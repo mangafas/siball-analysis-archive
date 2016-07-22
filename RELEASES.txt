@@ -1,0 +1,10 @@
+Full details about the releases.
+
+22/07/2016 - text-based - 1.0
+- First edition of the program
+- Free Kicks(FK) and Penalty Kicks(PK) are supported
+
+Next Version 
+ETA: 23/07/16
+User Interface: Text Based
+Version: 1.0.1
