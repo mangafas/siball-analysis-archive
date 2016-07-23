@@ -1,10 +1,13 @@
 Full details about the releases.
 
-22/07/2016 - text-based - 1.0
-- First edition of the program
-- Free Kicks(FK) and Penalty Kicks(PK) are supported
-
-Next Version 
-ETA: 23/07/16
+Codename: SBATB10
+Released Date: 22/07/16
 User Interface: Text Based
-Version: 1.0.1
+Features: Free Kicks(FK) and Penalty Kicks(PK) are supported
+
+
+Codename: SBATB101
+Release Date: 23/07/16
+User Interface: Text Based
+Features: SBATB10 + Corner Kicks(CK), Throw Ins(TI), 1 versus 1(1v1), crosses, saves, shots, headers are supported 
+
