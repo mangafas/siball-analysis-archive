@@ -1,12 +1,12 @@
 Full details about the releases.
 
-Codename: SBATB10
+Codename: SBATB01
 Released Date: 22/07/16
 User Interface: Text Based
 Features: Free Kicks(FK) and Penalty Kicks(PK) are supported
 
 
-Codename: SBATB101
+Codename: SBATB011
 Release Date: 23/07/16
 User Interface: Text Based
 Features: SBATB10 + Corner Kicks(CK), Throw Ins(TI), 1 versus 1(1v1), crosses, saves, shots, headers are supported 
