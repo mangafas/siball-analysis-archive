@@ -1,19 +1,24 @@
 Full details about the releases.
 
-Codename: SBATB01
+Codename: SBATB011
 Released Date: 22/07/16
 User Interface: Text Based
 Features: Free Kicks(FK) and Penalty Kicks(PK) are supported
 
 
-Codename: SBATB011
+Codename: SBATB012
 Release Date: 23/07/16
 User Interface: Text Based
-Features: SBATB10 + Corner Kicks(CK), Throw Ins(TI), 1 versus 1(1v1), crosses, saves, shots, headers are supported 
+Features: SBATB011 + Corner Kicks(CK), Throw Ins(TI), 1 versus 1(1v1), crosses, saves, shots, headers are supported 
 
 
-Codename: SBATB012
+Codename: SBATB013
 Release Date: 26/07/16
 User Interface: Text Based
-Features: SBATB011 + introduction
+Features: SBATB012 + introduction
 
+
+Codename: SBATB021
+Release Date: 27/07/16 
+User Interface: Text Based
+Features: SBATB013 + Win or Lose Feature where the Users define if the stat was succesful or not
