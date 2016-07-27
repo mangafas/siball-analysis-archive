@@ -22,3 +22,9 @@ Codename: SBATB021
 Release Date: 27/07/16 
 User Interface: Text Based
 Features: SBATB013 + Win or Lose Feature where the Users define if the stat was succesful or not
+
+
+Codename: SBATB021
+Release Date: 27/07/16 
+User Interface: Text Based
+Features: SBATB021 + Updated Introductory text on how to use the program
