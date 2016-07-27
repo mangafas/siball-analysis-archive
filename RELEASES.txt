@@ -3,28 +3,47 @@ Full details about the releases.
 Codename: SBATB011
 Released Date: 22/07/16
 User Interface: Text Based
-Features: Free Kicks(FK) and Penalty Kicks(PK) are supported
+Features: Free Kicks(FK) and Penalty Kicks(PK) are supported.
 
 
 Codename: SBATB012
 Release Date: 23/07/16
 User Interface: Text Based
-Features: SBATB011 + Corner Kicks(CK), Throw Ins(TI), 1 versus 1(1v1), crosses, saves, shots, headers are supported 
+Features: SBATB011 + Corner Kicks(CK), Throw Ins(TI), 1 versus 1(1v1), crosses, saves, shots, headers are supported.
 
 
 Codename: SBATB013
 Release Date: 26/07/16
 User Interface: Text Based
-Features: SBATB012 + introduction
+Features: SBATB012 + introduction.
 
 
 Codename: SBATB021
 Release Date: 27/07/16 
 User Interface: Text Based
-Features: SBATB013 + Win or Lose Feature where the Users define if the stat was succesful or not
+Features: SBATB013 + Win or Lose Feature where the Users define if the stat was succesful or not.
 
 
-Codename: SBATB021
+Codename: SBATB022
 Release Date: 27/07/16 
 User Interface: Text Based
-Features: SBATB021 + Updated Introductory text on how to use the program
+Features: SBATB021 + Updated Introductory text on how to use the program.
+
+
+Codename: SBATB023
+Release Date: 27/07/16 
+User Interface: Text Based
+Features: SBATB022 + Added quit function.
+
+
+Codename: SBATB024
+Release Date: 27/07/16 
+User Interface: Text Based
+Features: SBATB023 + Improved output when you count stats.
+
+
+Codename: SBATB025
+Release Date: 27/07/16 
+User Interface: Text Based
+Features: SBATB024 + Updated Quit function and stats are now printed out and at the end. 
+
