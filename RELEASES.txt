@@ -47,3 +47,8 @@ Release Date: 27/07/16
 User Interface: Text Based
 Features: SBATB024 + Updated Quit function and stats are now printed out and at the end. 
 
+
+Codename: SBATB026
+Release Date: 27/07/16 
+User Interface: Text Based
+Features: SBATB025 + Updated Final Output with the Total Stats
