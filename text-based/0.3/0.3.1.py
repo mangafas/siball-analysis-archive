@@ -1,5 +1,3 @@
-
-
 # -----> * INTRODUCTION * <-----
 
 
@@ -10,14 +8,14 @@ Commands = '''      STAT ------------> COMMAND
       -> Saved ---------> saved
       -> Missed --------> missed
 
-          Free Kick --------> fk
+      Free Kick --------> fk
       Corner Kick ------> ck
       Throw In ---------> ti
       Cross ------------> cross
       -> Good Delivery -> gd
       -> Good Delivery -> pd
 
-      1 versus 1 ------> 1v1
+      True versus True ------> 1v1
       -> Won ----------> w
       -> Lost ---------> l
 
@@ -44,18 +42,17 @@ pk_range_saved = range(0, 1000)
 pk_list_saved = list(pk_range_saved)
 pk_range_missed = range(0, 1000)
 pk_list_missed = list(pk_range_missed)
-
 pk_input = '''goal/saved/missed
 '''
 
 # -----> * Free Kicks Variables <-----
 
 
-fk_range = range(-1, 1000)
+fk_range = range(0, 1000)
 fk_list = list(fk_range)
-fk_range_gd = range(-1, 1000)
+fk_range_gd = range(0, 1000)
 fk_list_gd = list(fk_range_gd)
-fk_range_pd = range(-1, 1000)
+fk_range_pd = range(0, 1000)
 fk_list_pd = list(fk_range_pd)
 fk_input = '''gd/pd
 '''
@@ -63,11 +60,11 @@ fk_input = '''gd/pd
 # -----> * Corner Kicks Variables * <-----
 
 
-ck_range = range(-1, 1000)
+ck_range = range(0, 1000)
 ck_list = list(ck_range)
-ck_range_gd = range(-1, 1000)
+ck_range_gd = range(0, 1000)
 ck_list_gd = list(ck_range_gd)
-ck_range_pd = range(-1, 1000)
+ck_range_pd = range(0, 1000)
 ck_list_pd = list(ck_range_pd)
 ck_input = '''gd/pd
 '''
@@ -96,7 +93,7 @@ crosses_list_pd = list(crosses_range_pd)
 crosses_input = '''gd/pd
 '''
 
-# -----> * 1 vs 1 Variables * <-----
+# -----> * True vs True Variables * <-----
 
 
 v1_range = range(0, 1000)
@@ -150,212 +147,55 @@ long_passes_input = '''first touch/second touch
 # -----> * Main Function * <-----
 
 def body():
-    global string_number_pk, string_number_pk_goal, string_number_pk_missed, string_number_pk_saved, string_number_fk, string_number_fk_gd, string_number_fk_pd, string_number_ck, string_number_ck_gd, string_number_ck_pd, string_number_ti, string_number_ti_gd, string_number_ti_gd, string_number_ti_pd, string_number_crosses, string_number_crosses_gd, string_number_crosses_pd, string_number_shots, string_number_shots_gd, string_number_shots_pd, string_number_headers, string_number_headers_gd, string_number_v1, string_number_v1_w, string_number_v1_l, string_number_saves, string_number_long_passes, string_number_long_passes_first_touch, string_number_long_passes_second_touch
+    global string_number_pk_goal, string_number_pk_missed, string_number_pk_saved, string_number_pk, string_number_fk_gd
+    global string_number_fk_pd, string_number_fk, string_number_ck_pd, string_number_ck_gd, string_number_ck
+    global string_number_crosses_gd, string_number_crosses_pd, string_number_crosses, string_number_shots   
+    global string_number_headers_pd, string_number_headers_gd, string_number_shots_pd, string_number_shots_gd
+    global string_number_v1_l, string_number_v1, string_number_long_passes_first_touch, string_number_v1_w
+    global string_number_long_passes_second_touch, string_number_long_passes, string_number_save, string_number_headers
+    global string_number_ti_gd, string_number_ti
+    
+    int_number_pk_goal = False
+    int_number_pk_saved = False
+    int_number_pk_missed = False
+    int_number_pk = False
+
+    int_number_fk_gd = False
+    int_number_fk_pd = False
+    int_number_fk = False
+
+    int_number_ck_gd = False
+    int_number_ck_pd = False
+    int_number_ck = False
+
+    int_number_ti_gd = False
+    int_number_ti_pd = False
+    int_number_ti = False
+
+    int_number_crosses_gd = False
+    int_number_crosses_pd = False
+    int_number_crosses = False
+
+    int_number_shots_gd = False
+    int_number_shots_pd = False
+    int_number_shots = False
+
+    int_number_headers_gd = False
+    int_number_headers_pd = False
+    int_number_headers = False
+
+    int_number_v1_w = False
+    int_number_v1_l = False
+    int_number_v1 = False
+
+    int_number_long_passes_second_ball = False
+    int_number_long_passes_third_ball = False
+    int_number_long_passes = False
+
+    int_number_saves = False
+
     while True:
         choice = input("")
-
-        # -----> * Penalty_Kicks_total Variables * <-----
-
-        first_number_pk = pk_list[0]
-        first_number_pk_string = string_number_pk(first_number_pk)
-        if first_number_pk_string == "-1":
-            pk_list.remove(first_number_pk)
-
-        # -----> * Penalty_Kicks_goal Variables * <-----
-
-        first_number_pk_goal = pk_list_goal[0]
-        first_number_pk_goal_string = string_number_pk_goal(first_number_pk_goal)
-        if first_number_pk_goal_string == "-1":
-            pk_list_goal.remove(first_number_pk_goal)
-
-        # -----> * Penalty_Kicks_missed Variables * <-----
-
-        first_number_pk_missed = pk_list_missed[0]
-        first_number_pk_missed_string = string_number_pk_missed(first_number_pk_missed)
-        if first_number_pk_missed_string == "-1":
-            pk_list_missed.remove(first_number_pk_missed)
-
-        # -----> * Penalty_Kicks_saved Variables * <-----
-
-        first_number_pk_saved = pk_list_saved[0]
-        first_number_pk_saved_string = string_number_headers_pd(first_number_pk_saved)
-        if first_number_pk_saved_string == "-1":
-            pk_list_saved.remove(first_number_pk_saved)
-
-        # -----> * Free_Kicks_total Variables * <-----
-
-        first_number_fk = fk_list[0]
-        first_number_fk_string = string_number_headers_pd(first_number_fk)
-        if first_number_fk_string == "-1":
-            fk_list.remove(first_number_fk)
-
-        # -----> * Free_Kicks_gd Variables * <-----
-
-        first_number_fk_gd = fk_list_gd[0]
-        first_number_fk_gd_string = string_number_headers_pd(first_number_fk_gd)
-        if first_number_fk_gd_string == "-1":
-            fk_list_gd.remove(first_number_fk_gd)
-
-        # -----> * Free_Kicks_pd Variables * <-----
-
-        first_number_fk_pd = fk_list_pd[0]
-        first_number_fk_pd_string = string_number_headers_pd(first_number_fk_pd)
-        if first_number_fk_pd_string == "-1":
-            fk_list_pd.remove(first_number_fk_pd)
-
-        # -----> * Corner_Kicks_total Variables * <-----
-
-        first_number_ck = ck_list[0]
-        first_number_ck_string = string_number_headers_pd(first_number_ck)
-        if first_number_ck_string == "-1":
-            ck_list.remove(first_number_ck)
-
-        # -----> * Corner_Kicks_gd Variables * <-----
-
-        first_number_ck_gd = ck_list_gd[0]
-        first_number_ck_gd_string = string_number_headers_pd(first_number_ck_gd)
-        if first_number_ck_gd_string == "-1":
-            ck_list_gd.remove(first_number_ck_gd)
-
-        # -----> * Corner_Kicks_pd Variables * <-----
-
-        first_number_ck_pd = ck_list_pd[0]
-        first_number_ck_pd_string = string_number_headers_pd(first_number_ck_pd)
-        if first_number_ck_pd_string == "-1":
-            ck_list_pd.remove(first_number_ck_pd)
-
-        # -----> * Throw_Ins_total Variables * <-----
-
-        first_number_ti = ti_list[0]
-        first_number_ti_string = string_number_headers_pd(first_number_ti)
-        if first_number_ti_string == "-1":
-            ti_list.remove(first_number_ti)
-
-        # -----> * Throw_Ins_gd Variables * <-----
-
-        first_number_ti_gd = ti_list_gd[0]
-        first_number_ti_gd_string = string_number_headers_pd(first_number_ti_gd)
-        if first_number_ti_gd_string == "-1":
-            ti_list_gd.remove(first_number_ti_gd)
-
-        # -----> * Throw_Ins_pd Variables * <-----
-
-        first_number_ti_pd = ti_list_pd[0]
-        first_number_ti_pd_string = string_number_headers_pd(first_number_ti_pd)
-        if first_number_ti_pd_string == "-1":
-            ti_list_pd.remove(first_number_ti_pd)
-
-        # -----> * crosses_total Variables * <-----
-
-        first_number_crosses = crosses_list[0]
-        first_number_crosses_string = string_number_headers_pd(first_number_crosses)
-        if first_number_crosses_string == "-1":
-            crosses_list.remove(first_number_crosses)
-
-        # -----> * crosses_gd Variables * <-----
-
-        first_number_crosses_gd = crosses_list_gd[0]
-        first_number_crosses_gd_string = string_number_headers_pd(first_number_crosses_gd)
-        if first_number_crosses_gd_string == "-1":
-            crosses_list_gd.remove(first_number_crosses_gd)
-
-        # -----> * crosses_pd Variables * <-----
-
-        first_number_crosses_pd = crosses_list_pd[0]
-        first_number_crosses_pd_string = string_number_headers_pd(first_number_crosses_pd)
-        if first_number_crosses_pd_string == "-1":
-            crosses_list_pd.remove(first_number_crosses_pd)
-
-        # -----> * shot_total Variables * <-----
-
-        first_number_shots = shots_list[0]
-        first_number_shots_string = string_number_headers_pd(first_number_shots)
-        if first_number_shots_string == "-1":
-            shots_list.remove(first_number_shots)
-
-        # -----> * shot_gd Variables * <-----
-
-        first_number_shots_gd = shots_list_gd[0]
-        first_number_shots_gd_string = string_number_headers_pd(first_number_shots_gd)
-        if first_number_shots_gd_string == "-1":
-            shots_list_gd.remove(first_number_shots_gd)
-
-        # -----> * shot_pd Variables * <-----
-
-        first_number_shots_pd = shots_list_pd[0]
-        first_number_shots_pd_string = string_number_headers_pd(first_number_shots_pd)
-        if first_number_shots_pd_string == "-1":
-            shots_list_pd.remove(first_number_shots_pd)
-
-        # -----> * headers_total Variables * <-----
-
-        first_number_headers = headers_list[0]
-        first_number_headers_string = string_number_headers_pd(first_number_headers)
-        if first_number_headers_string == "-1":
-            headers_list.remove(first_number_headers)
-
-        # -----> * headers_gd Variables * <-----
-
-        first_number_headers_gd = headers_list_gd[0]
-        first_number_headers_gd_string = string_number_headers_pd(first_number_headers_gd)
-        if first_number_headers_gd_string == "-1":
-            headers_list_gd.remove(first_number_headers_gd)
-
-        # -----> * headers_pd Variables * <-----
-
-        first_number_headers_pd = headers_list_pd[0]
-        first_number_headers_pd_string = string_number_headers_pd(first_number_headers_pd)
-        if first_number_headers_pd_string == "-1":
-            headers_list_pd.remove(first_number_headers_pd)
-
-        # -----> * 1vs1_total Variables * <-----
-
-        first_number_v1 = v1_list[0]
-        first_number_v1_string = string_number_headers_pd(first_number_v1)
-        if first_number_v1_string == "-1":
-            v1_list.remove(first_number_v1)
-
-        # -----> * 1vs1_won Variables * <-----
-
-        first_number_v1_w = v1_list_w[0]
-        first_number_v1_w_string = string_number_headers_pd(first_number_v1_w)
-        if first_number_v1_w_string == "-1":
-            v1_list_w.remove(first_number_v1_w)
-
-        # -----> * 1vs1_lost Variables * <-----
-
-        first_number_v1_l = v1_list_l[0]
-        first_number_v1_l_string = string_number_headers_pd(first_number_v1_l)
-        if first_number_v1_l_string == "-1":
-            v1_list_l.remove(first_number_v1_l)
-
-        # -----> * long_passes_total Variables * <-----
-
-        first_number_long_passes = long_passes_list[0]
-        first_number_long_passes_string = string_number_headers_pd(first_number_long_passes)
-        if first_number_long_passes_string == "-1":
-            long_passes_list.remove(first_number_long_passes)
-
-        # -----> * long_passes_first_touch Variables * <-----
-
-        first_number_long_passes_first_touch = long_passes_list_first_touch[0]
-        first_number_long_passes_first_touch_string = string_number_headers_pd(first_number_long_passes_first_touch)
-        if first_number_long_passes_first_touch_string == "-1":
-            long_passes_list_first_touch.remove(first_number_long_passes_first_touch)
-
-        # -----> * long_passes_second_touch Variables * <-----
-
-        first_number_long_passes_second_touch = long_passes_list_second_touch[0]
-        first_number_long_passes_second_touch_string = string_number_headers_pd(first_number_long_passes_second_touch)
-        if first_number_long_passes_second_touch_string == "-1":
-            long_passes_list_second_touch.remove(first_number_long_passes_second_touch)
-        
-        # -----> * saves_total Variables * <-----
-
-        first_number_saves = saves_list[0]
-        first_number_saves_string = string_number_headers_pd(first_number_saves)
-        if first_number_saves_string == "-1":
-            saves_list.remove(first_number_saves)
 
         # -----> * Penalty Kicks Function * <-----
 
@@ -367,21 +207,24 @@ def body():
                 first_number_pk_goal = pk_list_goal[0]
                 pk_list_goal.remove(first_number_pk_goal)
                 number_pk_goal = pk_list_goal[0]
-                string_number_pk_goal = string_number_headers_pd(number_pk_goal)
+                string_number_pk_goal = str(number_pk_goal)
+                int_number_pk_goal = True
                 print("Penalty Kick goal(s): ", string_number_pk_goal)
 
             elif good_bad_input_pk == "saved":
                 first_number_pk_saved = pk_list_saved[0]
                 pk_list_saved.remove(first_number_pk_saved)
                 number_pk_saved = pk_list_saved[0]
-                string_number_pk_saved = string_number_headers_pd(number_pk_saved)
+                string_number_pk_saved = str(number_pk_saved)
+                int_number_pk_saved = True
                 print("Penalty Kick(s) saved: ", string_number_pk_saved)
 
             elif good_bad_input_pk == "missed":
                 first_number_pk_missed = pk_list_missed[0]
                 pk_list_missed.remove(first_number_pk_missed)
                 number_pk_missed = pk_list_missed[0]
-                string_number_pk_missed = string_number_headers_pd(number_pk_missed)
+                string_number_pk_missed = str(number_pk_missed)
+                int_number_pk_missed = True
                 print("Penalty Kick(s) missed: ", string_number_pk_missed)
 
             else:
@@ -390,7 +233,8 @@ def body():
             first_number_pk = pk_list[0]
             pk_list.remove(first_number_pk)
             number_pk = pk_list[0]
-            string_number_pk = string_number_headers_pd(number_pk)
+            string_number_pk = str(number_pk)
+            int_number_pk = True
             print("Penalty Kick(s) : ", string_number_pk)
 
         # -----> * Free Kicks Function * <-----
@@ -403,14 +247,16 @@ def body():
                 first_number_fk_gd = fk_list_gd[0]
                 fk_list_gd.remove(first_number_fk_gd)
                 number_fk_gd = fk_list_gd[0]
-                string_number_fk_gd = string_number_headers_pd(number_fk_gd)
+                string_number_fk_gd = str(number_fk_gd)
+                int_number_fk_gd = True
                 print("Free Kick(s) with a Good Delivery: ", string_number_fk_gd)
 
             elif good_bad_input_fk == "pd":
                 first_number_fk_pd = fk_list_pd[0]
                 fk_list_pd.remove(first_number_fk_pd)
                 number_fk_pd = fk_list_pd[0]
-                string_number_fk_pd = string_number_headers_pd(number_fk_pd)
+                string_number_fk_pd = str(number_fk_pd)
+                int_number_fk_pd = True
                 print("Free Kick(s) with a Poor Delivery: ", string_number_fk_pd)
 
             else:
@@ -419,7 +265,8 @@ def body():
             first_number_fk = fk_list[0]
             fk_list.remove(first_number_fk)
             number_fk = fk_list[0]
-            string_number_fk = string_number_headers_pd(number_fk)
+            string_number_fk = str(number_fk)
+            int_number_fk = True
             print("Free Kick(s)", string_number_fk)
 
         # -----> * Corner Kick Variables * <-----
@@ -432,14 +279,16 @@ def body():
                 first_number_ck_gd = ck_list_gd[0]
                 ck_list_gd.remove(first_number_ck_gd)
                 number_ck_gd = ck_list_gd[0]
-                string_number_ck_gd = string_number_headers_pd(number_ck_gd)
+                string_number_ck_gd = str(number_ck_gd)
+                int_number_ck_gd = True
                 print("Corner Kick(s) with a Good Delivery: ", string_number_ck_gd)
 
             elif good_bad_input_ck == "pd":
                 first_number_ck_pd = ck_list_pd[0]
                 ck_list_pd.remove(first_number_ck_pd)
                 number_ck_pd = ck_list_pd[0]
-                string_number_ck_pd = string_number_headers_pd(number_ck_pd)
+                string_number_ck_pd = str(number_ck_pd)
+                int_number_ck_pd = True
                 print("Corner Kick(s) with a Poor Delivery: ", string_number_ck_pd)
 
             else:
@@ -448,7 +297,8 @@ def body():
             first_number_ck = ck_list[0]
             ck_list.remove(first_number_ck)
             number_ck = ck_list[0]
-            string_number_ck = string_number_headers_pd(number_ck)
+            string_number_ck = str(number_ck)
+            int_number_ck = True
             print("Corner Kick(s): ", string_number_ck)
 
         # -----> * Throw Ins Functions * <-----
@@ -461,14 +311,16 @@ def body():
                 first_number_ti_gd = ti_list_gd[0]
                 ti_list_gd.remove(first_number_ti_gd)
                 number_ti_gd = ti_list_gd[0]
-                string_number_ti_gd = string_number_headers_pd(number_ti_gd)
+                string_number_ti_gd = str(number_ti_gd)
+                int_number_ti_gd = True
                 print("Throw In(s) with a Good Delivery: ", string_number_ti_gd)
 
             elif good_bad_input_ti == "pd":
                 first_number_ti_pd = ti_list_pd[0]
                 ti_list_pd.remove(first_number_ti_pd)
                 number_ti_pd = ti_list_pd[0]
-                string_number_ti_pd = string_number_headers_pd(number_ti_pd)
+                string_number_ti_pd = str(number_ti_pd)
+                int_number_ti_pd = True
                 print("Throw In(s) with a Poor Delivery: ", string_number_ti_pd)
 
             else:
@@ -477,7 +329,8 @@ def body():
             first_number_ti = ti_list[0]
             ti_list.remove(first_number_ti)
             number_ti = ti_list[0]
-            string_number_ti = string_number_headers_pd(number_ti)
+            string_number_ti = str(number_ti)
+            int_number_ti = True
             print("Throw In(s): ", string_number_ti)
 
         # -----> * Crosses Function * <-----
@@ -490,14 +343,16 @@ def body():
                 first_number_crosses_gd = crosses_list_gd[0]
                 crosses_list_gd.remove(first_number_crosses_gd)
                 number_crosses_gd = crosses_list_gd[0]
-                string_number_crosses_gd = string_number_headers_pd(number_crosses_gd)
+                string_number_crosses_gd = str(number_crosses_gd)
+                int_number_crosses_gd = True
                 print("Cross(es) with a Good Delivery: ", string_number_crosses_gd)
 
             elif good_bad_input_crosses == "pd":
                 first_number_crosses_pd = crosses_list_pd[0]
                 crosses_list_pd.remove(first_number_crosses_pd)
                 number_crosses_pd = crosses_list_pd[0]
-                string_number_crosses_pd = string_number_headers_pd(number_crosses_pd)
+                string_number_crosses_pd = str(number_crosses_pd)
+                int_number_crosses_pd = True
                 print("Cross(es) with a Good Delivery: ", string_number_crosses_pd)
 
             else:
@@ -506,7 +361,8 @@ def body():
             first_number_crosses = crosses_list[0]
             crosses_list.remove(first_number_crosses)
             number_crosses = crosses_list[0]
-            string_number_crosses = string_number_headers_pd(number_crosses)
+            string_number_crosses = str(number_crosses)
+            int_number_crosses = True
             print("Cross(es): ", string_number_crosses)
 
         # -----> * 1 versus 1 Function * <-----
@@ -519,14 +375,16 @@ def body():
                 first_number_v1_w = v1_list_w[0]
                 v1_list_w.remove(first_number_v1_w)
                 number_v1_w = v1_list_w[0]
-                string_number_v1_w = string_number_headers_pd(number_v1_w)
+                string_number_v1_w = str(number_v1_w)
+                int_number_v1_w = True
                 print("Won 1vs1: ", string_number_v1_w)
 
             elif good_bad_input_v1 == "l":
                 first_number_v1_l = v1_list_l[0]
                 v1_list_l.remove(first_number_v1_l)
                 number_v1_l = v1_list_l[0]
-                string_number_v1_l = string_number_headers_pd(number_v1_l)
+                string_number_v1_l = str(number_v1_l)
+                int_number_v1_l = True
                 print("Lost 1vs1: ", string_number_v1_l)
 
             else:
@@ -535,7 +393,8 @@ def body():
             first_number_v1 = v1_list[0]
             v1_list.remove(first_number_v1)
             number_v1 = v1_list[0]
-            string_number_v1 = string_number_headers_pd(number_v1)
+            string_number_v1 = str(number_v1)
+            int_number_v1 = True
             print("1vs1: ", string_number_v1)
 
         # -----> * Shots Function * <-----
@@ -548,14 +407,16 @@ def body():
                 first_number_shots_gd = shots_list_gd[0]
                 shots_list_gd.remove(first_number_shots_gd)
                 number_shots_gd = shots_list_gd[0]
-                string_number_shots_gd = string_number_headers_pd(number_shots_gd)
+                string_number_shots_gd = str(number_shots_gd)
+                int_number_shots_gd = True
                 print("Shot(s) on target: ", string_number_shots_gd)
 
             elif good_bad_input_shots == "off target":
                 first_number_shots_pd = shots_list_pd[0]
                 shots_list_pd.remove(first_number_shots_pd)
                 number_shots_pd = shots_list_pd[0]
-                string_number_shots_pd = string_number_headers_pd(number_shots_pd)
+                string_number_shots_pd = str(number_shots_pd)
+                int_number_shots_pd = True
                 print("Shot(s) off target: ", string_number_shots_pd)
 
             else:
@@ -564,7 +425,8 @@ def body():
             first_number_shots = shots_list[0]
             shots_list.remove(first_number_shots)
             number_shots = shots_list[0]
-            string_number_shots = string_number_headers_pd(number_shots)
+            string_number_shots = str(number_shots)
+            int_number_shots = True
             print("Shot(s): ", string_number_shots)
 
         # -----> * Headers Function * <-----
@@ -577,14 +439,16 @@ def body():
                 first_number_headers_gd = headers_list_gd[0]
                 headers_list_gd.remove(first_number_headers_gd)
                 number_headers_gd = headers_list_gd[0]
-                string_number_headers_gd = string_number_headers_pd(number_headers_gd)
+                string_number_headers_gd = str(number_headers_gd)
+                int_number_headers_gd = True
                 print("Header(s) on target: ", string_number_headers_gd)
 
             elif good_bad_input_headers == "off target":
                 first_number_headers_pd = headers_list_pd[0]
                 headers_list_pd.remove(first_number_headers_pd)
                 number_headers_pd = headers_list_pd[0]
-                string_number_headers_pd = string_number_headers_pd(number_headers_pd)
+                string_number_headers_pd = str(number_headers_pd)
+                int_number_headers_pd = True
                 print("Header(s) off target: ", string_number_headers_pd)
 
             else:
@@ -593,7 +457,8 @@ def body():
             first_number_headers = headers_list[0]
             headers_list.remove(first_number_headers)
             number_headers = headers_list[0]
-            string_number_headers = string_number_headers_pd(number_headers)
+            string_number_headers = str(number_headers)
+            int_number_crosses = True
             print("Header(s): ", string_number_headers)
 
         # -----> * Long Passes * <-----
@@ -603,21 +468,24 @@ def body():
             first_number_long_passes = long_passes_list[0]
             long_passes_list.remove(first_number_long_passes)
             number_long_passes = long_passes_list[0]
-            string_number_long_passes = string_number_headers_pd(number_long_passes)
+            string_number_long_passes = str(number_long_passes)
+            int_number_long_passes = True
             print("Long Pass(es): ", string_number_long_passes)
 
             if good_bad_input_long_passes == "first touch":
                 first_number_long_passes_first_touch = long_passes_list_first_touch[0]
                 long_passes_list_first_touch.remove(first_number_long_passes_first_touch)
                 number_long_passes_first_touch = long_passes_list_first_touch[0]
-                string_number_long_passes_first_touch = string_number_headers_pd(number_long_passes_first_touch)
+                string_number_long_passes_first_touch = str(number_long_passes_first_touch)
+                int_number_long_passes_second_ball = True
                 print("Long Pass(es) first touch: ", string_number_long_passes_first_touch)
 
             elif good_bad_input_long_passes == "second touch":
                 first_number_long_passes_second_touch = long_passes_list_second_touch[0]
                 long_passes_list_second_touch.remove(first_number_long_passes_second_touch)
                 number_long_passes_second_touch = long_passes_list_second_touch[0]
-                string_number_long_passes_second_touch = string_number_headers_pd(number_long_passes_second_touch)
+                string_number_long_passes_second_touch = str(number_long_passes_second_touch)
+                int_number_long_passes_third_ball = True
                 print("Long Pass(es) second touch: ", string_number_long_passes_second_touch)
 
             else:
@@ -626,230 +494,162 @@ def body():
         # -----> * Saves * <-----
 
         elif choice == "save":
-            first_number_saves = saves_list[0]
-            saves_list.remove(first_number_saves)
-            number_saves = saves_list[0]
-            string_number_saves = first_number_saves_string(number_saves)
-            print("Save(s)", string_number_saves)
+            first_number_save = saves_list[0]
+            saves_list.remove(first_number_save)
+            number_save = saves_list[0]
+            string_number_save = str(number_save)
+            int_number_saves = True
+            print("Save(s)", string_number_save)
 
-        # -----> * Quit * <-----
+        # -----> * Quit Function * <-----
 
         elif choice == "q":
+            if int_number_pk_goal:
+                print("Penalty Kick goal(s): ", string_number_pk_goal)
+            elif not int_number_pk_goal:
+                print("Penalty Kick goal(s): 0")
 
-            print("Are you sure that you want to finish the stat counting? (yes/no)")
-            quit_choice = input()
+            if int_number_pk_missed:
+                print("Penalty Kick(s) missed: ", string_number_pk_missed)
+            elif not int_number_pk_missed:
+                print("Penalty Kick(s) missed: 0")
 
-            if quit_choice == "yes":
+            if int_number_pk_saved:
+                print("Penalty Kick(s) saved: ", string_number_pk_saved)
+            elif not int_number_pk_saved:
+                print("Penalty Kick(s) saved: 0")
 
-                # -----> * Penalty_Kicks_total_quit_function * <-----
+            if int_number_pk:
+                print("Penalty Kick(s): ", string_number_pk)
+            elif not int_number_pk:
+                print("Penalty Kick(s): 0")
 
-                if first_number_pk_string == "0":
-                    print("Penalty Kick(s): ", string_number_pk)
-                else:
-                    print("Penalty Kicks: 0 ")
+            if int_number_fk_gd:
+                print("Free Kick(s) with Good Delivery: ", string_number_fk_gd)
+            elif not int_number_fk_gd:
+                print("Free Kick(s) with Good Delivery: 0")
 
-                # -----> * Penalty_Kicks_goal_quit_function * <-----
-                
-                if first_number_pk_goal_string == "0":
-                    print("Goals from Penalty Kicks:  ", string_number_pk_goal)
-                else:
-                    print("Goals from Penalty Kicks: 0 ")
+            if int_number_fk_pd:
+                print("Free Kick(s) with Good Delivery: ", string_number_fk_pd)
+            elif not int_number_fk_pd:
+                print("Free Kick(s) with Good Delivery: 0")
 
-                # -----> * Penalty_Kicks_missed_quit_function * <-----
-                
-                if first_number_pk_missed_string == "0":
-                    print("Missed Penalty Kicks: ", string_number_pk_missed)
-                else:
-                    print("Missed Penalty Kicks: 0 ")
+            if int_number_fk:
+                print("Free Kick(s): ", string_number_fk)
+            elif not int_number_fk:
+                print("Free Kick(s): 0")
 
-                # -----> * Penalty_Kicks_saved_quit_function * <-----
+            if int_number_ck_gd:
+                print("Corner Kick(s) with Good Delivery: ", string_number_ck_gd)
+            elif not int_number_ck_gd:
+                print("Corner Kick(s) with Good Delivery: 0")
 
-                if first_number_pk_saved_string == "0":
-                    print("Penalty Kick(s) with Good Delivery: ", string_number_pk_saved)
-                else:
-                    print("Saved Penalty Kicks: 0 ")
+            if int_number_ck_pd:
+                print("Corner Kick(s) with Good Delivery: ", string_number_ck_pd)
+            elif not int_number_ck_pd:
+                print("Corner Kick(s) with Good Delivery: 0")
 
-                # -----> * Free_Kicks_total_quit_function * <-----
+            if int_number_ck:
+                print("Corner Kick(s): ", string_number_ck)
+            elif not int_number_ck:
+                print("Corner Kick(s): 0")
 
-                if first_number_fk_string == "0":
-                    print("Free Kick(s): ", string_number_fk)
-                else:
-                    print("Free Kicks: 0 ")
+            if int_number_ti_gd:
+                print("Throw In(s) with Good Delivery: ", string_number_ti_gd)
+            elif not int_number_ti_gd:
+                print("Throw In(s) with Good Delivery: 0")
 
-                # -----> * Free_Kicks_gd_quit_function * <-----
+            if int_number_ti_pd:
+                print("Throw In(s) with Poor Delivery: ", string_number_ti_gd)
+            elif not int_number_ti_pd:
+                print("Throw In(s) with Poor Delivery: 0")
 
-                if first_number_fk_gd_string == "0":
-                    print("Free Kick(s) with Good Delivery: ", string_number_fk_gd)
-                else:
-                    print("Free Kicks with Good Delivery: 0 ")
+            if int_number_ti:
+                print("Throw In(s): ", string_number_ti)
+            elif not int_number_ti:
+                print("Throw In(s): 0")
 
-                # -----> * Free_Kick_pd_quit_function * <-----
+            if int_number_crosses_gd:
+                print("Cross(es) with Good Delivery: ", string_number_crosses_gd)
+            elif not int_number_crosses_gd:
+                print("Cross(es) with Good Delivery: 0")
 
-                if first_number_fk_pd_string == "0":
-                    print("Free Kick(s) with  Poor Delivery: ", string_number_fk_pd)
-                else:
-                    print("Free Kicks with Poor Delivery: 0 ")
+            if int_number_crosses_pd:
+                print("Cross(es) with Poor Delivery: ", string_number_crosses_pd)
+            elif not int_number_crosses_pd:
+                print("Cross(es) with Poor Delivery: 0")
 
-                # -----> * Corner_Kick_total_quit_function * <-----
+            if int_number_crosses:
+                print("Cross(es): ", string_number_crosses)
+            elif not int_number_crosses:
+                print("Cross(es): 0")
 
-                if first_number_ck_string == "0":
-                    print("Cross(es): ", string_number_ck)
-                else:
-                    print("Crosses: 0 ")
+            if int_number_shots_gd:
+                print("Shot(s) on Target: ", string_number_shots_gd)
+            elif not int_number_shots_gd:
+                print("Shot(s) on Target: 0")
 
-                # -----> * Corner_Kick_gd_quit_function * <-----
-                
-                if first_number_ck_gd_string == "0":
-                    print("Cross(es) with Good Delivery: ", string_number_ck_gd)
-                else:
-                    print("Crosses with Good Delivery: 0 ")
+            if int_number_shots_pd:
+                print("Shot(s) off Target: ", string_number_shots_pd)
+            elif not int_number_shots_pd:
+                print("Shot(s) off Target: 0")
 
-                # -----> * Corner_Kick_pd_quit_function * <-----
-                
-                if first_number_ck_pd_string == "0":
-                    print("Cross(es) with  Poor Delivery: ", string_number_ck_pd)
-                else:
-                    print("Crosses with Poor Delivery: 0 ")
-                
-                # -----> * Throw_Ins_total_quit_function * <-----
+            if int_number_shots:
+                print("Shot(s): ", string_number_shots)
+            elif not int_number_shots:
+                print("Shot(s): 0")
 
-                if first_number_ti_string == "0":
-                    print("Throw In(s): ", string_number_ti)
-                else:
-                    print("Throw Ins: 0 ")
+            if int_number_headers_gd:
+                print("Header(s) on Target: ", string_number_headers_gd)
+            elif not int_number_headers_gd:
+                print("Header(s) on Target: 0")
 
-                # -----> * Throw_Ins_gd_quit_function * <-----
-                
-                if first_number_ti_gd_string == "0":
-                    print("Throw In(s) with Good Delivery: ", string_number_ti_gd)
-                else:
-                    print("Throw Ins with Good Delivery: 0 ")
+            if int_number_headers_pd:
+                print("Header(s) off Target: ", string_number_headers_pd)
+            elif not int_number_headers_pd:
+                print("Header(s) off Target: 0")
 
-                # -----> * Throw_Ins_pd_quit_function * <-----
-                
-                if first_number_ti_pd_string == "0":
-                    print("Throw In(s) with  Poor Delivery: ", string_number_ti_pd)
-                else:
-                    print("Throw Ins with Poor Delivery: 0 ")
-                
-                # -----> * Crosses_total_quit_function * <-----
+            if int_number_headers:
+                print("Header(s): ", string_number_headers)
+            elif not int_number_headers:
+                print("Header(s): 0")
 
-                if first_number_crosses_string == "0":
-                    print("Cross(es): ", string_number_crosses)
-                else:
-                    print("Crosses: 0 ")
+            if int_number_v1_w:
+                print("1vs1 Won: ", string_number_v1_w)
+            elif not int_number_v1_w:
+                print("1vs1 Won: 0")
 
-                # -----> * Crosses_gd_quit_function * <-----
-                
-                if first_number_crosses_gd_string == "0":
-                    print("Cross(s) with Good Delivery: ", string_number_crosses_gd)
-                else:
-                    print("Crosses with Good Delivery: 0 ")
+            if int_number_v1_l:
+                print("1vs1 Lost: ", string_number_v1_l)
+            elif not int_number_v1_l:
+                print("1vs1 Lost: 0")
 
-                # -----> * Crosses_pd_quit_function * <-----
-                
-                if first_number_crosses_pd_string == "0":
-                    print("Cross(s) with  Poor Delivery: ", string_number_crosses_pd)
-                else:
-                    print("Crosses with Poor Delivery: 0 ")
+            if int_number_v1:
+                print("1vs1: ", string_number_v1)
+            elif not int_number_v1:
+                print("1vs1: 0")
 
-                # -----> * Shots_total_quit_function * <-----
+            if int_number_long_passes_second_ball:
+                print("Long Passes Second Ball: ", string_number_long_passes_first_touch)
+            elif not int_number_long_passes_second_ball:
+                print("Long Passes Second Ball: 0")
 
-                if first_number_shots_string == "0":
-                    print("Shot(s): ", string_number_shots)
-                else:
-                    print("Shots: 0 ")
+            if int_number_long_passes_third_ball:
+                print("Long Passes Third Ball: ", string_number_long_passes_second_touch)
+            elif not int_number_long_passes_third_ball:
+                print("Long Passes Third Ball: 0")
 
-                # -----> * Shots_gd_quit_function * <-----
+            if int_number_long_passes:
+                print("Long Passes: ", string_number_long_passes)
+            elif not int_number_long_passes:
+                print("Long Passes: 0")
 
-                if first_number_shots_gd_string == "0":
-                    print("Shot(s) on target: ", string_number_shots_gd)
-                else:
-                    print("Shots on target: 0 ")
+            if int_number_saves:
+                print("Saves: ", string_number_save)
+            elif not int_number_saves:
+                print("Saves: 0")
 
-                # -----> * Shots_pd_quit_function * <-----
-                
-                if first_number_shots_pd_string == "0":
-                    print("Shot(s) off target: ", string_number_shots_pd)
-                else:
-                    print("Shots off target: 0 ")
-
-                # -----> * Headers_total_quit_function * <-----
-
-                if first_number_headers_string == "0":
-                    print("Free Kick(s): ", string_number_headers)
-                else:
-                    print("Free Kicks: 0 ")
-
-                # -----> * Headers_gd_quit_function * <-----
-                
-                if first_number_headers_gd_string == "0":
-                    print("Header(s) on target: ", string_number_headers_gd)
-                else:
-                    print("Headers on target: 0 ")
-
-                # -----> * Headers_pd_quit_function * <-----
-                
-                if first_number_headers_pd_string == "0":
-                    print("Header(s) off target: ", string_number_headers_pd)
-                else:
-                    print("Headers off target: 0 ")
-
-                # -----> * 1vs1_total_quit_function * <-----
-
-                if first_number_v1_string == "0":
-                    print("Free Kick(s): ", string_number_v1)
-                else:
-                    print("Free Kicks: 0 ")
-
-                # -----> * 1vs1_won_quit_function * <-----
-
-                if first_number_v1_w_string == "0":
-                    print("1vs1 won: ", string_number_v1_w)
-                else:
-                    print("1vs1 won: 0 ")
-
-                # -----> * 1vs1_pd_quit_function * <-----
-
-                if first_number_v1_l_string == "0":
-                    print("1vs1 Lost: ", string_number_v1_l)
-                else:
-                    print("1vs1 Lost: 0 ")
-
-                # -----> * saves_total_quit_function * <-----
-
-                if first_number_saves_string == "0":
-                    print("Save(s): ", string_number_saves)
-                else:
-                    print("Saves: 0 ")
-
-                # -----> * Long_Pass_total_quit_function * <-----
-
-                if first_number_long_passes_string == "0":
-                    print("Work In Progress... but: ", string_number_long_passes)
-                else:
-                    print("Work In Progress... but: 0 ")
-
-                # -----> * Long_Pass_second_ball_quit_function * <-----
-
-                if first_number_long_passes_string == "0":
-                    print("Work In Progress... but: ", string_number_long_passes_first_touch)
-                else:
-                    print("Work In Progress... but: 0 ")
-
-                # -----> * Long_Pass_Third_Ball_quit_function * <-----
-
-                if first_number_long_passes_string == "0":
-                    print("Work In Progress... but: ", string_number_long_passes_second_touch)
-                else:
-                    print("Work In Progress")
-
-                break
-            elif quit_choice == "no":
-                pass
-
-            else:
-                pass
+            break
 
 
 body()
