@@ -61,6 +61,12 @@ Features: SBATB026 + now Long Pass stat is supported.
 
 
 Codename: SBATB031
-Release Date: 30/07/16 
+Release Date: 03/08/16 
 User Interface: Text Based
 Features: SBATB027 + stats can go countless
+
+
+Codename: SBATB032
+Release Date: 03/08/16 
+User Interface: Text Based
+Features: SBATB031 + updated Long Pass Stat
