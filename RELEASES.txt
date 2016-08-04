@@ -70,3 +70,8 @@ Codename: SBATB032
 Release Date: 03/08/16 
 User Interface: Text Based
 Features: SBATB031 + updated Long Pass Stat
+
+Codename: SBATB033
+Release Date: 04/08/16 
+User Interface: Text Based
+Features: SBATB032 + updated Long Pass Stat to Long Pass Interception on Attack/Defense-Second/Third Ball
