@@ -51,7 +51,7 @@ pk_list_saved = list(pk_range_saved)
 pk_range_missed = range(0, 1000)
 pk_list_missed = list(pk_range_missed)
 pk_input = '''goal/saved/missed
-'''
+''' 
 
 # -----> * Free Kicks Variables <-----
 
