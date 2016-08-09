@@ -9,7 +9,8 @@
 ####Features: Features that 0.1.1.py has plus record Corner Kicks, Throw Ins, 1vs1, crosses, saves, shots and header and a quit option
 > Comments: None
 
+## 0.1.3.py File
+####Language: Python
+####Features: Features that 0.1.2.py has plus a small introductory on how to use the program
+> Comments: None
 
-
-In 0.1.3 you can track Penalty Kicks, Free Kicks, Corner Kicks, Throw ins, 1vs1, crosses, saves, shots and headers with a quit option and an intro where it explains you the commands in order to use the program
-This is the very first version of the software and as you can see it has little capabilities.
