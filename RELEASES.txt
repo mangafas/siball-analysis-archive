@@ -80,3 +80,8 @@ Codename: SBATB041
 Release Date: 10/08/16 
 User Interface: Text Based
 Features: SBATB033 + save each game's stat in a seperate .txt file
+
+Codename: SBATB042
+Release Date: 10/08/16 
+User Interface: Text Based
+Features: SBATB041 + add custom name for each .txt file
