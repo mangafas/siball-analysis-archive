@@ -1,87 +1,87 @@
 Full details about the releases.
 
-Codename: SBATB011
+Codename: SATB011
 Released Date: 22/07/16
 User Interface: Text Based
 Features: Free Kicks(FK) and Penalty Kicks(PK) are supported.
 
 
-Codename: SBATB012
+Codename: SATB012
 Release Date: 23/07/16
 User Interface: Text Based
-Features: SBATB011 + Corner Kicks(CK), Throw Ins(TI), 1 versus 1(1v1), crosses, saves, shots, headers are supported.
+Features: SATB011 + Corner Kicks(CK), Throw Ins(TI), 1 versus 1(1v1), crosses, saves, shots, headers are supported.
 
 
-Codename: SBATB013
+Codename: SATB013
 Release Date: 26/07/16
 User Interface: Text Based
-Features: SBATB012 + introduction.
+Features: SATB012 + introduction.
 
 
-Codename: SBATB021
+Codename: SATB021
 Release Date: 27/07/16 
 User Interface: Text Based
-Features: SBATB013 + Win or Lose Feature where the Users define if the stat was succesful or not.
+Features: SATB013 + Win or Lose Feature where the Users define if the stat was succesful or not.
 
 
-Codename: SBATB022
+Codename: SATB022
 Release Date: 27/07/16 
 User Interface: Text Based
-Features: SBATB021 + Updated Introductory text on how to use the program.
+Features: SATB021 + Updated Introductory text on how to use the program.
 
 
-Codename: SBATB023
+Codename: SATB023
 Release Date: 27/07/16 
 User Interface: Text Based
-Features: SBATB022 + Added quit function.
+Features: SATB022 + Added quit function.
 
 
-Codename: SBATB024
+Codename: SATB024
 Release Date: 27/07/16 
 User Interface: Text Based
-Features: SBATB023 + Improved output when you count stats.
+Features: SATB023 + Improved output when you count stats.
 
 
-Codename: SBATB025
+Codename: SATB025
 Release Date: 27/07/16 
 User Interface: Text Based
-Features: SBATB024 + Updated Quit function and stats are now printed out and at the end. 
+Features: SATB024 + Updated Quit function and stats are now printed out and at the end. 
 
 
-Codename: SBATB026
+Codename: SATB026
 Release Date: 27/07/16 
 User Interface: Text Based
-Features: SBATB025 + Updated Final Output with the Total Stats.
+Features: SATB025 + Updated Final Output with the Total Stats.
 
 
-Codename: SBATB027
+Codename: SATB027
 Release Date: 27/07/16 
 User Interface: Text Based
-Features: SBATB026 + now Long Pass stat is supported.
+Features: SATB026 + now Long Pass stat is supported.
 
 
-Codename: SBATB031
+Codename: SATB031
 Release Date: 03/08/16 
 User Interface: Text Based
-Features: SBATB027 + stats can go countless
+Features: SATB027 + stats can go countless
 
 
-Codename: SBATB032
+Codename: SATB032
 Release Date: 03/08/16 
 User Interface: Text Based
-Features: SBATB031 + updated Long Pass Stat
+Features: SATB031 + updated Long Pass Stat
 
-Codename: SBATB033
+Codename: SATB033
 Release Date: 04/08/16 
 User Interface: Text Based
-Features: SBATB032 + updated Long Pass Stat to Long Pass Interception on Attack/Defense-Second/Third Ball
+Features: SATB032 + updated Long Pass Stat to Long Pass Interception on Attack/Defense-Second/Third Ball
 
-Codename: SBATB041
+Codename: SATB041
 Release Date: 10/08/16 
 User Interface: Text Based
-Features: SBATB033 + save each game's stat in a seperate .txt file
+Features: SATB033 + save each game's stat in a seperate .txt file
 
-Codename: SBATB042
+Codename: SATB042
 Release Date: 10/08/16 
 User Interface: Text Based
-Features: SBATB041 + add custom name for each .txt file
+Features: SATB041 + add custom name for each .txt file
