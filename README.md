@@ -1,4 +1,5 @@
 # Siball-Analysis 
+![alt tag](https://img.shields.io/badge/lines-1000%2B-brightgreen.svg)
 ## What is Siball-Analysis?
 Siball-Analysis, SA for short, is an API for recording football stats(soccer if wou will). It is developed in python **without** using any libraries. 
 
