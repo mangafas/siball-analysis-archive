@@ -7,7 +7,7 @@ Siball-Analysis, SA for short, is an API for recording football stats(soccer if 
 SA will hopefully be available as a text-based application, a GUI *(Graphical User Interface)* application but also on iOS and Android
 
 ### Text Based Application
-It's a work in progress having released three official releases 0.3.1, 0.4.1, 0.4.5(Current). Official Releases will be on github on a every minor change and last patch (major.__minor__._patch_). Currently we are on 0.4.5. The next version will be 0.5.1 introducing the transition stat. Designed and Engineered with **Python**
+It's a work in progress having released three official releases 0.3.1, 0.4.1, 0.4.5(Current). Official Releases will be on github on a every minor change and last patch (major.__minor__._patch_). Currently we are on 0.4.5. The next version will be 0.5.1. Designed and Engineered with **Python**
 
 ### GUI Application
 Haven't started yet but plans ahead for using it with Java. 
