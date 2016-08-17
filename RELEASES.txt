@@ -82,16 +82,21 @@ User Interface: Text Based
 Features: SATB033 + save each game's stat in a seperate .txt file
 
 Codename: SATB042
-Release Date: 10/08/16 
+Release Date: 13/08/16 
 User Interface: Text Based
 Features: SATB041 + add custom name for each .txt file
 
 Codename: SATB043
-Release Date: 10/08/16 
+Release Date: 14/08/16 
 User Interface: Text Based
 Features: SATB042 + include commenting
 
-Codename: SATB043
-Release Date: 10/08/16 
+Codename: SATB044
+Release Date: 16/08/16 
 User Interface: Text Based
-Features: SATB042 + add possession loss stat 
+Features: SATB043 + add possession loss stat 
+
+Codename: SATB045
+Release Date: 17/08/16 
+User Interface: Text Based
+Features: SATB044 + offside stat 
