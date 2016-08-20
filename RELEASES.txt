@@ -100,3 +100,8 @@ Codename: SATB045
 Release Date: 17/08/16 
 User Interface: Text Based
 Features: SATB044 + offside stat 
+
+Codename: SATB045
+Release Date: 21/08/16 
+User Interface: Text Based
+Features: SATB045 + user has multiple options when he types a stat in order to record it 
