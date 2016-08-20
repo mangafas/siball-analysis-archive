@@ -1,107 +1,126 @@
 Full details about the releases.
 
-Codename: SATB011
+Codename: SATBA011
 Released Date: 22/07/16
 User Interface: Text Based
+Version: Alpha
 Features: Free Kicks(FK) and Penalty Kicks(PK) are supported.
 
 
-Codename: SATB012
+Codename: SATBA012
 Release Date: 23/07/16
 User Interface: Text Based
+Version: Alpha
 Features: SATB011 + Corner Kicks(CK), Throw Ins(TI), 1 versus 1(1v1), crosses, saves, shots, headers are supported.
 
 
-Codename: SATB013
+Codename: SATBA013
 Release Date: 26/07/16
 User Interface: Text Based
+Version: Alpha
 Features: SATB012 + introduction.
 
 
-Codename: SATB021
+Codename: SATBA021
 Release Date: 27/07/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB013 + Win or Lose Feature where the Users define if the stat was succesful or not.
 
 
-Codename: SATB022
+Codename: SATBA022
 Release Date: 27/07/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB021 + Updated Introductory text on how to use the program.
 
 
-Codename: SATB023
+Codename: SATBA023
 Release Date: 27/07/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB022 + Added quit function.
 
 
-Codename: SATB024
+Codename: SATBA024
 Release Date: 27/07/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB023 + Improved output when you count stats.
 
 
-Codename: SATB025
+Codename: SATBA025
 Release Date: 27/07/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB024 + Updated Quit function and stats are now printed out and at the end. 
 
 
-Codename: SATB026
+Codename: SATBA026
 Release Date: 27/07/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB025 + Updated Final Output with the Total Stats.
 
 
-Codename: SATB027
+Codename: SATBA027
 Release Date: 27/07/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB026 + now Long Pass stat is supported.
 
 
-Codename: SATB031
+Codename: SATBA031
 Release Date: 03/08/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB027 + stats can go countless
 
 
-Codename: SATB032
+Codename: SATBA032
 Release Date: 03/08/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB031 + updated Long Pass Stat
 
-Codename: SATB033
+Codename: SATBA033
 Release Date: 04/08/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB032 + updated Long Pass Stat to Long Pass Interception on Attack/Defense-Second/Third Ball
 
-Codename: SATB041
+Codename: SATBA041
 Release Date: 10/08/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB033 + save each game's stat in a seperate .txt file
 
-Codename: SATB042
+Codename: SATBA042
 Release Date: 13/08/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB041 + add custom name for each .txt file
 
-Codename: SATB043
+Codename: SATBA043
 Release Date: 14/08/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB042 + include commenting
 
-Codename: SATB044
+Codename: SATBA044
 Release Date: 16/08/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB043 + add possession loss stat 
 
-Codename: SATB045
+Codename: SATBA045
 Release Date: 17/08/16 
 User Interface: Text Based
+Version: Alpha
 Features: SATB044 + offside stat 
 
-Codename: SATB045
+Codename: SATBB051
 Release Date: 21/08/16 
 User Interface: Text Based
+Version: Beta
 Features: SATB045 + user has multiple options when he types a stat in order to record it 
