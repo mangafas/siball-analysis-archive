@@ -8,5 +8,14 @@ python:
   - "3.5"
   - "pypy"
   
+os:
+  - linux
+  - osx
+  - windows
+  
+matrix:
+  allow_failures:
+    - os: osx
+    - os: linux
 # command to run tests
 script: pk
