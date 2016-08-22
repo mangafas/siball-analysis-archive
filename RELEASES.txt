@@ -124,3 +124,9 @@ Release Date: 21/08/16
 User Interface: Text Based
 Version: Beta
 Features: SATB045 + user has multiple options when he types a stat in order to record it 
+
+Codename: SATBB052
+Release Date: 21/08/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB052 + a HOW TO USE.txt file was created and the intro was removed
