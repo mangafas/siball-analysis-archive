@@ -9,4 +9,4 @@ python:
   - "pypy"
   
 # command to run tests
-script: body()
+script: pk
