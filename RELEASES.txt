@@ -129,4 +129,10 @@ Codename: SATBB052
 Release Date: 21/08/16 
 User Interface: Text Based
 Version: Beta
-Features: SATB052 + a HOW TO USE.txt file was created and the intro was removed
+Features: SATB051 + a HOW TO USE.txt file was created and the intro was removed
+
+Codename: SATBB053
+Release Date: 22/08/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB052 + teams seperator and how to name your file into HOW TO USE.txt file
