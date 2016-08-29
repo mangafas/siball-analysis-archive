@@ -136,3 +136,15 @@ Release Date: 22/08/16
 User Interface: Text Based
 Version: Beta
 Features: SATB052 + teams seperator and how to name your file into HOW TO USE.txt file
+
+Codename: SATBB054 - NOT YET RELEASED
+Release Date: ##/##/## 
+User Interface: Text Based
+Version: Beta
+Features: SATB053 + keep possession time
+
+Codename: SATBB055
+Release Date: 29/08/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB052 + add intro and update howto.txt
