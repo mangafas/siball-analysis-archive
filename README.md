@@ -3,6 +3,7 @@
 ![alt tag](https://img.shields.io/badge/commits-100%2B-green.svg)
 ![alt tag](https://img.shields.io/badge/beta-running-yellowgreen.svg)
 ![alt tag](https://img.shields.io/badge/alpha-closed-red.svg)
+![alt tag](https://img.shields.io/badge/version-v0.5.1-blue.svg)
 ## What is Siball-Analysis?
 Siball-Analysis, SA for short, is a text-based software for recording football stats(soccer if wou will). It is developed in python.  You can find it on the project's [github page](https://mangafas.github.io/siball-analysis/) and the github page's [branch](https://github.com/mangafas/siball-analysis/tree/gh-pages) on github.
 
