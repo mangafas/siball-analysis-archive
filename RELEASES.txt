@@ -147,4 +147,10 @@ Codename: SATBB055
 Release Date: 29/08/16 
 User Interface: Text Based
 Version: Beta
-Features: SATB052 + add intro and update howto.txt
+Features: SATB053 + add intro and update howto.txt
+
+Codename: SATBB056
+Release Date: 29/08/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB055 + colored text!
