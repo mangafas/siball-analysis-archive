@@ -149,8 +149,14 @@ User Interface: Text Based
 Version: Beta
 Features: SATB053 + add intro and update howto.txt
 
-Codename: SATBB056
-Release Date: 29/08/16 
+Codename: SATBB057
+Release Date: 03/09/16 
 User Interface: Text Based
 Version: Beta
 Features: SATB055 + colored text!
+
+Codename: SATBB05
+Release Date: 03/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB055 + tead seperator asks for which team
