@@ -1,6 +1,6 @@
 # Siball-Analysis 
 ![alt tag](https://img.shields.io/badge/lines-1000%2B-brightgreen.svg)
-![alt tag](https://img.shields.io/badge/commits-100%2B-green.svg)
+![alt tag](https://img.shields.io/badge/commits-150%2B-green.svg)
 ![alt tag](https://img.shields.io/badge/beta-running-yellowgreen.svg)
 ![alt tag](https://img.shields.io/badge/alpha-closed-red.svg)
 ![alt tag](https://img.shields.io/badge/version-v0.5.1-blue.svg)
