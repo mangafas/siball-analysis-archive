@@ -155,8 +155,14 @@ User Interface: Text Based
 Version: Beta
 Features: SATB055 + colored text!
 
-Codename: SATBB05
+Codename: SATBB058
 Release Date: 03/09/16 
 User Interface: Text Based
 Version: Beta
-Features: SATB055 + tead seperator asks for which team
+Features: SATB055 + team seperator asks for which team you are recording stats for
+
+Codename: SATBB056
+Release Date: 06/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB058 + add transition stat
