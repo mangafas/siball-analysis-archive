@@ -172,3 +172,10 @@ Release Date: 07/09/16
 User Interface: Text Based
 Version: Beta
 Features: SATB056 + possession counter
+
+Codename: SATBB059
+Release Date: 07/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB056 + SATB054 + commenting, possession counter customazitation
+
