@@ -166,3 +166,9 @@ Release Date: 06/09/16
 User Interface: Text Based
 Version: Beta
 Features: SATB058 + add transition stat
+
+Codename: SATBB054
+Release Date: 07/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB056 + possession counter
