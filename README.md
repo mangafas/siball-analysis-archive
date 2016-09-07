@@ -4,8 +4,7 @@
 ![alt tag](https://img.shields.io/badge/beta-running-yellowgreen.svg)
 ![alt tag](https://img.shields.io/badge/alpha-closed-red.svg)
 ![alt tag](https://img.shields.io/badge/version-v0.5.1-blue.svg)
-![alt tag](https://img.shields.io/badge/missing-v0.5.4-fe0000.svg)
-![alt tag](https://img.shields.io/badge/in progress-v0.5.4-0000fe.svg)
+![alt tag](https://img.shields.io/badge/in progress-v0.5.9-0000fe.svg)
 
 ## What is Siball-Analysis?
 Siball-Analysis, SA for short, is a text-based software for recording football stats(soccer if wou will). It is developed in python.  You can find it on the project's [github page](https://mangafas.github.io/siball-analysis/) and the github page's [branch](https://github.com/mangafas/siball-analysis/tree/gh-pages) on github.
@@ -14,7 +13,7 @@ Siball-Analysis, SA for short, is a text-based software for recording football s
 SA will hopefully be available as a text-based application, a GUI *(Graphical User Interface)* application but also on iOS and Android
 
 ### Text Based Application
-It's a work in progress having released three official alpha releases 0.3.1, 0.4.1, 0.4.5 and one beta release 0.5.1. Official Releases will be on github on a every minor change and last patch (major.__minor__._patch_). Currently we are on 0.5.8. The next version will be 0.5.4. that is not yet developed. Designed and Engineered with **Python** with **subprocess** library
+It's a work in progress having released three official alpha releases 0.3.1, 0.4.1, 0.4.5 and one beta release 0.5.1. Official Releases will be on github on a every minor change and last patch (major.__minor__._patch_). Currently we are on 0.5.8. The next version will be 0.5.9. that is not yet developed. Designed and Engineered with **Python** with **subprocess** library
 
 ### GUI Application
 Haven't started yet but plans ahead for using it with Java. 
