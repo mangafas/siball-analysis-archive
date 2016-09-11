@@ -184,3 +184,9 @@ Release Date: 11/09/16
 User Interface: Text Based
 Version: Beta
 Features: SATB061 + global-lise transition stat
+
+Codename: SATBB063
+Release Date: 12/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB061 + add gk turnover stat
