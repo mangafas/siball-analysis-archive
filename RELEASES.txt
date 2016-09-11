@@ -178,3 +178,9 @@ Release Date: 11/09/16
 User Interface: Text Based
 Version: Beta
 Features: SATB059 + update transition stat
+
+Codename: SATBB062
+Release Date: 11/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB061 + global-lise transition stat

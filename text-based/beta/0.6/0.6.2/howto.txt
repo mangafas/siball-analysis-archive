@@ -1,0 +1,71 @@
+How to use Siball-Analysis:
+1. Enter the games name.
+    How to name your file/game:
+    "hometeam-awayteam-date"
+    example:
+    brazil-germany-20.8.2016
+
+2. Enter the command to record the desired stat
+3. Write how the stat went from the available options
+4. If you want to quit the program or if the game ended type one of the quit commands to quit.
+Commands on how to use the program
+
+
+Stat -------> commands
+for help press "h" or "help"
+
+Penalty Kick ---> "pk", "penalty kick", "Penalty kick", "Penalty Kick", "penalty Kick", "PK", "Pk", "pK", "a1ta", "penalty kicks", "Penalty kicks", "Penalty Kicks", "penalty Kicks",  "penalty kick ", "Penalty kick ", "Penalty Kick ", "penalty Kick ", "penalty kicks ", "Penalty kicks ", "Penalty Kicks ", "penalty Kicks ", "01"
+goal ---> "goal", "Goal", "GOAL", "goal ", "Goal ", "GOAL ",  "011"
+missed ---> "missed", "Missed", "MISSED", "missed ", "Missed ", "MISSED ", "miss", "Miss", "MISS", "miss ", "Miss ", "MISS ", "012"
+saved ---> "saved", "Saved", "SAVED", "saved ", "Saved ", "SAVED ", "save", "Save", "SAVE", "save ", "Save ", "SAVE ", 013
+
+free kick ---> "fk", "free kick", "Free kick", "Free Kick", "free Kick", "FK", "Fk", "fK", "a1ta", "free kicks", "Free kicks", "Free Kicks", "free Kicks",  "free kick ", "Free kick ", "Free Kick ", "free Kick ", "free kicks ", "Free kicks ", "Free Kicks ", "free Kicks ", "02"
+good delivery ---> "gd", "GD", "gd ", "GD ", "021"
+poor delivery ---> "pd", "PD", "pd ", "PD ", "022"
+
+corner kick ---> "ck", "corner kick", "Corner kick", "Corner Kick", "corner Kick", "CK", "Ck", "cK", "a1ta", "corner kicks", "Corner kicks", "Corner Kicks", "corner Kicks",  "corner kick ", "Corner kick ", "Corner Kick ", "corner Kick ", "corner kicks ", "Corner kicks ", "Corner Kicks ", "corner Kicks ", "03"
+good delivery ---> "gd", "GD", "gd ", "GD ", "031"
+poor delivery ---> "pd", "PD", "pd ", "PD ", "032"
+
+corner ---> "ti", "throw in", "Throw in", "Throw In", "throw In", "TI", "Ti", "tI", "a1ta", "throw ins", "Throw ins", "Throw Ins", "throw Ins",  "throw in ", "Throw in ", "Throw In ", "throw In ", "throw ins ", "Throw ins ", "Throw Ins ", "throw Ins ", "04"
+good delivery ---> "gd", "GD", "gd ", "GD ", "041"
+poor delivery ---> "pd", "PD", "pd ", "PD ", "042"
+
+cross ---> "cross", "Cross", "Cross ", "cross ", "crosses", "Crosses", "Crosses ", "crosses ", "a1ta", "05"
+good delivery ---> "gd", "GD", "gd ", "GD ", "051"
+poor delivery ---> "pd", "PD", "pd ", "PD ", "052"
+
+1vs1 ---> "1v1", "1vs1", "1 versus 1", "1 Versus 1", "1VS1", "1v1 ", "1vs1 ", "1 versus 1 ", "1 Versus 1 ", "1VS1 ", "a1ta", "06"
+won ---> "w", "W", "w ","W ", "won", "Won", "WON", "won ", "Won ", "WON ", "061"
+lost ---> "l", "L", "l ","L ", "lost", "Lost", "LOST", "lost ", "Lost ", "LOST ", "062"
+
+shot ---> "shot", "Shot", "SHOT", "shot ", "Shot ", "SHOT ", "shots", "Shots", "SHOTS", "shots ", "Shots ", "SHOTS ", "a1ta", "07"
+on target ---> "on target", "On target", "On Target", "ON TARGET", "on target ", "On target ", "On Target ", "ON TARGET ", "ont", "ONT", "ont ", "ONT ", "071"
+off target ---> "off target", "Off target", "Off Target", "OFF TARGET", "off target ", "Off target ", "Off Target ", "OFF TARGET ", "oft", "OFT", "oft ", "OFT ", "072"
+
+header ---> ["header", "Header", "HEADER", "header ", "Header ", "HEADER ", "header", "Header", "HEADER", "headers ", "Headers ", "HEADERS ", "a1ta", "08"
+on target ---> "on target", "On target", "On Target", "ON TARGET", "on target ", "On target ", "On Target ", "ON TARGET ", "ont", "ONT", "ont ", "ONT ", "081"
+off target ---> "off target", "Off target", "Off Target", "OFF TARGET", "off target ", "Off target ", "Off Target ", "OFF TARGET ", "oft", "OFT", "oft ", "OFT ", "082"
+
+save ---> "save", "Save", "SAVE", "saves", "Saves", "SAVES", "save ", "Save ", "SAVE ", "saves ", "Saves ", "SAVES ", "a1ta", "09"
+
+long pass interception ---> "long pass", "Long pass", "long pass ", "Long Pass ", "LP", "lp", "LP ", "lp ", "long pass interception", "Long pass interception", "long pass interception ", "Long Pass Interception ", "LPI", "lpi", "LPI ", "lpi ", "a1ta", "10"
+on attack ---> "attack", "Attack", "ATTACK", "attack ", "Attack ", "ATTACK ", "a", "33", "3/3", "33 ", "3/3 ", "101"
+second ball ---> "second ball", "Second ball", "SECOND BALL ", "second ball ", "Second ball ", "SECOND BALL ", "SB", "sb", "SB ", "sb ", "1011"
+third ball ---> "third ball", "Third ball", "THIRD BALL ", "third ball ", "Third ball ", "THIRD BALL ", "TB", "tb", "TB ", "tb ", "1012"
+on defense ---> "defense", "Defense", "DEFENSE", "defense ", "Defense ", "DEFENSE ", "d", "13", "1/3", "13 ", "1/3", "102"]
+second ball ---> "second ball", "Second ball", "SECOND BALL ", "second ball ", "Second ball ", "SECOND BALL ", "SB", "sb", "SB ", "sb ", "1021"
+third ball ---> "third ball", "Third ball", "THIRD BALL ", "third ball ", "Third ball ", "THIRD BALL ", "TB", "tb", "TB ", "tb ", "1022"
+
+possession loss ---> "pl", "PL", "Possession Loss", "Possession loss", "possession loss", "pl ", "PL ", "Possession Loss ", "Possession loss ", "possession loss ", "a1ta", "11"
+on attack ---> "attack", "Attack", "ATTACK", "attack ", "Attack ", "ATTACK ", "a", "33", "3/3", "33 ", "3/3 ", "111"
+from midfield ---> "midfield", "Midfield", "MIDFIELD", "midfield ", "Midfield ", "MIDFIELD ", "m", "23", "2/3", "23 ", "2/3 ", "1111"
+from defense ---> "defense", "Defense", "DEFENSE", "defense ", "Defense ", "DEFENSE ", "d", "13", "1/3", "13 ", "1/3", "1112"
+on midfield ---> "midfield", "Midfield", "MIDFIELD", "midfield ", "Midfield ", "MIDFIELD ", "m", "23", "2/3", "23 ", "2/3 ", "112"
+from attack ---> "attack", "Attack", "ATTACK", "attack ", "Attack ", "ATTACK ", "a", "33", "3/3", "33 ", "3/3 ", "1121"
+from defense ---> "defense", "Defense", "DEFENSE", "defense ", "Defense ", "DEFENSE ", "d", "13", "1/3", "13 ", "1/3", "1122"
+on defense ---> "defense", "Defense", "DEFENSE", "defense ", "Defense ", "DEFENSE ", "d", "13", "1/3", "13 ", "1/3", "113"
+from attack ---> "attack", "Attack", "ATTACK", "attack ", "Attack ", "ATTACK ", "a", "33", "3/3", "33 ", "3/3 ", "1131"
+from midfield ---> "midfield", "Midfield", "MIDFIELD", "midfield ", "Midfield ", "MIDFIELD ", "m", "23", "2/3", "23 ", "2/3 ", "1132"
+
+offside ---> "offside", "Offside", "offside ", "Offside ", "a1ta", "12"
