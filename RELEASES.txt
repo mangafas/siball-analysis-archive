@@ -189,4 +189,10 @@ Codename: SATBB063
 Release Date: 12/09/16 
 User Interface: Text Based
 Version: Beta
-Features: SATB061 + add gk turnover stat
+Features: SATB062 + add gk turnover stat
+
+Codename: SATBB064
+Release Date: 12/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB063 + update howto.txt file
