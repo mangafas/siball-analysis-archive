@@ -196,3 +196,9 @@ Release Date: 12/09/16
 User Interface: Text Based
 Version: Beta
 Features: SATB063 + update howto.txt file
+
+Codename: SATBB065
+Release Date: 17/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB064 + code is pep8 friendly
