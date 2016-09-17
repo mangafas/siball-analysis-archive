@@ -1,0 +1,81 @@
+How to use Siball-Analysis:
+1. Enter the games name.
+    How to name your file/game:
+    "hometeam-awayteam-date"
+    example:
+    brazil-germany-20.8.2016
+
+2. Enter the command to record the desired stat
+3. If you want to count possession time, type the team's name as you typed it in the file
+4. Write how the stat went from the available options
+5. If you want to quit the program or if the game ended type one of the quit commands to quit.
+Commands on how to use the program
+
+
+Stat -------> commands
+for help press "h" or "help"
+
+Penalty Kick ---> "pk", "penalty kick", "Penalty kick", "Penalty Kick", "penalty Kick", "PK", "Pk", "pK", "a1ta", "penalty kicks", "Penalty kicks", "Penalty Kicks", "penalty Kicks",  "penalty kick ", "Penalty kick ", "Penalty Kick ", "penalty Kick ", "penalty kicks ", "Penalty kicks ", "Penalty Kicks ", "penalty Kicks "
+goal ---> "goal", "Goal", "GOAL", "goal ", "Goal ", "GOAL ",
+missed ---> "missed", "Missed", "MISSED", "missed ", "Missed ", "MISSED ", "miss", "Miss", "MISS", "miss ", "Miss ", "MISS "
+saved ---> "saved", "Saved", "SAVED", "saved ", "Saved ", "SAVED ", "save", "Save", "SAVE", "save ", "Save ", "SAVE "
+
+free kick ---> "fk", "free kick", "Free kick", "Free Kick", "free Kick", "FK", "Fk", "fK", "a1ta", "free kicks", "Free kicks", "Free Kicks", "free Kicks",  "free kick ", "Free kick ", "Free Kick ", "free Kick ", "free kicks ", "Free kicks ", "Free Kicks ", "free Kicks "
+good delivery ---> "gd", "GD", "gd ", "GD "
+poor delivery ---> "pd", "PD", "pd ", "PD "
+
+corner kick ---> "ck", "corner kick", "Corner kick", "Corner Kick", "corner Kick", "CK", "Ck", "cK", "a1ta", "corner kicks", "Corner kicks", "Corner Kicks", "corner Kicks",  "corner kick ", "Corner kick ", "Corner Kick ", "corner Kick ", "corner kicks ", "Corner kicks ", "Corner Kicks ", "corner Kicks "
+good delivery ---> "gd", "GD", "gd ", "GD "
+poor delivery ---> "pd", "PD", "pd ", "PD "
+
+corner ---> "ti", "throw in", "Throw in", "Throw In", "throw In", "TI", "Ti", "tI", "a1ta", "throw ins", "Throw ins", "Throw Ins", "throw Ins",  "throw in ", "Throw in ", "Throw In ", "throw In ", "throw ins ", "Throw ins ", "Throw Ins ", "throw Ins "
+good delivery ---> "gd", "GD", "gd ", "GD "
+poor delivery ---> "pd", "PD", "pd ", "PD "
+
+cross ---> "cross", "Cross", "Cross ", "cross ", "crosses", "Crosses", "Crosses ", "crosses "
+good delivery ---> "gd", "GD", "gd ", "GD "
+poor delivery ---> "pd", "PD", "pd ", "PD "
+
+1vs1 ---> "1v1", "1vs1", "1 versus 1", "1 Versus 1", "1VS1", "1v1 ", "1vs1 ", "1 versus 1 ", "1 Versus 1 ", "1VS1 "
+won ---> "w", "W", "w ","W ", "won", "Won", "WON", "won ", "Won ", "WON "
+lost ---> "l", "L", "l ","L ", "lost", "Lost", "LOST", "lost ", "Lost ", "LOST "
+
+shot ---> "shot", "Shot", "SHOT", "shot ", "Shot ", "SHOT ", "shots", "Shots", "SHOTS", "shots ", "Shots ", "SHOTS "
+on target ---> "on target", "On target", "On Target", "ON TARGET", "on target ", "On target ", "On Target ", "ON TARGET ", "ont", "ONT", "ont ", "ONT "
+off target ---> "off target", "Off target", "Off Target", "OFF TARGET", "off target ", "Off target ", "Off Target ", "OFF TARGET ", "oft", "OFT", "oft ", "OFT "
+
+header ---> ["header", "Header", "HEADER", "header ", "Header ", "HEADER ", "header", "Header", "HEADER", "headers ", "Headers ", "HEADERS "
+on target ---> "on target", "On target", "On Target", "ON TARGET", "on target ", "On target ", "On Target ", "ON TARGET ", "ont", "ONT", "ont ", "ONT "
+off target ---> "off target", "Off target", "Off Target", "OFF TARGET", "off target ", "Off target ", "Off Target ", "OFF TARGET ", "oft", "OFT", "oft ", "OFT "
+
+save ---> "save", "Save", "SAVE", "saves", "Saves", "SAVES", "save ", "Save ", "SAVE ", "saves ", "Saves ", "SAVES "
+
+long pass interception ---> "long pass", "Long pass", "long pass ", "Long Pass ", "LP", "lp", "LP ", "lp ", "long pass interception", "Long pass interception", "long pass interception ", "Long Pass Interception ", "LPI", "lpi", "LPI ", "lpi ", "a1ta"
+on attack ---> "attack", "Attack", "ATTACK", "attack ", "Attack ", "ATTACK ", "a", "33", "3/3", "33 ", "3/3 "
+second ball ---> "second ball", "Second ball", "SECOND BALL ", "second ball ", "Second ball ", "SECOND BALL ", "SB", "sb", "SB ", "sb "
+third ball ---> "third ball", "Third ball", "THIRD BALL ", "third ball ", "Third ball ", "THIRD BALL ", "TB", "tb", "TB ", "tb "
+on defense ---> "defense", "Defense", "DEFENSE", "defense ", "Defense ", "DEFENSE ", "d", "13", "1/3", "13 ", "1/3"
+second ball ---> "second ball", "Second ball", "SECOND BALL ", "second ball ", "Second ball ", "SECOND BALL ", "SB", "sb", "SB ", "sb "
+third ball ---> "third ball", "Third ball", "THIRD BALL ", "third ball ", "Third ball ", "THIRD BALL ", "TB", "tb", "TB ", "tb "
+
+possession loss ---> "pl", "PL", "Possession Loss", "Possession loss", "possession loss", "pl ", "PL ", "Possession Loss ", "Possession loss ", "possession loss "
+on attack ---> "attack", "Attack", "ATTACK", "attack ", "Attack ", "ATTACK ", "a", "33", "3/3", "33 ", "3/3 "
+from midfield ---> "midfield", "Midfield", "MIDFIELD", "midfield ", "Midfield ", "MIDFIELD ", "m", "23", "2/3", "23 ", "2/3 "
+from defense ---> "defense", "Defense", "DEFENSE", "defense ", "Defense ", "DEFENSE ", "d", "13", "1/3", "13 ", "1/3"
+on midfield ---> "midfield", "Midfield", "MIDFIELD", "midfield ", "Midfield ", "MIDFIELD ", "m", "23", "2/3", "23 ", "2/3 "
+from attack ---> "attack", "Attack", "ATTACK", "attack ", "Attack ", "ATTACK ", "a", "33", "3/3", "33 ", "3/3 "
+from defense ---> "defense", "Defense", "DEFENSE", "defense ", "Defense ", "DEFENSE ", "d", "13", "1/3", "13 ", "1/3"
+on defense ---> "defense", "Defense", "DEFENSE", "defense ", "Defense ", "DEFENSE ", "d", "13", "1/3", "13 ", "1/3"
+from attack ---> "attack", "Attack", "ATTACK", "attack ", "Attack ", "ATTACK ", "a", "33", "3/3", "33 ", "3/3 "
+from midfield ---> "midfield", "Midfield", "MIDFIELD", "midfield ", "Midfield ", "MIDFIELD ", "m", "23", "2/3", "23 ", "2/3 "
+
+offside ---> "offside", "Offside", "offside ", "Offside "
+
+transition ---> "transition", "Transition", "Transition ", "transition"
+from attack ---> "attack", "Attack", "ATTACK", "attack ", "Attack ", "ATTACK ", "a", "33", "3/3", "33 ", "3/3 "
+from midfield ---> "midfield", "Midfield", "MIDFIELD", "midfield ", "Midfield ", "MIDFIELD ", "m", "23", "2/3", "23 ", "2/3 "
+from defense ---> "defense", "Defense", "DEFENSE", "defense ", "Defense ", "DEFENSE ", "d", "13", "1/3", "13 ", "1/3"
+on attack ---> "attack", "Attack", "ATTACK", "attack ", "Attack ", "ATTACK ", "a", "33", "3/3", "33 ", "3/3 "
+on midfield ---> "midfield", "Midfield", "MIDFIELD", "midfield ", "Midfield ", "MIDFIELD ", "m", "23", "2/3", "23 ", "2/3 "
+
+Goalkeeper Turnover ---> "gkto", "Goalkeeper Turnover", "GOALKEEPER TURNOVER", "gkto ", "Goalkeeper Turnover ", "GOALKEEPER TURNOVER "
