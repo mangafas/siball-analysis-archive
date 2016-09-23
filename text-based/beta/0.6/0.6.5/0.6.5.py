@@ -289,35 +289,35 @@ Great! I hope %s has a good game!
                   "SAVES "]
 
     # -----> * Long Pass Variables * <-----
-    long_passes_range = range(0, 1000)
-    long_passes_list = list(long_passes_range)
+    lpi_range = range(0, 1000)
+    lpi_list = list(lpi_range)
 
-    long_passes_range_sb_defense = range(0, 1000)
-    long_passes_list_second_ball_defense = list(long_passes_range_sb_defense)
+    lpi_range_sb_defense = range(0, 1000)
+    lpi_list_sb_defense = list(lpi_range_sb_defense)
 
-    long_passes_range_tb_defense = range(0, 1000)
-    long_passes_list_third_ball_defense = list(long_passes_range_tb_defense)
+    lpi_range_tb_defense = range(0, 1000)
+    lpi_list_tb_defense = list(lpi_range_tb_defense)
 
-    long_passes_range_attack = range(0, 1000)
-    long_passes_list_attack = list(long_passes_range_attack)
+    lpi_range_attack = range(0, 1000)
+    lpi_list_attack = list(lpi_range_attack)
 
-    long_passes_range_sb_attack = range(0, 1000)
-    long_passes_list_second_ball_attack = list(long_passes_range_sb_attack)
+    lpi_range_sb_attack = range(0, 1000)
+    lpi_list_sb_attack = list(lpi_range_sb_attack)
 
-    long_passes_range_tb_attack = range(0, 1000)
-    long_passes_list_third_ball_attack = list(long_passes_range_tb_attack)
+    lpi_range_tb_attack = range(0, 1000)
+    lpi_list_tb_attack = list(lpi_range_tb_attack)
 
-    long_passes_range_defense = range(0, 1000)
-    long_passes_list_defense = list(long_passes_range_defense)
+    lpi_range_defense = range(0, 1000)
+    lpi_list_defense = list(lpi_range_defense)
 
-    long_passes_input_defense = '''second_ball/third_ball
+    lpi_input_defense = '''sb/tb
 '''
-    long_passes_input = '''attack/defence
+    lpi_input = '''attack/defence
 '''
-    long_passes_input_attack = '''second ball/third ball
+    lpi_input_attack = '''second ball/third ball
 '''
 
-    attack_lpi, defense_lpi = long_passes_input.split("/")
+    attack_lpi, defense_lpi = lpi_input.split("/")
 
     long_pass_words = ["long pass", "Long pass", "long pass ", "Long Pass ",
                        "long pass interception", "Long pass interception",
@@ -441,28 +441,25 @@ Great! I hope %s has a good game!
 
     # -----> * Transition * <-----
 
-    transition_range = range(0, 1000)
-    transition_list = list(transition_range)
+    pw_range_33_home = range(0, 1000)
+    pw_list_33_home = list(pw_range_33_home)
 
-    transition_range_33_home = range(0, 1000)
-    transition_list_33_home = list(transition_range_33_home)
+    pw_range_home = range(0, 1000)
+    pw_list_home = list(pw_range_home)
 
-    transition_range_home = range(0, 1000)
-    transition_list_home = list(transition_range_home)
+    pw_range_23_33_home = range(0, 1000)
+    pw_list_23_33_home = list(pw_range_23_33_home)
 
-    transition_range_23_33_home = range(0, 1000)
-    transition_list_23_33_home = list(transition_range_23_33_home)
+    pw_range_13_home = range(0, 1000)
+    pw_list_13_home = list(pw_range_13_home)
 
-    transition_range_13_home = range(0, 1000)
-    transition_list_13_home = list(transition_range_13_home)
+    pw_range_13_33_home = range(0, 1000)
+    pw_list_13_33_home = list(pw_range_13_33_home)
 
-    transition_range_13_33_home = range(0, 1000)
-    transition_list_13_33_home = list(transition_range_13_33_home)
+    pw_range_13_23_home = range(0, 1000)
+    pw_list_13_23_home = list(pw_range_13_23_home)
 
-    transition_range_13_23_home = range(0, 1000)
-    transition_list_13_23_home = list(transition_range_13_23_home)
-
-    transition_input = home + "/" + away + '''
+    pw_input = home + "/" + away + '''
 '''
 
     home_input_home = '''3/3
@@ -470,81 +467,82 @@ Great! I hope %s has a good game!
 1/3
 '''
 
-    defense_transition_print_home = '''3/3
+    defense_pw_print_home = '''3/3
 2/3
 '''
 
-    transition_words = ["transition", "Transition", "Transition ",
-                        "transition"]
+    pw_words = ["transition", "Transition", "Transition ",
+                "transition"]
 
-    transition_midfield_words_home = ["midfield", "Midfield", "MIDFIELD",
-                                      "midfield ", "Midfield ", "MIDFIELD ",
-                                      "m", "23", "2/3", "23 ", "2/3 "]
+    pw_midfield_words_home = ["midfield", "Midfield", "MIDFIELD",
+                              "midfield ", "Midfield ", "MIDFIELD ",
+                              "m", "23", "2/3", "23 ", "2/3 "]
 
-    transition_defense_words_home = ["defense", "Defense", "DEFENSE",
-                                     "defense ", "Defense ", "DEFENSE ", "d",
-                                     "13", "1/3", "13 ", "1/3", "113"]
+    pw_defense_words_home = ["defense", "Defense", "DEFENSE",
+                             "defense ", "Defense ", "DEFENSE ", "d",
+                             "13", "1/3", "13 ", "1/3", "113"]
 
-    defense_attack_transition_words_home = ["attack", "Attack", "ATTACK",
-                                            "attack ", "Attack ", "ATTACK ",
-                                            "3/3", "a", "33", "33 ", "3/3 "]
+    defense_attack_pw_words_home = ["attack", "Attack", "ATTACK",
+                                    "attack ", "Attack ", "ATTACK ",
+                                    "3/3", "a", "33", "33 ", "3/3 "]
 
-    defense_midfield_transition_words_home = ["midfield", "Midfield",
-                                              "MIDFIELD", "midfield ",
-                                              "Midfield ", "MIDFIELD ",
-                                              "23", "2/3", "23 ", "2/3 ", "m"]
+    defense_midfield_pw_words_home = ["midfield", "Midfield",
+                                      "MIDFIELD", "midfield ",
+                                      "Midfield ", "MIDFIELD ",
+                                      "23", "2/3", "23 ", "2/3 ", "m"]
 
-    transition_attack_words_home = ["attack", "Attack", "ATTACK", "attack ",
-                                    "Attack ", "ATTACK ", "a", "33", "3/3",
-                                    "33 ", "3/3"]
+    pw_attack_words_home = ["attack", "Attack", "ATTACK", "attack ",
+                            "Attack ", "ATTACK ", "a", "33", "3/3",
+                            "33 ", "3/3"]
 
-    transition_range_33_away = range(0, 1000)
-    transition_list_33_away = list(transition_range_33_away)
+    pw_range_33_away = range(0, 1000)
+    pw_list_33_away = list(pw_range_33_away)
+# ---------------------------------500th line---------------------------------
 
-    transition_range_away = range(0, 1000)
-    transition_list_away = list(transition_range_away)
+    pw_range_away = range(0, 1000)
+    pw_list_away = list(pw_range_away)
 
-    transition_range_23_33_away = range(0, 1000)
-    transition_list_23_33_away = list(transition_range_23_33_away)
+    pw_range_23_33_away = range(0, 1000)
+    pw_list_23_33_away = list(pw_range_23_33_away)
 
-    transition_range_13_away = range(0, 1000)
-    transition_list_13_away = list(transition_range_13_away)
+    pw_range_13_away = range(0, 1000)
+    pw_list_13_away = list(pw_range_13_away)
 
-    transition_range_13_33_away = range(0, 1000)
-    transition_list_13_33_away = list(transition_range_13_33_away)
+    pw_range_13_33_away = range(0, 1000)
+    pw_list_13_33_away = list(pw_range_13_33_away)
 
-    transition_range_13_23_away = range(0, 1000)
-    transition_list_13_23_away = list(transition_range_13_23_away)
+    pw_range_13_23_away = range(0, 1000)
+    pw_list_13_23_away = list(pw_range_13_23_away)
 
     away_input_away = '''3/3
 2/3
 1/3
 '''
 
-    defense_transition_print_away = '''3/3
+    defense_pw_print_away = '''3/3
 2/3
 '''
 
-    transition_midfield_words_away = ["midfield", "Midfield", "MIDFIELD",
-                                      "midfield ", "Midfield ", "MIDFIELD ",
-                                      "23", "m", "2/3", "23 ", "2/3 "]
+    pw_midfield_words_away = ["midfield", "Midfield", "MIDFIELD",
+                              "midfield ", "Midfield ", "MIDFIELD ",
+                              "23", "m", "2/3", "23 ", "2/3 "]
 
-    transition_defense_words_away = ["defense", "Defense", "DEFENSE",
-                                     "defense ", "Defense ", "DEFENSE ", "d",
-                                     "1/3", "13", "13 ", "1/3", "113"]
+    pw_defense_words_away = ["defense", "Defense", "DEFENSE",
+                             "defense ", "Defense ", "DEFENSE ", "d",
+                             "1/3", "13", "13 ", "1/3"]
 
-    defense_attack_transition_words_away = ["attack", "Attack", "ATTACK",
-                                            "attack ", "Attack ", "ATTACK ",
-                                            "33 ", "3/3 ", "a", "33", "3/3"]
+    defense_attack_pw_words_away = ["attack", "Attack", "ATTACK",
+                                    "attack ", "Attack ", "ATTACK ",
+                                    "33 ", "3/3 ", "a", "33", "3/3"]
 
-    defense_midfield_transition_words_away = ["midfield", "Midfield",
-                                              "MIDFIELD", "midfield ",
-                                              "Midfield ", "MIDFIELD ",
-                                              "m", "23", "2/3", "23 ", "2/3 "]
+    defense_midfield_pw_words_away = ["midfield", "Midfield",
+                                      "MIDFIELD", "midfield ",
+                                      "Midfield ", "MIDFIELD ",
+                                      "m", "23", "2/3", "23 ", "2/3 "]
 
-    transition_attack_words_away = ["attack", "Attack", "ATTACK", "attack ",
-                                    "Attack ", "ATTACK ", "a", "33", "3/3",
-                                    "33 ", "3/3"]
+    pw_attack_words_away = ["attack", "Attack", "ATTACK", "attack ",
+                            "Attack ", "ATTACK ", "a", "33", "3/3",
+                            "33 ", "3/3"]
 
     # -----> * Goalkeeper Turnover * <-----
 
@@ -560,33 +558,33 @@ Great! I hope %s has a good game!
     global string_number_crosses_gd, string_number_crosses_pd
     global string_number_headers_pd, string_number_headers_gd
     global string_number_v1_l, string_number_v1, string_number_v1_w
-    global string_number_long_passes_third_ball, string_number_long_passes
+    global string_number_lpi_tb, string_number_lpi
     global string_number_ti_gd, string_number_ti, string_number_pl_23
-    global string_number_long_passes_second_ball_defense
-    global string_number_long_passes_attack, string_number_pl_23_13
-    global string_number_long_passes_second_ball_attack, string_number_ti_pd
+    global string_number_lpi_sb_defense
+    global string_number_lpi_attack, string_number_pl_23_13
+    global string_number_lpi_sb_attack, string_number_ti_pd
     global string_number_pl_13_23, string_number_pl_13, midfield_input
     global string_number_pl_33, string_number_pl_23_33, string_number_pl_33_13
     global string_number_pk_saved, string_number_pk, string_number_fk_gd
-    global string_number_offside, string_number_transition_23_33_away
+    global string_number_offside, string_number_pw_23_33_away
     global string_number_ck_gd, string_number_ck, end_away, start_home, team
-    global string_number_transition_33_home, string_number_shots_pd
+    global string_number_pw_33_home, string_number_shots_pd
     global string_number_crosses, string_number_shots, elapsed_away, ball_away
     global string_number_pl, string_number_transition
-    global string_number_transition_13_23_away, string_number_shots_gd
-    global string_number_transition_23_33_home, elapsed_home
-    global string_number_transition_home, string_number_transition_33_away
-    global string_number_long_passes_second_ball, string_number_pl_13_33
-    global string_number_transition_23_33, string_number_transition_13_33_away
+    global string_number_pw_13_23_away, string_number_shots_gd
+    global string_number_pw_23_33_home, elapsed_home
+    global string_number_pw_home, string_number_pw_33_away
+    global string_number_lpi_sb, string_number_pl_13_33
+    global string_number_pw_23_33, string_number_pw_13_33_away
     global string_number_save, start_away, string_number_headers
-    global string_number_long_passes_defense, string_number_transition_23
-    global string_number_transition_away, string_number_transition_13_33_home
-    global string_number_long_passes_third_ball_defense
-    global string_number_transition_13_33, string_number_transition_13_away
-    global string_number_long_passes_third_ball_attack
-    global string_number_pl_33_23, string_number_transition_13
-    global string_number_transition_13_23, string_number_transition_13_23_home
-    global string_number_transition_13_home, end_home, ball_home
+    global string_number_lpi_defense, string_number_pw_23
+    global string_number_pw_away, string_number_pw_13_33_home
+    global string_number_lpi_tb_defense
+    global string_number_pw_13_33, string_number_pw_13_away
+    global string_number_lpi_tb_attack, string_number_gkto
+    global string_number_pl_33_23, string_number_pw_13
+    global string_number_pw_13_23, string_number_pw_13_23_home
+    global string_number_pw_13_home, end_home, ball_home
 
     # false each variable to declare if a stat was called before or not
     int_number_pk_goal = False
@@ -622,13 +620,13 @@ Great! I hope %s has a good game!
     int_number_v1_l = False
     int_number_v1 = False
 
-    int_number_long_passes_second_ball_attack = False
-    int_number_long_passes_third_ball_attack = False
-    int_number_long_passes_attack = False
-    int_number_long_passes_second_ball_defense = False
-    int_number_long_passes_third_ball_defense = False
-    int_number_long_passes_defense = False
-    int_number_long_passes = False
+    int_number_lpi_sb_attack = False
+    int_number_lpi_tb_attack = False
+    int_number_lpi_attack = False
+    int_number_lpi_sb_defense = False
+    int_number_lpi_tb_defense = False
+    int_number_lpi_defense = False
+    int_number_lpi = False
 
     int_number_saves = False
 
@@ -646,20 +644,20 @@ Great! I hope %s has a good game!
     int_number_offside = False
 
     int_number_transition = False
-    int_number_transition_13_home = False
-    int_number_transition_13_23_home = False
-    int_number_transition_13_33_home = False
-    int_number_transition_23_33_home = False
-    int_number_transition_33_home = False
-    int_number_transition_home = False
+    int_number_pw_13_home = False
+    int_number_pw_13_23_home = False
+    int_number_pw_13_33_home = False
+    int_number_pw_23_33_home = False
+    int_number_pw_33_home = False
+    int_number_pw_home = False
 
-    int_number_transition_13_away = False
-    int_number_transition_13_23_away = False
-    int_number_transition_13_33_away = False
-    int_number_transition_23_33_away = False
+    int_number_pw_13_away = False
+    int_number_pw_13_23_away = False
+    int_number_pw_13_33_away = False
+    int_number_pw_23_33_away = False
 
-    int_number_transition_33_away = False
-    int_number_transition_away = False
+    int_number_pw_33_away = False
+    int_number_pw_away = False
 
     int_number_gkto = False
 
@@ -691,9 +689,9 @@ Great! I hope %s has a good game!
                 string_number_pk_goal = str(number_pk_goal)
                 # true the integer so it knows it was called
                 int_number_pk_goal = True
-                pk_string_goal_1 = "Penalty Kick goal(s): "
-                pk_print_string_goal = pk_string_goal_1 + pk_string_goal_2
-                pk_string_goal_2 = string_number_pk_goal
+                pk_goal_1 = "Penalty Kick goal(s): "
+                pk_goal_2 = string_number_pk_goal
+                pk_print_string_goal = pk_goal_1 + pk_goal_2
                 # print a nice introduction and the time a stat was called
                 print(blue % pk_print_string_goal)
 
@@ -704,9 +702,9 @@ Great! I hope %s has a good game!
                 number_pk_saved = pk_list_saved[0]
                 string_number_pk_saved = str(number_pk_saved)
                 int_number_pk_saved = True
-                pk_string_saved_1 = "Penalty Kick(s) saved: "
-                pk_string_saved_2 = string_number_pk_saved
-                pk_print_string_saved = pk_string_saved_1 + pk_string_saved_2
+                pk_saved_1 = "Penalty Kick(s) saved: "
+                pk_saved_2 = string_number_pk_saved
+                pk_print_string_saved = pk_saved_1 + pk_saved_2
                 print(red % pk_print_string_saved)
 
             elif good_bad_input_pk in missed_words:
@@ -716,9 +714,9 @@ Great! I hope %s has a good game!
                 number_pk_missed = pk_list_missed[0]
                 string_number_pk_missed = str(number_pk_missed)
                 int_number_pk_missed = True
-                pk_string_miss_1 = "Penalty Kick(s) missed: "
-                pk_string_miss_2 = string_number_pk_missed
-                pk_print_string_missed = pk_string_miss_1 + pk_string_miss_2
+                pk_miss_1 = "Penalty Kick(s) missed: "
+                pk_miss_2 = string_number_pk_missed
+                pk_print_string_missed = pk_miss_1 + pk_miss_2
                 print(red % pk_print_string_missed)
 
             first_number_pk = pk_list[0]
@@ -999,6 +997,8 @@ Great! I hope %s has a good game!
 
         # -----> * Long Passes * <-----
 
+        # -----------------------------1000th line-----------------------------
+
         elif choice in long_pass_words:
 
             print(blue % attack_lpi, red % defense_lpi)
@@ -1006,73 +1006,89 @@ Great! I hope %s has a good game!
 
             if attack_defense_input_long_pass in lpi_attack_words:
 
-                print(blue % long_passes_input_attack)
+                print(blue % lpi_input_attack)
                 sec_third_input_long_pass_attack = input()
 
                 if sec_third_input_long_pass_attack in attack_sb_words:
-                    first_number_long_passes_second_ball_attack = long_passes_list_second_ball_attack[0]
-                    long_passes_list_second_ball_attack.remove(first_number_long_passes_second_ball_attack)
-                    number_long_passes_second_ball_attack = long_passes_list_second_ball_attack[0]
-                    string_number_long_passes_second_ball_attack = str(number_long_passes_second_ball_attack)
-                    lpi_print_string_attack_sb = "Second Ball Long Pass Interceptions on Attack:" + string_number_long_passes_second_ball_attack
-                    print(white % lpi_print_string_attack_sb)
-                    int_number_long_passes_second_ball_attack = True
+                    first_number_lpi_sb_attack = lpi_list_sb_attack[0]
+                    lpi_list_sb_attack.remove(first_number_lpi_sb_attack)
+                    number_lpi_sb_attack = lpi_list_sb_attack[0]
+                    string_number_lpi_sb_attack = str(number_lpi_sb_attack)
+                    lpi_attack_sb_1 = "Second Ball Long Pass Interceptions " \
+                                      "on Attack: "
+                    lpi_attack_sb_2 = string_number_lpi_sb_attack
+                    lpi_print_attack_sb = lpi_attack_sb_1 + lpi_attack_sb_2
+                    print(white % lpi_print_attack_sb)
+                    int_number_lpi_sb_attack = True
 
                 elif sec_third_input_long_pass_attack in attack_tb_words:
-                    first_number_long_passes_third_ball_attack = long_passes_list_third_ball_attack[0]
-                    long_passes_list_third_ball_attack.remove(first_number_long_passes_third_ball_attack)
-                    number_long_passes_third_ball_attack = long_passes_list_third_ball_attack[0]
-                    string_number_long_passes_third_ball_attack = str(number_long_passes_third_ball_attack)
-                    lpi_print_string_attack_tb = "Third Ball Long Pass Interceptions on Attack:" + string_number_long_passes_third_ball_attack
-                    print(white % lpi_print_string_attack_tb)
-                    int_number_long_passes_third_ball_attack = True
+                    first_number_lpi_tb_attack = lpi_list_tb_attack[0]
+                    lpi_list_tb_attack.remove(first_number_lpi_tb_attack)
+                    number_lpi_tb_attack = lpi_list_tb_attack[0]
+                    string_number_lpi_tb_attack = str(number_lpi_tb_attack)
+                    lpi_attack_tb_1 = "Third Ball Long Pass " \
+                                      "Interceptions on Attack: "
+                    lpi_attack_tb_2 = string_number_lpi_tb_attack
+                    lpi_print_attack_tb = lpi_attack_tb_1 + lpi_attack_tb_2
+                    print(white % lpi_print_attack_tb)
+                    int_number_lpi_tb_attack = True
 
-                first_number_long_passes_attack = long_passes_list_attack[0]
-                long_passes_list_attack.remove(first_number_long_passes_attack)
-                number_long_passes_attack = long_passes_list_attack[0]
-                string_number_long_passes_attack = str(number_long_passes_attack)
-                lpi_print_string_attack = "Long Pass Interceptions on Attack:" + string_number_long_passes_attack
+                first_number_lpi_attack = lpi_list_attack[0]
+                lpi_list_attack.remove(first_number_lpi_attack)
+                number_lpi_attack = lpi_list_attack[0]
+                string_number_lpi_attack = str(number_lpi_attack)
+                lpi_attack_1 = "Long Pass Interceptions on Attack: "
+                lpi_attack_2 = string_number_lpi_attack
+                lpi_print_string_attack = lpi_attack_1 + lpi_attack_2
                 print(white % lpi_print_string_attack)
-                int_number_long_passes_attack = True
+                int_number_lpi_attack = True
 
             elif attack_defense_input_long_pass in lpi_defense_words:
 
-                print(red % long_passes_input_defense)
+                print(red % lpi_input_defense)
                 sec_third_input_long_pass_defense = input()
 
                 if sec_third_input_long_pass_defense in defense_sb_words:
-                    first_number_long_passes_second_ball_defense = long_passes_list_second_ball_defense[0]
-                    long_passes_list_second_ball_defense.remove(first_number_long_passes_second_ball_defense)
-                    number_long_passes_second_ball_defense = long_passes_list_second_ball_defense[0]
-                    string_number_long_passes_second_ball_defense = str(number_long_passes_second_ball_defense)
-                    lpi_print_string_defense_sb = "Second Ball Long Pass Interceptions on Defense:" + string_number_long_passes_second_ball_defense
-                    print(white % lpi_print_string_defense_sb)
-                    int_number_long_passes_second_ball_defense = True
+                    first_number_lpi_sb_defense = lpi_list_sb_defense[0]
+                    lpi_list_sb_defense.remove(first_number_lpi_sb_defense)
+                    number_lpi_sb_defense = lpi_list_sb_defense[0]
+                    string_number_lpi_sb_defense = str(number_lpi_sb_defense)
+                    lpi_defense_sb_1 = "Second Ball Long Pass " \
+                                       "Interceptions on Defense: "
+                    lpi_defense_sb_2 = string_number_lpi_sb_defense
+                    lpi_print_defense_sb = lpi_defense_sb_1 + lpi_defense_sb_2
+                    print(white % lpi_print_defense_sb)
+                    int_number_lpi_sb_defense = True
 
                 elif sec_third_input_long_pass_defense in defense_tb_words:
-                    first_number_long_passes_third_ball_defense = long_passes_list_third_ball_defense[0]
-                    long_passes_list_third_ball_defense.remove(first_number_long_passes_third_ball_defense)
-                    number_long_passes_third_ball_defense = long_passes_list_third_ball_defense[0]
-                    string_number_long_passes_third_ball_defense = str(number_long_passes_third_ball_defense)
-                    lpi_print_string_defense_tb = "Third Ball Long Pass Interceptions on Defense:" + string_number_long_passes_third_ball_defense
-                    print(white % lpi_print_string_defense_tb)
-                    int_number_long_passes_third_ball_defense = True
+                    first_number_lpi_tb_defense = lpi_list_tb_defense[0]
+                    lpi_list_tb_defense.remove(first_number_lpi_tb_defense)
+                    number_lpi_tb_defense = lpi_list_tb_defense[0]
+                    string_number_lpi_tb_defense = str(number_lpi_tb_defense)
+                    lpi_defense_tb_1 = "Third Ball Long Pass " \
+                                       "Interceptions on Defense: "
+                    lpi_defense_tb_2 = string_number_lpi_tb_defense
+                    lpi_print_defense_tb = lpi_defense_tb_1 + lpi_defense_tb_2
+                    print(white % lpi_print_defense_tb)
+                    int_number_lpi_tb_defense = True
 
-                first_number_long_passes_defense = long_passes_list_defense[0]
-                long_passes_list_defense.remove(first_number_long_passes_defense)
-                number_long_passes_defense = long_passes_list_defense[0]
-                string_number_long_passes_defense = str(number_long_passes_defense)
-                pk_print_string_goal = "Long Pass Interceptions on Defense:" + string_number_long_passes_defense
+                first_number_lpi_defense = lpi_list_defense[0]
+                lpi_list_defense.remove(first_number_lpi_defense)
+                number_lpi_defense = lpi_list_defense[0]
+                string_number_lpi_defense = str(number_lpi_defense)
+                pk_goal_1 = "Long Pass Interceptions on Defense:"
+                pk_goal_2 = string_number_lpi_defense
+                pk_print_string_goal = pk_goal_1 + pk_goal_2
                 print(white % pk_print_string_goal)
-                int_number_long_passes_defense = True
+                int_number_lpi_defense = True
 
-            first_number_long_passes = long_passes_list[0]
-            long_passes_list.remove(first_number_long_passes)
-            number_long_passes = long_passes_list[0]
-            string_number_long_passes = str(number_long_passes)
-            lpi_print_string = "Long Pass Interceptions: " + string_number_long_passes
+            first_number_lpi = lpi_list[0]
+            lpi_list.remove(first_number_lpi)
+            number_lpi = lpi_list[0]
+            string_number_lpi = str(number_lpi)
+            lpi_print_string = "Long Pass Interceptions: " + string_number_lpi
             print(white % lpi_print_string)
-            int_number_long_passes = True
+            int_number_lpi = True
 
         # -----> * Saves * <-----
 
@@ -1099,7 +1115,10 @@ Great! I hope %s has a good game!
                     number_pl_33_23 = pl_list_33_23[0]
                     string_number_pl_33_23 = str(number_pl_33_23)
                     int_number_pl_33_23 = True
-                    pl_print_string_33_23 = "Possession lost on offence that came from Midfield: " + string_number_pl_33_23
+                    pl_33_23_1 = "Possession lost on offence " \
+                                 "that came from Midfield: "
+                    pl_33_23_2 = string_number_pl_33_23
+                    pl_print_string_33_23 = pl_33_23_1 + pl_33_23_2
                     print(white % pl_print_string_33_23)
 
                 elif attack_input in attack_defense_words:
@@ -1108,7 +1127,10 @@ Great! I hope %s has a good game!
                     number_pl_33_13 = pl_list_33_13[0]
                     string_number_pl_33_13 = str(number_pl_33_13)
                     int_number_pl_33_13 = True
-                    pl_print_string_33_13 = "Possession lost on offence that came from Defense: " + string_number_pl_33_13
+                    pl_33_13_1 = "Possession lost on offence" \
+                                 " that came from Defense: "
+                    pl_33_13_2 = string_number_pl_33_13
+                    pl_print_string_33_13 = pl_33_13_1 + pl_33_13_2
                     print(white % pl_print_string_33_13)
 
                 first_number_pl_33 = pl_list_33[0]
@@ -1116,7 +1138,9 @@ Great! I hope %s has a good game!
                 number_pl_33 = pl_list_33[0]
                 string_number_pl_33 = str(number_pl_33)
                 int_number_pl_33 = True
-                pl_print_string_33 = "Possession lost on offence: " + string_number_pl_33
+                pl_33_1 = "Possession lost on offence: "
+                pl_33_2 = string_number_pl_33
+                pl_print_string_33 = pl_33_1 + pl_33_2
                 print(white % pl_print_string_33)
 
             elif good_bad_input_pl in pl_midfield_words:
@@ -1129,7 +1153,10 @@ Great! I hope %s has a good game!
                     number_pl_23_33 = pl_list_23_33[0]
                     string_number_pl_23_33 = str(number_pl_23_33)
                     int_number_pl_23_33 = True
-                    pl_print_string_23_33 = "Possession lost on midfield that came from Offense: " + string_number_pl_23_33
+                    pl_23_33_1 = "Possession lost on midfield that " \
+                                 "came from Offense: "
+                    pl_23_33_2 = string_number_pl_23_33
+                    pl_print_string_23_33 = pl_23_33_1 + pl_23_33_2
                     print(white % pl_print_string_23_33)
 
                 elif midfield_input in midfield_defense_words:
@@ -1138,7 +1165,10 @@ Great! I hope %s has a good game!
                     number_pl_23_13 = pl_list_23_13[0]
                     string_number_pl_23_13 = str(number_pl_23_13)
                     int_number_pl_23_13 = True
-                    pl_print_string_23_13 = "Possession lost on midfield that came from Defense: " + string_number_pl_23_13
+                    pl_23_13_1 = "Possession lost on midfield " \
+                                 "that came from Defense: "
+                    pl_23_13_2 = string_number_pl_23_13
+                    pl_print_string_23_13 = pl_23_13_1 + pl_23_13_2
                     print(white % pl_print_string_23_13)
 
                 first_number_pl_23 = pl_list_23[0]
@@ -1146,7 +1176,9 @@ Great! I hope %s has a good game!
                 number_pl_23 = pl_list_23[0]
                 string_number_pl_23 = str(number_pl_23)
                 int_number_pl_23 = True
-                pl_print_string_23 = "Possession lost on midfield: " + string_number_pl_23
+                pl_23_1 = "Possession lost on midfield: "
+                pl_23_2 = string_number_pl_23
+                pl_print_string_23 = pl_23_1 + pl_23_2
                 print(white % pl_print_string_23)
 
             elif good_bad_input_pl in pl_defense_words:
@@ -1159,7 +1191,10 @@ Great! I hope %s has a good game!
                     number_pl_13_33 = pl_list_13_33[0]
                     string_number_pl_13_33 = str(number_pl_13_33)
                     int_number_pl_13_33 = True
-                    pl_print_string_13_33 = "Possession lost on defense that came from offense: " + string_number_pl_13_33
+                    pl_13_33_1 = "Possession lost on defense " \
+                                 "that came from offense: "
+                    pl_13_33_2 = string_number_pl_13_33
+                    pl_print_string_13_33 = pl_13_33_1 + pl_13_33_2
                     print(white % pl_print_string_13_33)
 
                 elif defense_input in defense_midfield_words:
@@ -1169,7 +1204,10 @@ Great! I hope %s has a good game!
                     number_pl_13_23 = pl_list_13_23[0]
                     string_number_pl_13_23 = str(number_pl_13_23)
                     int_number_pl_13_23 = True
-                    pl_print_string_13_23 = "Possession lost on defense that came from midfield: " + string_number_pl_13_23
+                    pl_13_23_1 = "Possession lost on defense that came " \
+                                 "from midfield: "
+                    pl_13_23_2 = string_number_pl_13_23
+                    pl_print_string_13_23 = pl_13_23_1 + pl_13_23_2
                     print(white % pl_print_string_13_23)
 
                 first_number_pl_13 = pl_list_13[0]
@@ -1177,7 +1215,9 @@ Great! I hope %s has a good game!
                 number_pl_13 = pl_list_13[0]
                 string_number_pl_13 = str(number_pl_13)
                 int_number_pl_13 = True
-                pl_print_string_13 = "Possession lost on defense: " + string_number_pl_13
+                pl_13_1 = "Possession lost on defense: "
+                pl_13_2 = string_number_pl_13
+                pl_print_string_13 = pl_13_1 + pl_13_2
                 print(white % pl_print_string_13)
 
             first_number_pl = pl_list[0]
@@ -1189,7 +1229,6 @@ Great! I hope %s has a good game!
             print(white % pl_print_string)
 
         elif choice in offside_words:
-            # -------------------------------> 1000th line <--------------------------------------------------------
 
             first_number_offside = offside_list[0]
             offside_list.remove(first_number_offside)
@@ -1199,145 +1238,165 @@ Great! I hope %s has a good game!
             offside_print_string = "Offside(s):" + string_number_offside
             print(white % offside_print_string)
 
-        elif choice in transition_words:
+        elif choice in pw_words:
 
-            attack_defense_input_transition = input(transition_input)
+            attack_defense_input_transition = input(pw_input)
 
             if attack_defense_input_transition == home:
 
-                home_input_transition_home = input(home_input_home)
+                home_input_pw_home = input(home_input_home)
 
-                if home_input_transition_home in transition_attack_words_home:
+                if home_input_pw_home in pw_attack_words_home:
 
-                    first_number_transition_33_home = transition_list_33_home[0]
-                    transition_list_33_home.remove(first_number_transition_33_home)
-                    number_transition_33_home = transition_list_33_home[0]
-                    string_number_transition_33_home = str(number_transition_33_home)
-                    int_number_transition_33_home = True
-                    transition_print_string_33_home = "Offensive Transitions: " + string_number_transition_33_home
-                    print(white % transition_print_string_33_home)
+                    first_number_pw_33_home = pw_list_33_home[0]
+                    pw_list_33_home.remove(first_number_pw_33_home)
+                    number_pw_33_home = pw_list_33_home[0]
+                    string_number_pw_33_home = str(number_pw_33_home)
+                    int_number_pw_33_home = True
+                    pw_33_home_1 = "Offensive Transitions: "
+                    pw_33_home_2 = string_number_pw_33_home
+                    pw_print_string_33_home = pw_33_home_1 + pw_33_home_2
+                    print(white % pw_print_string_33_home)
 
-                elif home_input_transition_home in transition_midfield_words_home:
+                elif home_input_pw_home in pw_midfield_words_home:
 
-                    first_number_transition_23_33_home = transition_list_23_33_home[0]
-                    transition_list_23_33_home.remove(first_number_transition_23_33_home)
-                    int_number_transition_23_33_home = True
-                    number_transition_23_33_home = transition_list_23_33_home[0]
-                    string_number_transition_23_33_home = str(number_transition_23_33_home)
-                    transition_print_string_23_33_home = "Offensive Transition that came from midfield: " + string_number_transition_23_33_home
-                    print(white % transition_print_string_23_33_home)
+                    first_number_pw_23_33_home = pw_list_23_33_home[0]
+                    pw_list_23_33_home.remove(first_number_pw_23_33_home)
+                    int_number_pw_23_33_home = True
+                    number_pw_23_33_home = pw_list_23_33_home[0]
+                    string_number_pw_23_33_home = str(number_pw_23_33_home)
+                    pw_23_33_home_1 = "Offensive Transition that came from " \
+                                      "midfield: "
+                    pw_23_33_home_2 = string_number_pw_23_33_home
+                    pw_print_23_33_home = pw_23_33_home_1 + pw_23_33_home_2
+                    print(white % pw_print_23_33_home)
 
-                elif home_input_transition_home in transition_defense_words_home:
+                elif home_input_pw_home in pw_defense_words_home:
 
-                    defense_input_home = input(defense_transition_print_home)
+                    defense_input_home = input(defense_pw_print_home)
 
-                    if defense_input_home in defense_attack_transition_words_home:
+                    if defense_input_home in defense_attack_pw_words_home:
 
-                        first_number_transition_13_33_home = transition_list_13_33_home[0]
-                        transition_list_13_33_home.remove(first_number_transition_13_33_home)
-                        number_transition_13_33_home = transition_list_13_33_home[0]
-                        string_number_transition_13_33_home = str(number_transition_13_33_home)
-                        int_number_transition_13_33_home = True
-                        transition_print_string_13_33_home = "Offensive Transition that came from defense: " + string_number_transition_13_33_home
-                        print(white % transition_print_string_13_33_home)
+                        first_number_pw_13_33_home = pw_list_13_33_home[0]
+                        pw_list_13_33_home.remove(first_number_pw_13_33_home)
+                        number_pw_13_33_home = pw_list_13_33_home[0]
+                        string_number_pw_13_33_home = str(number_pw_13_33_home)
+                        int_number_pw_13_33_home = True
+                        pw_13_33_home_1 = "Offensive Transition that came " \
+                                          "from defense: "
+                        pw_13_33_home_2 = string_number_pw_13_33_home
+                        pw_print_13_33_home = pw_13_33_home_1 + pw_13_33_home_2
+                        print(white % pw_print_13_33_home)
 
-                    elif defense_input_home in defense_midfield_transition_words_home:
+                    elif defense_input_home in defense_midfield_pw_words_home:
 
-                        first_number_transition_13_23_home = transition_list_13_23_home[0]
-                        transition_list_13_23_home.remove(first_number_transition_13_23_home)
-                        number_transition_13_23_home = transition_list_13_23_home[0]
-                        string_number_transition_13_23_home = str(number_transition_13_23_home)
-                        int_number_transition_13_23_home = True
-                        transition_print_string_13_23_home = "Midfield Transition that came from defense: " + string_number_transition_13_23_home
-                        print(white % transition_print_string_13_23_home)
+                        first_number_pw_13_23_home = pw_list_13_23_home[0]
+                        pw_list_13_23_home.remove(first_number_pw_13_23_home)
+                        number_pw_13_23_home = pw_list_13_23_home[0]
+                        string_number_pw_13_23_home = str(number_pw_13_23_home)
+                        int_number_pw_13_23_home = True
+                        pw_13_23_home_1 = "Midfield Transition that came " \
+                                          "from defense: "
+                        pw_13_23_home_2 = string_number_pw_13_23_home
+                        pw_print_13_23_home = pw_13_23_home_1 + pw_13_23_home_2
+                        print(white % pw_print_13_23_home)
 
-                    first_number_transition_13_home = transition_list_13_home[0]
-                    transition_list_13_home.remove(first_number_transition_13_home)
-                    number_transition_13_home = transition_list_13_home[0]
-                    string_number_transition_13_home = str(number_transition_13_home)
-                    int_number_transition_13_home = True
-                    transition_print_string_13_home = "Transition that came from defense: " + string_number_transition_13_home
-                    print(white % transition_print_string_13_home)
+                    first_number_pw_13_home = pw_list_13_home[0]
+                    pw_list_13_home.remove(first_number_pw_13_home)
+                    number_pw_13_home = pw_list_13_home[0]
+                    string_number_pw_13_home = str(number_pw_13_home)
+                    int_number_pw_13_home = True
+                    pw_13_home_1 = "Transition that came from defense: "
+                    pw_13_home_2 = string_number_pw_13_home
+                    pw_print_string_13_home = pw_13_home_1 + pw_13_home_2
+                    print(white % pw_print_string_13_home)
 
-                first_number_transition_home = transition_list_home[0]
-                transition_list_home.remove(first_number_transition_home)
-                number_transition_home = transition_list_home[0]
-                string_number_transition_home = str(number_transition_home)
-                int_number_transition_home = True
-                transition_print_string_home = "Transitions from " + home + ": " + string_number_transition_home
-                print(white % transition_print_string_home)
+                first_number_pw_home = pw_list_home[0]
+                pw_list_home.remove(first_number_pw_home)
+                number_pw_home = pw_list_home[0]
+                string_number_pw_home = str(number_pw_home)
+                int_number_pw_home = True
+                pw_print_string_home = "Transitions from " + home + ": " \
+                                       + string_number_pw_home
+                print(white % pw_print_string_home)
 
-            if attack_defense_input_transition == away:
+            elif attack_defense_input_transition == away:
 
-                away_input_transition_away = input(away_input_away)
+                away_input_pw_away = input(away_input_away)
 
-                if away_input_transition_away in transition_attack_words_away:
+                if away_input_pw_away in pw_attack_words_away:
 
-                    first_number_transition_33_away = transition_list_33_away[0]
-                    transition_list_33_away.remove(first_number_transition_33_away)
-                    number_transition_33_away = transition_list_33_away[0]
-                    string_number_transition_33_away = str(number_transition_33_away)
-                    int_number_transition_33_away = True
-                    transition_print_string_33_away = "Offensive Transitions: " + string_number_transition_33_away
-                    print(white % transition_print_string_33_away)
+                    first_number_pw_33_away = pw_list_33_away[0]
+                    pw_list_33_away.remove(first_number_pw_33_away)
+                    number_pw_33_away = pw_list_33_away[0]
+                    string_number_pw_33_away = str(number_pw_33_away)
+                    int_number_pw_33_away = True
+                    pw_33_away_1 = "Offensive Transitions: "
+                    pw_33_away_2 = string_number_pw_33_away
+                    pw_print_string_33_away = pw_33_away_1 + pw_33_away_2
+                    print(white % pw_print_string_33_away)
 
-                elif away_input_transition_away in transition_midfield_words_away:
+                elif away_input_pw_away in pw_midfield_words_away:
 
-                    first_number_transition_23_33_away = transition_list_23_33_away[0]
-                    transition_list_23_33_away.remove(first_number_transition_23_33_away)
-                    int_number_transition_23_33_away = True
-                    number_transition_23_33_away = transition_list_23_33_away[0]
-                    string_number_transition_23_33_away = str(number_transition_23_33_away)
-                    transition_print_string_23_33_away = "Offensive Transition that came from midfield: " + string_number_transition_23_33_away
-                    print(white % transition_print_string_23_33_away)
+                    first_number_pw_23_33_away = pw_list_23_33_away[0]
+                    pw_list_23_33_away.remove(first_number_pw_23_33_away)
+                    int_number_pw_23_33_away = True
+                    number_pw_23_33_away = pw_list_23_33_away[0]
+                    string_number_pw_23_33_away = str(number_pw_23_33_away)
+                    pw_23_33_away_1 = "Offensive Transition that came from " \
+                                      "midfield: "
+                    pw_23_33_away_2 = string_number_pw_23_33_away
+                    pw_print_23_33_away = pw_23_33_away_1 + pw_23_33_away_2
+                    print(white % pw_print_23_33_away)
 
-                elif away_input_transition_away in transition_defense_words_away:
+                elif away_input_pw_away in pw_defense_words_away:
 
-                    defense_input_away = input(defense_transition_print_away)
+                    defense_input_away = input(defense_pw_print_away)
 
-                    if defense_input_away in defense_attack_transition_words_away:
+                    if defense_input_away in defense_attack_pw_words_away:
 
-                        first_number_transition_13_33_away = transition_list_13_33_away[0]
-                        transition_list_13_33_away.remove(first_number_transition_13_33_away)
-                        number_transition_13_33_away = transition_list_13_33_away[0]
-                        string_number_transition_13_33_away = str(number_transition_13_33_away)
-                        int_number_transition_13_33_away = True
-                        transition_print_string_13_33_away = "Offensive Transition that came from defense: " + string_number_transition_13_33_away
-                        print(white % transition_print_string_13_33_away)
+                        first_number_pw_13_33_away = pw_list_13_33_away[0]
+                        pw_list_13_33_away.remove(first_number_pw_13_33_away)
+                        number_pw_13_33_away = pw_list_13_33_away[0]
+                        string_number_pw_13_33_away = str(number_pw_13_33_away)
+                        int_number_pw_13_33_away = True
+                        pw_13_33_away_1 = "Offensive Transition that came " \
+                                          "from defense: "
+                        pw_13_33_away_2 = string_number_pw_13_33_away
+                        pw_print_13_33_away = pw_13_33_away_1 + pw_13_33_away_2
+                        print(white % pw_print_13_33_away)
 
-                    elif defense_input_away in defense_midfield_transition_words_away:
+                    elif defense_input_away in defense_midfield_pw_words_away:
 
-                        first_number_transition_13_23_away = transition_list_13_23_away[0]
-                        transition_list_13_23_away.remove(first_number_transition_13_23_away)
-                        number_transition_13_23_away = transition_list_13_23_away[0]
-                        string_number_transition_13_23_away = str(number_transition_13_23_away)
-                        int_number_transition_13_23_away = True
-                        transition_print_string_13_23_away = "Midfield Transition that came from defense: " + string_number_transition_13_23_away
-                        print(white % transition_print_string_13_23_away)
+                        first_number_pw_13_23_away = pw_list_13_23_away[0]
+                        pw_list_13_23_away.remove(first_number_pw_13_23_away)
+                        number_pw_13_23_away = pw_list_13_23_away[0]
+                        string_number_pw_13_23_away = str(number_pw_13_23_away)
+                        int_number_pw_13_23_away = True
+                        pw_13_23_away_1 = "Midfield Transition that came " \
+                                          "from defense: "
+                        pw_13_23_away_2 = string_number_pw_13_23_away
+                        pw_print_13_23_away = pw_13_23_away_1 + pw_13_23_away_2
+                        print(white % pw_print_13_23_away)
 
-                    first_number_transition_13_away = transition_list_13_away[0]
-                    transition_list_13_away.remove(first_number_transition_13_away)
-                    number_transition_13_away = transition_list_13_away[0]
-                    string_number_transition_13_away = str(number_transition_13_away)
-                    int_number_transition_13_away = True
-                    transition_print_string_13_away = "Transition that came from defense: " + string_number_transition_13_away
-                    print(white % transition_print_string_13_away)
+                    first_number_pw_13_away = pw_list_13_away[0]
+                    pw_list_13_away.remove(first_number_pw_13_away)
+                    number_pw_13_away = pw_list_13_away[0]
+                    string_number_pw_13_away = str(number_pw_13_away)
+                    int_number_pw_13_away = True
+                    pw_13_away_1 = "Transition that came from defense: "
+                    pw_13_away_2 = string_number_pw_13_away
+                    pw_print_string_13_away = pw_13_away_1 + pw_13_away_2
+                    print(white % pw_print_string_13_away)
 
-                first_number_transition_away = transition_list_away[0]
-                transition_list_away.remove(first_number_transition_away)
-                number_transition_away = transition_list_away[0]
-                string_number_transition_away = str(number_transition_away)
-                int_number_transition_away = True
-                transition_print_string_away = "Transitions from " + away + ": " + string_number_transition_away
-                print(white % transition_print_string_away)
-
-            first_number_transition = transition_list[0]
-            transition_list.remove(first_number_transition)
-            number_transition = transition_list[0]
-            string_number_transition = str(number_transition)
-            int_number_transition = True
-            transition_print_string = "Total Transitions: " + string_number_transition
-            print(white % transition_print_string)
+                first_number_pw_away = pw_list_away[0]
+                pw_list_away.remove(first_number_pw_away)
+                number_pw_away = pw_list_away[0]
+                string_number_pw_away = str(number_pw_away)
+                int_number_pw_away = True
+                pw_print_string_away = "Transitions from " + away + ": " \
+                                       + string_number_pw_away
+                print(white % pw_print_string_away)
 
         elif choice in gkto_words:
 
@@ -1349,7 +1408,6 @@ Great! I hope %s has a good game!
             gkto_print_string = "Free Kick(s)" + string_number_gkto
             print(red % gkto_print_string)
 
-        # records time but is able to interact with other functions --1000 lines... yeah
         if choice == home:
             if ball_home:
                 continue
@@ -1368,7 +1426,7 @@ Great! I hope %s has a good game!
                 start_away = time.time()
                 elapsed_home += time.time() - start_home
 
-        # when the user does not know the commands a howto.txt will be popped up
+        # when the user does not know the commands a howto.txt will pop up
         elif choice == "help":
             howto = "notepad.exe howto.txt"
             sub.Popen(howto)
@@ -1380,9 +1438,10 @@ Great! I hope %s has a good game!
         elif choice == "q":
 
             # text to appear in the end of the program and the separate file
-            draft_ending_statement = '''The game between %s and %s has come to an end. The following stats were recorded for %s:
-            '''
+            draft_end_1 = '''The game between %s and %s finished.'''
+            draft_end_2 = '''The following stats were recorded for %s:'''
 
+            draft_ending_statement = draft_end_1 + draft_end_2
             ending_statement = draft_ending_statement % (home, away, team)
 
             print(ending_statement)
@@ -1400,7 +1459,8 @@ Great! I hope %s has a good game!
             print_home = home + " had " + string_home + "% possession"
             print_away = away + " had " + string_away + "% possession"
 
-            # blues and reds the percentage of possession depending on which team you are on
+            # blues and reds are the percentage of possession depending on
+            # team you have selected above
             if home_or_away == home:
                 print(blue % print_home)
                 print(red % print_away)
@@ -1414,7 +1474,8 @@ Great! I hope %s has a good game!
             # if it was called
             if int_number_pk_goal:
                 # print the number of the stat
-                print(white % "Penalty Kick goal(s): ", white % string_number_pk_goal)
+                end_pk_goal = "Penalty Kick goal(s): " + string_number_pk_goal
+                print(white % end_pk_goal)
                 # write on the file
                 safile.write("Penalty Kick goal(s): ")
                 safile.write(string_number_pk_goal)
@@ -1436,6 +1497,8 @@ Great! I hope %s has a good game!
                 print("Penalty Kick(s) saved: ", string_number_pk_saved)
                 safile.write("\nPenalty Kick(s) saved: ")
                 safile.write(string_number_pk_saved)
+                # -------------------------1500th line-------------------------
+
             elif not int_number_pk_saved:
                 print("Penalty Kick(s) saved: 0")
                 safile.write("\nPenalty Kick(s) saved: 0")
@@ -1473,7 +1536,8 @@ Great! I hope %s has a good game!
                 safile.write("\nFree Kick(s): 0")
 
             if int_number_ck_gd:
-                print("Corner Kick(s) with Good Delivery: ", string_number_ck_gd)
+                end_ck_gd = "Corner Kick(s) with Good Delivery: "
+                print(end_ck_gd + string_number_ck_gd)
                 safile.write("\nCorner Kick(s) with Good Delivery: ")
                 safile.write(string_number_ck_gd)
             elif not int_number_ck_gd:
@@ -1481,7 +1545,8 @@ Great! I hope %s has a good game!
                 safile.write("\nCorner Kick(s) with Good Delivery: ")
 
             if int_number_ck_pd:
-                print("Corner Kick(s) with Poor Delivery: ", string_number_ck_pd)
+                end_ck_pd = "Corner Kick(s) with Poor Delivery: "
+                print(end_ck_pd + string_number_ck_pd)
                 safile.write("\nCorner Kick(s) with Good Delivery: ")
                 safile.write(string_number_ck_pd)
             elif not int_number_ck_pd:
@@ -1521,7 +1586,8 @@ Great! I hope %s has a good game!
                 safile.write("\nThrow In(s): 0")
 
             if int_number_crosses_gd:
-                print("Cross(es) with Good Delivery: ", string_number_crosses_gd)
+                end_cross_gd = "Cross(es) with Good Delivery: "
+                print(end_cross_gd + string_number_crosses_gd)
                 safile.write("\nCross(es) with Good Delivery: ")
                 safile.write(string_number_crosses_gd)
             elif not int_number_crosses_gd:
@@ -1529,7 +1595,8 @@ Great! I hope %s has a good game!
                 safile.write("\nCross(es) with Good Delivery: ")
 
             if int_number_crosses_pd:
-                print("Cross(es) with Poor Delivery: ", string_number_crosses_pd)
+                end_cross_pd = "Cross(es) with Poor Delivery: "
+                print(end_cross_pd + string_number_crosses_pd)
                 safile.write("\nCross(es) with Poor Delivery: ")
                 safile.write(string_number_crosses_pd)
             elif not int_number_crosses_pd:
@@ -1616,59 +1683,71 @@ Great! I hope %s has a good game!
                 print("1vs1: 0")
                 safile.write("\n1vs1: 0")
 
-            if int_number_long_passes_second_ball_attack:
-                print("Second Ball Long Pass Interceptions on Attack: ", string_number_long_passes_second_ball_attack)
-                safile.write("\nSecond Ball Long Pass Interceptions on Attack: ")
-                safile.write(string_number_long_passes_second_ball_attack)
-            elif not int_number_long_passes_second_ball_attack:
-                print("Second Ball Long Pass Interceptions on Attack: 0")
-                safile.write("\nSecond Ball Long Pass Interceptions on Attack: 0")
+            if int_number_lpi_sb_attack:
+                end_lpi_sb_attack = "Second Ball Long Pass Interceptions on " \
+                                    "Attack: "
+                print(end_lpi_sb_attack + string_number_lpi_sb_attack)
+                lpisba_f = "\nSecond Ball Long Pass Interceptions on Attack: "
+                safile.write(lpisba_f)
+                safile.write(string_number_lpi_sb_attack)
+            elif not int_number_lpi_sb_attack:
+                lpisba_f0 = "Second Ball Long Pass Interceptions on Attack: 0"
+                print(lpisba_f0)
+                safile.write("\n" + lpisba_f0)
 
-            if int_number_long_passes_third_ball_attack:
-                print("Third Ball Long Pass Interceptions on Attack: ", string_number_long_passes_third_ball_attack)
-                safile.write("\nThird Ball Long Pass Interceptions on Attack: ")
-                safile.write(string_number_long_passes_third_ball_attack)
-            elif not int_number_long_passes_third_ball_attack:
-                print("Third Ball Long Pass Interceptions on Attack: 0")
-                safile.write("\nThird Ball Long Pass Interceptions on Attack: 0")
+            if int_number_lpi_tb_attack:
+                lpitba = "Third Ball Long Pass Interceptions on Attack: "
+                print(lpitba + string_number_lpi_tb_attack)
+                safile.write(lpitba)
+                safile.write(string_number_lpi_tb_attack)
+            elif not int_number_lpi_tb_attack:
+                lpitba_f0 = "Third Ball Long Pass Interceptions on Attack: 0"
+                print(lpitba_f0)
+                safile.write("\n" + lpitba_f0)
 
-            if int_number_long_passes_attack:
-                print("Long Pass Interceptions on Attack: ", string_number_long_passes_attack)
+            if int_number_lpi_attack:
+                lpia = "Long Pass Interceptions on Attack: "
+                print("\n" + lpia + string_number_lpi_attack)
                 safile.write("\nLong Pass Interceptions on Attack: ")
-                safile.write(string_number_long_passes_attack)
-            elif not int_number_long_passes_attack:
+                safile.write(string_number_lpi_attack)
+            elif not int_number_lpi_attack:
                 print("Long Pass Interceptions on Attack: 0")
                 safile.write("\nLong Pass Interceptions on Attack: 0")
 
-            if int_number_long_passes_second_ball_defense:
-                print("Second Ball Long Pass Interceptions on Defense: ", string_number_long_passes_second_ball_defense)
-                safile.write("\nSecond Ball Long Pass Interceptions on Defense: ")
-                safile.write(string_number_long_passes_second_ball_defense)
-            elif not int_number_long_passes_second_ball_defense:
+            if int_number_lpi_sb_defense:
+                lpisbd = "Second Ball Long Pass Interceptions on Defense: "
+                print(lpisbd + string_number_lpi_sb_defense)
+                safile.write("\n" + lpisbd)
+                safile.write(string_number_lpi_sb_defense)
+            elif not int_number_lpi_sb_defense:
+                lpisbb_f0 = "Second Ball Long Pass Interceptions on Defense: 0"
                 print("Second Ball Long Pass Interceptions on Defense: 0")
-                safile.write("\nSecond Ball Long Pass Interceptions on Defense: 0")
+                safile.write("\n" + lpisbb_f0)
 
-            if int_number_long_passes_third_ball_defense:
-                print("Third Ball Long Pass Interceptions on Defense: ", string_number_long_passes_third_ball_defense)
-                safile.write("\nThird Ball Long Pass Interceptions on Defense: ")
-                safile.write(string_number_long_passes_third_ball_defense)
-            elif not int_number_long_passes_third_ball_defense:
-                print("Third Ball Long Pass Interceptions on Defense: 0")
-                safile.write("\nThird Ball Long Pass Interceptions on Defense: 0")
+            if int_number_lpi_tb_defense:
+                lpitbd = "Third Ball Long Pass Interceptions on Defense: "
+                print(lpitbd + string_number_lpi_tb_defense)
+                safile.write("\n" + lpitbd)
+                safile.write(string_number_lpi_tb_defense)
+            elif not int_number_lpi_tb_defense:
+                lpitbd_f0 = "Third Ball Long Pass Interceptions on Defense: 0"
+                print(lpitbd_f0)
+                safile.write("\n" + lpitbd_f0)
 
-            if int_number_long_passes_defense:
-                print("Long Pass Interceptions on Defense: ", string_number_long_passes_defense)
+            if int_number_lpi_defense:
+                lpid = "Long Pass Interceptions on Defense: "
+                print(lpid + string_number_lpi_defense)
                 safile.write("\nLong Pass Interceptions on Defense: ")
-                safile.write(string_number_long_passes_defense)
-            elif not int_number_long_passes_defense:
+                safile.write(string_number_lpi_defense)
+            elif not int_number_lpi_defense:
                 print("Long Pass Interceptions on Defense: 0")
                 safile.write("\nLong Pass Interceptions on Defense: 0")
 
-            if int_number_long_passes:
-                print("Long Pass Interceptions: ", string_number_long_passes)
+            if int_number_lpi:
+                print("Long Pass Interceptions: ", string_number_lpi)
                 safile.write("\nLong Pass Interceptions: ")
-                safile.write(string_number_long_passes)
-            elif not int_number_long_passes:
+                safile.write(string_number_lpi)
+            elif not int_number_lpi:
                 print("Long Pass Interceptions: 0")
                 safile.write("\nLg Pass Interceptions: 0")
 
@@ -1681,22 +1760,27 @@ Great! I hope %s has a good game!
                 safile.write("\nSaves: 0")
 
             if int_number_pl_33_23:
-                print("Possession(s) lost on offence that came from midfield: ", string_number_pl_33_23)
-                safile.write("\nPossession(s) lost on offence that came from midfield: ")
+                pl233 = "Possession(s) lost on offence that came from " \
+                        "midfield: "
+                print(pl233 + string_number_pl_33_23)
+                safile.write("\n" + pl233)
                 safile.write(string_number_pl_33_23)
             elif not int_number_pl_33_23:
-                print("Possession lost on offence that came from midfield: 0")
-                safile.write("\nPossession lost on offence that came from midfield: 0")
+                pl233_f0 = "Possession lost on offence that came from " \
+                           "midfield: 0"
+                print(pl233_f0)
+                safile.write("\n" + pl233_f0)
 
             if int_number_pl_33_13:
-                # --------------------------------------------------> 1500th line <-------------------------------------
-
-                print("Possession(s) lost on offence that came from defense: ", string_number_pl_33_13)
-                safile.write("\nPossession(s) lost on offence that came from defense: ")
+                pl3313 = "Possession(s) lost on offence that came " \
+                         "from defense: "
+                print(pl3313 + string_number_pl_33_13)
+                safile.write("\n" + pl3313)
                 safile.write(string_number_pl_33_13)
             elif not int_number_pl_33_13:
-                print("Possession lost on offence that came from defense: 0")
-                safile.write("\nPossession lost on offence that came from defense: 0")
+                pl3313 = "Possession lost on offence that came from defense: 0"
+                print(pl3313)
+                safile.write("\n" + pl3313)
 
             if int_number_pl_33:
                 print("Possession(s) lost on offence: ", string_number_pl_33)
@@ -1707,20 +1791,28 @@ Great! I hope %s has a good game!
                 safile.write("\nPossession lost on offence: 0")
 
             if int_number_pl_23_33:
-                print("Possession(s) lost on midfield that came from offense: ", string_number_pl_23_33)
-                safile.write("\nPossession(s) lost on midfield that came from offense: ")
+                pl2333 = "Possession(s) lost on midfield that came from " \
+                         "offense: "
+                print(pl2333 + string_number_pl_23_33)
+                safile.write("\n" + pl2333)
                 safile.write(string_number_pl_23_33)
             elif not int_number_pl_23_33:
-                print("Possession lost on midfield that came from offense: 0")
-                safile.write("\nPossession lost on midfield that came from offense: 0")
+                pl2333_f0 = "Possession lost on midfield that came from " \
+                            "offense: 0"
+                print(pl2333_f0)
+                safile.write("\n" + pl2333_f0)
 
             if int_number_pl_23_13:
-                print("Possession(s) lost on midfield that came from defense: ", string_number_pl_23_13)
-                safile.write("\nPossession(s) lost on midfield that came from defense: ")
+                pl2313 = "Possession(s) lost on midfield that came from " \
+                         "defense: "
+                print(pl2313 + string_number_pl_23_13)
+                safile.write("\n" + pl2313)
                 safile.write(string_number_pl_23_13)
             elif not int_number_pl_23_13:
-                print("Possession lost on midfield that came from defense: 0")
-                safile.write("\nPossession lost on midfield that came from defense: 0")
+                pl2313_f0 = "Possession lost on midfield that came from " \
+                            "defense: 0"
+                print(pl2313_f0)
+                safile.write("\n" + pl2313_f0)
 
             if int_number_pl_23:
                 print("Possession(s) lost on midfield: ", string_number_pl_23)
@@ -1731,20 +1823,28 @@ Great! I hope %s has a good game!
                 safile.write("\nPossession lost on midfield: 0")
 
             if int_number_pl_13_33:
-                print("Possession(s) lost on defense that came from offense: ", string_number_pl_13_33)
-                safile.write("\nPossession(s) lost on defense that came from offense: ")
+                pl1333 = "Possession(s) lost on defense that came from " \
+                         "offense: "
+                print(pl1333 + string_number_pl_13_33)
+                safile.write("\n" + pl1333)
                 safile.write(string_number_pl_13_33)
             elif not int_number_pl_13_33:
-                print("Possession lost on defense that came from offense: 0")
-                safile.write("\nPossession lost on defense that came from offense: 0")
+                pl1333_f0 = "Possession lost on defense that came from " \
+                            "offense: 0"
+                print(pl1333_f0)
+                safile.write("\n" + pl1333_f0)
 
             if int_number_pl_13_23:
-                print("Possession(s) lost on defense that came from offense: ", string_number_pl_13_23)
-                safile.write("\nPossession(s) lost on defense that came from offense: ")
+                pl1323 = "Possession(s) lost on defense that came from " \
+                         "offense: "
+                print(pl1323 + string_number_pl_13_23)
+                safile.write("\n" + pl1323)
                 safile.write(string_number_pl_13_23)
             elif not int_number_pl_13_23:
-                print("Possession lost on defense that came from offense: 0")
-                safile.write("\nPossession lost on defense that came from offense: 0")
+                pl1323_f0 = "Possession lost on defense that came from " \
+                            "offense: 0"
+                print(pl1323_f0)
+                safile.write("\n" + pl1323_f0)
 
             if int_number_pl_13:
                 print("Possession(s) lost on defense: ", string_number_pl_13)
@@ -1770,99 +1870,113 @@ Great! I hope %s has a good game!
                 print("Offside(s) h2: 0")
                 safile.write("\nOffside(s): 0 ")
 
-            if int_number_transition_33_home:
-                print("Offensive Transitions: ", string_number_transition_33_home)
+            if int_number_pw_33_home:
+                print("Offensive Transitions: ", string_number_pw_33_home)
                 safile.write("\nOffensive Transitions: ")
-                safile.write(string_number_transition_33_home)
-            elif not int_number_transition_33_home:
+                safile.write(string_number_pw_33_home)
+            elif not int_number_pw_33_home:
                 print("Offensive Transitions: 0")
                 safile.write("\nOffensive Transitions: 0")
 
-            if int_number_transition_23_33_home:
-                print("Offensive transitions that came from midfield: ", string_number_transition_23_33_home)
-                safile.write("\nOffensive transitions that came from midfield: ")
-                safile.write(string_number_transition_23_33_home)
-            elif not int_number_transition_23_33_home:
-                print("Offensive transitions that came from midfield: 0")
-                safile.write("\nOffensive transitions that came from midfield: 0")
+            if int_number_pw_23_33_home:
+                pw2333h = "Offensive transitions that came from midfield: "
+                print(pw2333h + string_number_pw_23_33_home)
+                safile.write("\n" + pw2333h)
+                safile.write(string_number_pw_23_33_home)
+            elif not int_number_pw_23_33_home:
+                pw2333h_f0 = "Offensive transitions that came from midfield: 0"
+                print(pw2333h_f0)
+                safile.write("\n" + pw2333h_f0)
 
-            if int_number_transition_13_33_home:
-                print("Offensive transitions that came from defense: ", string_number_transition_13_33_home)
-                safile.write("\nOffensive transitions that came from defense: ")
-                safile.write(string_number_transition_13_33_home)
-            elif not int_number_transition_13_33_home:
-                print("Offensive transitions that came from defense: 0")
-                safile.write("\nOffensive transitions that came from defense: 0")
+            if int_number_pw_13_33_home:
+                pw1333h = "Offensive transitions that came from defense: "
+                print(pw1333h + string_number_pw_13_33_home)
+                safile.write("\n" + pw1333h)
+                safile.write(string_number_pw_13_33_home)
+            elif not int_number_pw_13_33_home:
+                pw1333h_f0 = "Offensive transitions that came from defense: 0"
+                print(pw1333h_f0)
+                safile.write("\n" + pw1333h_f0)
 
-            if int_number_transition_13_23_home:
-                print("Midfield transitions that came from defense: ", string_number_transition_13_23_home)
+            if int_number_pw_13_23_home:
+                pw1323h = "Midfield transitions that came from defense: "
+                print(pw1323h + string_number_pw_13_23_home)
                 safile.write("\nMidfield transitions that came from defense: ")
-                safile.write(string_number_transition_13_23_home)
-            elif not int_number_transition_13_23_home:
-                print("Midfield transitions that came from defense: 0")
-                safile.write("\nMidfield transitions that came from defense: 0")
+                safile.write(string_number_pw_13_23_home)
+            elif not int_number_pw_13_23_home:
+                pw1323h_f0 = "Midfield transitions that came from defense: 0"
+                print(pw1323h_f0)
+                safile.write("\n" + pw1323h_f0)
 
-            if int_number_transition_13_home:
-                print("Transitions that came from defense: ", string_number_transition_13_home)
+            if int_number_pw_13_home:
+                pw13h = "Transitions that came from defense: "
+                print(pw13h + string_number_pw_13_home)
                 safile.write("\nTransitions that came from defense: ")
-                safile.write(string_number_transition_13_home)
-            elif not int_number_transition_13_home:
+                safile.write(string_number_pw_13_home)
+            elif not int_number_pw_13_home:
                 print("Transitions that came from defense: 0")
                 safile.write("\nTransitions that came from defense: 0")
 
-            if int_number_transition_home:
-                print("Transitions from " + home + ": ", string_number_transition_home)
+            if int_number_pw_home:
+                print("Transitions from " + home + ": ", string_number_pw_home)
                 safile.write("\nTransitions from " + home + ": ")
-                safile.write(string_number_transition_home)
-            elif not int_number_transition_home:
+                safile.write(string_number_pw_home)
+            elif not int_number_pw_home:
                 print("Transitions from " + home + ": 0")
                 safile.write("\nTransitions from " + home + ": 0")
 
-            if int_number_transition_33_away:
-                print("Offensive Transitions: ", string_number_transition_33_away)
+            if int_number_pw_33_away:
+                print("Offensive Transitions: ", string_number_pw_33_away)
                 safile.write("\nOffensive Transitions: ")
-                safile.write(string_number_transition_33_away)
-            elif not int_number_transition_33_away:
+                safile.write(string_number_pw_33_away)
+            elif not int_number_pw_33_away:
                 print("Offensive Transitions: 0")
                 safile.write("\nOffensive Transitions: 0")
 
-            if int_number_transition_23_33_away:
-                print("Offensive transitions that came from midfield: ", string_number_transition_23_33_away)
-                safile.write("\nOffensive transitions that came from midfield: ")
-                safile.write(string_number_transition_23_33_away)
-            elif not int_number_transition_23_33_away:
+            if int_number_pw_23_33_away:
+                pw2333a = "Offensive transitions that came from midfield: "
+                print(pw2333a + string_number_pw_23_33_away)
+                safile.write("\n" + pw2333a)
+                safile.write(string_number_pw_23_33_away)
+            elif not int_number_pw_23_33_away:
+                pw2333a_f0 = "Offensive transitions that came from midfield: 0"
                 print("Offensive transitions that came from midfield: 0")
-                safile.write("\nOffensive transitions that came from midfield: 0")
+                safile.write("\n" + pw2333a_f0)
 
-            if int_number_transition_13_33_away:
-                print("Offensive transitions that came from defense: ", string_number_transition_13_33_away)
-                safile.write("\nOffensive transitions that came from defense: ")
-                safile.write(string_number_transition_13_33_away)
-            elif not int_number_transition_13_33_away:
+            if int_number_pw_13_33_away:
+                pw1333a = "Offensive transitions that came from defense: "
+                print(pw1333a + string_number_pw_13_33_away)
+                safile.write("\n" + pw1333a)
+                safile.write(string_number_pw_13_33_away)
+            elif not int_number_pw_13_33_away:
+                pw1333a_f0 = "Offensive transitions that came from defense: 0"
                 print("Offensive transitions that came from defense: 0")
-                safile.write("\nOffensive transitions that came from defense: 0")
+                safile.write("\n" + pw1333a_f0)
 
-            if int_number_transition_13_23_away:
-                print("Midfield transitions that came from defense: ", string_number_transition_13_23_away)
+            if int_number_pw_13_23_away:
+                pw1323a = "Midfield transitions that came from defense: "
+                print(pw1323a + string_number_pw_13_23_away)
                 safile.write("\nMidfield transitions that came from defense: ")
-                safile.write(string_number_transition_13_23_away)
-            elif not int_number_transition_13_23_away:
+                safile.write(string_number_pw_13_23_away)
+            elif not int_number_pw_13_23_away:
+                pw1323a_f0 = "Midfield transitions that came from defense: 0"
                 print("Midfield transitions that came from defense: 0")
-                safile.write("\nMidfield transitions that came from defense: 0")
+                safile.write("\n" + pw1323a_f0)
 
-            if int_number_transition_13_away:
-                print("Transitions that came from defense: ", string_number_transition_13_away)
+            if int_number_pw_13_away:
+                pw13a = "Transitions that came from defense: "
+                print(pw13a + string_number_pw_13_away)
                 safile.write("\nTransitions that came from defense: ")
-                safile.write(string_number_transition_13_away)
-            elif not int_number_transition_13_away:
+                safile.write(string_number_pw_13_away)
+            elif not int_number_pw_13_away:
                 print("Transitions that came from defense: 0")
                 safile.write("\nTransitions that came from defense: 0")
 
-            if int_number_transition_away:
-                print("Transitions from " + away + ": ", string_number_transition_away)
+            if int_number_pw_away:
+                print("Transitions from " + away + ": ", string_number_pw_away)
                 safile.write("\nTransitions from " + away + ": ")
-                safile.write(string_number_transition_away)
-            elif not int_number_transition_away:
+                safile.write(string_number_pw_away)
+            elif not int_number_pw_away:
                 print("Transitions from " + away + ": 0")
                 safile.write("\nTransitions from " + away + ": 0")
 
@@ -1883,6 +1997,8 @@ Great! I hope %s has a good game!
             # if it was not called
             elif not int_number_gkto:
                 # print/write the time that the stat was called was None
+                # -------------------------2000th line-------------------------
+
                 print("Penalty Kick goal(s): 0")
                 safile.write("\nPenalty Kick goal(s): 0")
 
