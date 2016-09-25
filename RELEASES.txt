@@ -208,3 +208,9 @@ Release Date: 25/09/16
 User Interface: Text Based
 Version: Beta
 Features: SATB064 + add percentage on good to bad ratio
+
+Codename: SATBB067
+Release Date: 25/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB064 + add blocked shots
