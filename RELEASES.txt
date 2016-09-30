@@ -220,3 +220,9 @@ Release Date: 26/09/16
 User Interface: Text Based
 Version: Beta
 Features: SATB066 + add key pass
+
+Codename: SATBB069
+Release Date: 26/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB066 + commenting, summary and pep8 check up
