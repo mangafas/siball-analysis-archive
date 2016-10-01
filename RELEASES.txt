@@ -219,10 +219,16 @@ Codename: SATBB068
 Release Date: 26/09/16 
 User Interface: Text Based
 Version: Beta
-Features: SATB066 + add key pass
+Features: SATB067 + add key pass
 
 Codename: SATBB069
 Release Date: 26/09/16 
 User Interface: Text Based
 Version: Beta
-Features: SATB066 + commenting, summary and pep8 check up
+Features: SATB068 + commenting, summary and pep8 check up
+
+Codename: SATBB071
+Release Date: 26/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB069 + commenting, summary and pep8 check up
