@@ -231,4 +231,10 @@ Codename: SATBB071
 Release Date: 26/09/16 
 User Interface: Text Based
 Version: Beta
-Features: SATB069 + commenting, summary and pep8 check up
+Features: SATB069 + change variable names from plural to signural
+
+Codename: SATBB072
+Release Date: 26/09/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB071 + bug fixing 
