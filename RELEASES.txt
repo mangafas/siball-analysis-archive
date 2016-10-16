@@ -234,7 +234,7 @@ Version: Beta
 Features: SATB069 + change variable names from plural to signural
 
 Codename: SATBB072
-Release Date: 26/09/16 
+Release Date: 16/10/16 
 User Interface: Text Based
 Version: Beta
-Features: SATB071 + bug fixing 
+Features: SATB071 + fix bugs(more info on bugs card in projects)
