@@ -88,23 +88,25 @@ Are you recording for %s or %s?'''
 
     # asking the user which team are they recording stats for
 
+# for now this is useless as it records for both teams
+
     if True:
         if home_or_away == home:
             team = home
-            intro_two = '''
+            intro_two = ''''
 Great! I hope %s has a good game!
                 '''
             print(intro_two % team)
 
         elif home_or_away == away:
             team = away
-            intro_two = '''
+            intro_two = ('''
 Great! I hope %s has a good game!
-            '''
+            ''')
             print(intro_two % team)
 
-    stat_home_away = ("%s/%s")
-    home_away = (stat_home_away % home, away)
+    stat_home_away = "%s/%s"
+    home_away = (stat_home_away % (home, away))
 
     # -----> * Colors Variables * <-----
 
@@ -409,7 +411,7 @@ Great! I hope %s has a good game!
     # -----> * Saves Variables * <-----
 
     save_range_h = range(0, 1000)
-    save_list_h = list(save_range)
+    save_list_h = list(save_range_h)
 
     save_words = ["save", "Save", "SAVE", "saves", "Saves", "SAVES", "save ",
                   "SAVES "]
@@ -771,13 +773,13 @@ Great! I hope %s has a good game!
     int_number_cross_pd_h = False
     int_number_crosses_h = False
 
-    int_number_shot_gd_h = False
-    int_number_shot_pd_h = False
+    int_number_shot_ont_h = False
+    int_number_shot_oft_h = False
     int_number_shot_bs_h = False
     int_number_shots_h = False
 
-    int_number_header_gd_h = False
-    int_number_header_pd_h = False
+    int_number_header_ont_h = False
+    int_number_header_oft_h = False
     int_number_headers_h = False
 
     int_number_v1_w_h = False
@@ -847,8 +849,8 @@ Great! I hope %s has a good game!
     int_number_cross_pd_a = False
     int_number_crosses_a = False
 
-    int_number_shot_gd_a = False
-    int_number_shot_pd_a = False
+    int_number_shot_ont_a = False
+    int_number_shot_oft_a = False
     int_number_shot_bs_a = False
     int_number_shots_a = False
 
@@ -2049,417 +2051,893 @@ Great! I hope %s has a good game!
             safile.write(print_home)
             safile.write(print_away)
 
-            if int_number_pk_goal and \
-               int_number_pk_saved and \
-               int_number_pk_missed and \
-               int_number_pk and \
-               int_final_pk == all_pk_final:
+            if int_number_pk_goal_h and \
+               int_number_pk_saved_h and \
+               int_number_pk_missed_h and \
+               int_number_pk_h and \
+               int_final_pk_h == all_pk_final_h:
                 # makes the string to an int variable
-                int_final_pk_goal = int(pk_goal_2)
-                int_final_pk_missed = int(pk_miss_2)
-                int_final_pk_saved = int(pk_saved_2)
+                int_final_pk_goal_h = int(pk_goal_2_h)
+                int_final_pk_missed_h = int(pk_miss_2_h)
+                int_final_pk_saved_h = int(pk_saved_2_h)
                 # adds all the "bad" stats to a general variable
-                all_pk_bad = int_final_pk_missed + int_final_pk_saved
-                all_pk_final = int_final_pk_goal + int_final_pk_missed
-                all_pk_final += int_final_pk_saved
-                int_final_pk = int(string_number_pk)
+                all_pk_bad_h = int_final_pk_missed_h + int_final_pk_saved_h
+                all_pk_final_h = int_final_pk_goal_h + int_final_pk_missed_h
+                all_pk_final_h += int_final_pk_saved_h
                 # calculates the ratio between the good to bad
-                perc_num_pk = 100 / all_pk_final
-                perc_num_pk_good = perc_num_pk * int_final_pk_goal
-                perc_num_pk_bad = perc_num_pk * all_pk_bad
-                round_pk_good = round(perc_num_pk_good, 1)
-                round_pk_bad = round(perc_num_pk_bad, 1)
-                print_pk_good = str(round_pk_good)
-                print_pk_bad = str(round_pk_bad)
-                final_pk_good = print_pk_good + "% of the Penalty Kicks " \
-                                                "were good"
-                final_pk_bad = print_pk_bad + "% of the Penalty Kicks were " \
-                                              "bad"
-                print(blue % final_pk_good)
-                print(red % final_pk_bad)
+                perc_num_pk_h = 100 / all_pk_final_h
+                perc_num_pk_good_h = perc_num_pk_h * int_final_pk_goal_h
+                perc_num_pk_bad_h = perc_num_pk_h * all_pk_bad_h
+                round_pk_good_h = round(perc_num_pk_good_h, 1)
+                round_pk_bad_h = round(perc_num_pk_bad_h, 1)
+                print_pk_good_h = str(round_pk_good_h)
+                print_pk_bad_h = str(round_pk_bad_h)
+                final_pk_good_h = print_pk_good_h + "% of the Penalty Kicks " \
+                                                    "from " + home + \
+                                                    " were good"
+
+                final_pk_bad_h = print_pk_bad_h + "% of the Penalty Kicks " \
+                                                  "from " + home + \
+                                                  " were bad"
+                print(blue % final_pk_good_h)
+                print(red % final_pk_bad_h)
 
             # start print out/write on file each stat
             # if it was called
-            if int_number_pk_goal:
+            if int_number_pk_goal_h:
                 # print the number of the stat
-                end_pk_goal = "Penalty Kick goal(s): " + pk_goal_2
-                print(white % end_pk_goal)
+                end_pk_goal_h = "Penalty Kick goal(s): " + pk_goal_2_h
+                print(white % end_pk_goal_h)
                 # write on the file
-                safile.write("Penalty Kick goal(s): ")
-                safile.write(pk_goal_2)
+                safile.write("Penalty Kick goal(s) from " + home + ": ")
+                safile.write(pk_goal_2_h)
             # if it was not called
-            elif not int_number_pk_goal:
+            elif not int_number_pk_goal_h:
                 # print/write the time that the stat was called was None
                 print("Penalty Kick goal(s): 0")
-                safile.write("\nPenalty Kick goal(s): 0")
+                safile.write("\nPenalty Kick goal(s) from " + home + ": 0")
 
-            if int_number_pk_missed:
+            if int_number_pk_missed_h:
                 print("Penalty Kick(s) missed: ", pk_miss_2)
-                safile.write("\nPenalty Kick(s) missed: ")
-                safile.write(pk_miss_2)
-            elif not int_number_pk_missed:
+                safile.write("\nPenalty Kick(s) missed from " + home + ": ")
+                safile.write(pk_miss_2_h)
+            elif not int_number_pk_missed_h:
                 print("Penalty Kick(s) missed: 0")
-                safile.write("\nPenalty Kick(s) missed: 0 ")
+                safile.write("\nPenalty Kick(s) missed from " + home + ": 0 ")
 
-            if int_number_pk_saved:
-                print("Penalty Kick(s) saved: ", pk_saved_2)
-                safile.write("\nPenalty Kick(s) saved: ")
-                safile.write(pk_saved_2)
-
-            elif not int_number_pk_saved:
+            if int_number_pk_saved_h:
+                print("Penalty Kick(s) saved: ", pk_saved_2_h)
+                safile.write("\nPenalty Kick(s) saved from " + home + ": ")
+                safile.write(pk_saved_2_h)
+            elif not int_number_pk_saved_h:
                 print("Penalty Kick(s) saved: 0")
-                safile.write("\nPenalty Kick(s) saved: 0")
+                safile.write("\nPenalty Kick(s) saved from " + home + ": 0")
 
-            if int_number_pk:
-                print("Penalty Kick(s): ", string_number_pk)
-                safile.write("\nPenalty Kick(s): ")
-                safile.write(string_number_pk)
-            elif not int_number_pk:
+            if int_number_pk_h:
+                print("Penalty Kick(s): ", string_number_pk_h)
+                safile.write("\nPenalty Kick(s) from " + home + ": ")
+                safile.write(string_number_pk_h)
+            elif not int_number_pk_h:
                 print("Penalty Kick(s): 0")
-                safile.write("\nPenalty Kick(s): 0")
+                safile.write("\nPenalty Kick(s) from " + home + ": 0")
+                
+            if int_number_pk_goal_a and \
+               int_number_pk_saved_a and \
+               int_number_pk_missed_a and \
+               int_number_pk_a and \
+               int_final_pk_a == all_pk_final_a:
+                # makes the string to an int variable
+                int_final_pk_goal_a = int(pk_goal_2_a)
+                int_final_pk_missed_a = int(pk_miss_2_a)
+                int_final_pk_saved_a = int(pk_saved_2_a)
+                # adds all the "bad" stats to a general variable
+                all_pk_bad_a = int_final_pk_missed_a + int_final_pk_saved_a
+                all_pk_final_a = int_final_pk_goal_a + int_final_pk_missed_a
+                all_pk_final_a += int_final_pk_saved_a
+                # calculates the ratio between the good to bad
+                perc_num_pk_a = 100 / all_pk_final_a
+                perc_num_pk_good_a = perc_num_pk_a * int_final_pk_goal_a
+                perc_num_pk_bad_a = perc_num_pk_a * all_pk_bad_a
+                round_pk_good_a = round(perc_num_pk_good_a, 1)
+                round_pk_bad_a = round(perc_num_pk_bad_a, 1)
+                print_pk_good_a = str(round_pk_good_a)
+                print_pk_bad_a = str(round_pk_bad_a)
+                final_pk_good_a = print_pk_good_a + "% of the Penalty Kicks " \
+                                                    "from " + away + \
+                                                    " were good"
 
-            if int_number_fk_gd and \
-               int_number_fk_pd and \
-               int_number_fk and \
-               int_final_fk == all_fk_final:
-                int_final_fk_gd = int(fk_string_gd_2)
-                int_final_fk_pd = int(fk_string_pd_2)
-                all_fk_final = int_final_fk_gd + int_final_fk_pd
-                int_final_fk = int(string_number_fk)
-                perc_num_fk = 100 / all_fk_final
-                perc_num_fk_good = perc_num_fk * int_final_fk_gd
-                perc_num_fk_bad = perc_num_fk * int_final_fk_pd
-                round_fk_good = round(perc_num_fk_good, 1)
-                round_fk_bad = round(perc_num_fk_bad, 1)
-                print_fk_good = str(round_fk_good)
-                print_fk_bad = str(round_fk_bad)
-                final_fk_good = print_fk_good + "% of the Free Kicks were " \
-                                                "good"
-                final_fk_bad = print_fk_bad + "% of the Free Kicks were " \
-                                              "bad"
-                print(blue % final_fk_good)
-                print(red % final_fk_bad)
-
-            if int_number_fk_gd:
-                print("Free Kick(s) with Good Delivery: ", fk_string_gd_2)
-                safile.write("\nFree Kick(s) with Good Delivery: ")
-                safile.write(fk_string_gd_2)
-            elif not int_number_fk_gd:
-                print("Free Kick(s) with Good Delivery: 0")
-                safile.write("\nFree Kick(s) with Good Delivery: 0")
-
-            if int_number_fk_pd:
-                print("Free Kick(s) with Good Delivery: ",  fk_string_pd_2)
-                safile.write("\nFree Kick(s) with Poor Delivery: ")
-                safile.write( fk_string_pd_2)
-            elif not int_number_fk_pd:
-                print("Free Kick(s) with Poor Delivery: 0")
-                safile.write("\nFree Kick(s) with Poor Delivery: 0")
-
-            if int_number_fk:
-                print("Free Kick(s): ", string_number_fk)
-                safile.write("\nFree Kick(s): ")
-                safile.write(string_number_fk)
-            elif not int_number_fk:
-                print("Free Kick(s): 0")
-                safile.write("\nFree Kick(s): 0")
-
-
-            if int_number_ck_gd and \
-               int_number_ck_pd and \
-               int_number_ck and \
-               int_final_ck == all_ck_final:
-                int_final_ck_gd = int(ck_string_gd_2)
-                int_final_ck_pd = int(string_number_ck_pd)
-                all_ck_final = int_final_ck_gd + int_final_ck_pd
-                int_final_ck = int(string_number_ck)
-                perc_num_ck = 100 / all_ck_final
-                perc_num_ck_good = perc_num_ck * int_final_ck_gd
-                perc_num_ck_bad = perc_num_ck * int_final_ck_pd
-                round_ck_good = round(perc_num_ck_good, 1)
-                round_ck_bad = round(perc_num_ck_bad, 1)
-                print_ck_good = str(round_ck_good)
-                print_ck_bad = str(round_ck_bad)
-                final_ck_good = print_ck_good + "% of the Corner Kicks were " \
-                                                "good"
-                final_ck_bad = print_ck_bad + "% of the Corner Kicks were " \
-                                              "bad"
-                print(blue % final_ck_good)
-                print(red % final_ck_bad)
-
-            if int_number_ck_gd:
-                end_ck_gd = "Corner Kick(s) with Good Delivery: "
-                print(end_ck_gd + ck_string_gd_2)
-                safile.write("\nCorner Kick(s) with Good Delivery: ")
-                safile.write(ck_string_gd_2)
-            elif not int_number_ck_gd:
-                print("Corner Kick(s) with Good Delivery: 0")
-                safile.write("\nCorner Kick(s) with Good Delivery: ")
-
-            if int_number_ck_pd:
-                end_ck_pd = "Corner Kick(s) with Poor Delivery: "
-                print(end_ck_pd + string_number_ck_pd)
-                safile.write("\nCorner Kick(s) with Good Delivery: ")
-                safile.write(string_number_ck_pd)
-            elif not int_number_ck_pd:
-                print("Corner Kick(s) with Poor Delivery: 0")
-                safile.write("\nCorner Kick(s) with Good Delivery: 0")
-
-            if int_number_ck:
-                print("Corner Kick(s): ", string_number_ck)
-                safile.write("\nCorner Kick(s): ")
-                safile.write(string_number_ck)
-            elif not int_number_ck:
-                print("Corner Kick(s): 0")
-                safile.write("\nCorner Kick(s): 0")
-
-            if int_number_ti_gd and \
-               int_number_ti_pd and \
-               int_number_ti and \
-               int_final_ti == all_ti_final:
-                int_final_ti_gd = int(ti_string_gd_2)
-                int_final_ti_pd = int(ti_string_pd_2)
-                all_ti_final = int_final_ti_gd + int_final_ti_pd
-                int_final_ti = int(string_number_ti)
-                perc_num_ti = 100 / all_ti_final
-                perc_num_ti_good = perc_num_ti * int_final_ti_gd
-                perc_num_ti_bad = perc_num_ti * int_final_ti_pd
-                round_ti_good = round(perc_num_ti_good, 1)
-                round_ti_bad = round(perc_num_ti_bad, 1)
-                print_ti_good = str(round_ti_good)
-                print_ti_bad = str(round_ti_bad)
-                final_ti_good = print_ti_good + "% of the Corner Kicks were " \
-                                                "good"
-                final_ti_bad = print_ti_bad + "% of the Corner Kicks were " \
-                                              "bad"
-                print(blue % final_ti_good)
-                print(red % final_ti_bad)
-
-            if int_number_ti_gd:
-                print("Throw In(s) with Good Delivery: ", ti_string_gd_2)
-                safile.write("\nThrow In(s) with Good Delivery: ")
-                safile.write(ti_string_gd_2)
-            elif not int_number_ti_gd:
-                print("Throw In(s) with Good Delivery: 0")
-                safile.write("\nThrow In(s) with Good Delivery: 0")
-
-            if int_number_ti_pd:
-                print("Throw In(s) with Poor Delivery: ", ti_string_pd_2)
-                safile.write("\nThrow In(s) with Poor Delivery: ")
-                safile.write(ti_string_pd_2)
-            elif not int_number_ti_pd:
-                print("Throw In(s) with Poor Delivery: 0")
-                safile.write("\nThrow In(s) with Poor Delivery: 0")
-
-            if int_number_ti:
-                print("Throw In(s): ", string_number_ti)
-                safile.write("\nThrow In(s): ")
-                safile.write(string_number_ti)
-            elif not int_number_ti:
-                print("Throw In(s): 0")
-                safile.write("\nThrow In(s): 0")
-
-            if int_number_cross_gd and \
-               int_number_cross_pd and \
-               int_number_crosses and \
-               int_final_crosses == all_cross_final:
-                int_final_cross_gd = int(cross_string_gd_2)
-                int_final_cross_pd = int(cross_string_pd_2)
-                all_cross_final = int_final_cross_gd + int_final_cross_pd
-                int_final_crosses = int(string_number_crosses)
-                perc_num_crosses = 100 / all_cross_final
-                perc_num_cross_good = perc_num_crosses * int_final_cross_gd
-                perc_num_cross_bad = perc_num_crosses * int_final_cross_pd
-                round_cross_good = round(perc_num_cross_good, 1)
-                round_cross_bad = round(perc_num_cross_bad, 1)
-                print_cross_good = str(round_cross_good)
-                print_cross_bad = str(round_cross_bad)
-                final_cross_good = print_cross_good + "% of the Crosses " \
-                                                      "were good "
-                final_cross_bad = print_cross_bad + "% of the Crosses " \
-                                                    "were bad"
-
-                print(blue % final_cross_good)
-                print(red % final_cross_bad)
-
-            if int_number_cross_gd:
-                end_cross_gd = "Cross(es) with Good Delivery: "
-                print(end_cross_gd + cross_string_gd_2)
-                safile.write("\nCross(es) with Good Delivery: ")
-                safile.write(cross_string_gd_2)
-            elif not int_number_cross_gd:
-                print("Cross(es) with Good Delivery: 0")
-                safile.write("\nCross(es) with Good Delivery: ")
-
-            if int_number_cross_pd:
-                end_cross_pd = "Cross(es) with Poor Delivery: "
-                print(end_cross_pd + cross_string_pd_2)
-                safile.write("\nCross(es) with Poor Delivery: ")
-                safile.write(cross_string_pd_2)
-            elif not int_number_cross_pd:
-                print("Cross(es) with Poor Delivery: 0")
-                safile.write("\nCross(es) with Poor Delivery: 0")
-
-            if int_number_crosses:
-                print("Cross(es): ", string_number_crosses)
-                safile.write("\nCross(es): ")
-                safile.write(string_number_crosses)
-            elif not int_number_crosses:
-                print("Cross(es): 0")
-                safile.write("\nCross(es): 0")
-
-            if int_number_shot_gd and \
-               int_number_shot_pd and \
-               int_number_shots and \
-               int_final_shot == all_shot_final:
-                int_final_shot_gd = int(shot_string_ont_2)
-                int_final_shot_pd = int(shot_string_oft_2)
-                int_final_shot_bs = int(shot_string_bs_2)
-                all_shot_bad = int_final_shot_bs + int_final_shot_pd
-                all_shot_final = int_final_shot_gd + int_final_shot_pd
-                all_shot_final += int_final_shot_bs
-                int_final_shot = int(string_number_shots)
-                perc_num_shot = 100 / all_shot_final
-                perc_num_shot_good = perc_num_shot * int_final_shot_gd
-                perc_num_shot_bad = perc_num_shot * all_shot_bad
-                round_shot_good = round(perc_num_shot_good, 1)
-                round_shot_bad = round(perc_num_shot_bad, 1)
-                print_shot_good = str(round_shot_good)
-                print_shot_bad = str(round_shot_bad)
-                final_shot_good = print_shot_good + "% of the Shots " \
-                                                    "were good "
-                final_shot_bad = print_shot_bad + "% of the Shots " \
+                final_pk_bad_a = print_pk_bad_a + "% of the Penalty Kicks " \
+                                                  "from " + away + \
                                                   " were bad"
+                print(blue % final_pk_good_a)
+                print(red % final_pk_bad_a)
 
-                print(blue % final_shot_good)
-                print(red % final_shot_bad)
+            # start print out/write on file each stat
+            # if it was called
+            if int_number_pk_goal_a:
+                # print the number of the stat
+                end_pk_goal_a = "Penalty Kick goal(s): " + pk_goal_2_a
+                print(white % end_pk_goal_a)
+                # write on the file
+                safile.write("Penalty Kick goal(s) from " + away + ": ")
+                safile.write(pk_goal_2_a)
+            # if it was not called
+            elif not int_number_pk_goal_a:
+                # print/write the time that the stat was called was None
+                print("Penalty Kick goal(s): 0")
+                safile.write("\nPenalty Kick goal(s) from " + away + ": 0")
 
-            if int_number_shot_gd:
-                print("Shot(s) on Target: ", shot_string_ont_2)
-                safile.write("\nShot(s) on Target: ")
-                safile.write(shot_string_ont_2)
-            elif not int_number_shot_gd:
-                print("Shot(s) on Target: 0")
-                safile.write("\nShot(s) on Target: 0")
+            if int_number_pk_missed_a:
+                print("Penalty Kick(s) missed: ", pk_miss_2)
+                safile.write("\nPenalty Kick(s) missed from " + away + ": ")
+                safile.write(pk_miss_2_a)
+            elif not int_number_pk_missed_a:
+                print("Penalty Kick(s) missed: 0")
+                safile.write("\nPenalty Kick(s) missed from " + away + ": 0 ")
 
-            if int_number_shot_pd:
-                print("Shot(s) off Target: ", shot_string_oft_2)
-                safile.write("\nShot(s) off Target: ")
-                safile.write(shot_string_oft_2)
-            elif not int_number_shot_pd:
-                print("Shot(s) off Target: 0")
-                safile.write("\nShot(s) off Target: 0")
+            if int_number_pk_saved_a:
+                print("Penalty Kick(s) saved: ", pk_saved_2_a)
+                safile.write("\nPenalty Kick(s) saved from " + away + ": ")
+                safile.write(pk_saved_2_a)
+            elif not int_number_pk_saved_a:
+                print("Penalty Kick(s) saved: 0")
+                safile.write("\nPenalty Kick(s) saved from " + away + ": 0")
 
-            if int_number_shot_bs:
-                print("Blocked Shot(s): ", shot_string_bs_2)
-                safile.write("\nBlocked Shot(s): ")
-                safile.write(shot_string_bs_2)
-            elif not int_number_shot_bs:
-                print("Blocked Shot(s): 0")
-                safile.write("\nBlocked Shot(s): 0")
+            if int_number_pk_a:
+                print("Penalty Kick(s): ", string_number_pk_a)
+                safile.write("\nPenalty Kick(s) from " + away + ": ")
+                safile.write(string_number_pk_a)
+            elif not int_number_pk_a:
+                print("Penalty Kick(s): 0")
+                safile.write("\nPenalty Kick(s) from " + away + ": 0")
 
-            if int_number_shots:
-                print("Shot(s): ", string_number_shots)
-                safile.write("\nShot(s): ")
-                safile.write(string_number_shots)
-            elif not int_number_shots:
-                print("Shot(s): 0")
-                safile.write("\nShot(s): 0")
+            if int_number_fk_gd_h and \
+               int_number_fk_pd_h and \
+               int_number_fk_h and \
+               int_final_fk_h == all_fk_final_h:
+                int_final_fk_gd_h = int(fk_string_gd_2_h)
+                int_final_fk_pd_h = int(fk_string_pd_2_h)
+                all_fk_final_h = int_final_fk_gd_h + int_final_fk_pd_h
+                perc_num_fk_h = 100 / all_fk_final_h
+                perc_num_fk_good_h = perc_num_fk_h * int_final_fk_gd_h
+                perc_num_fk_bad_h = perc_num_fk_h * int_final_fk_pd_h
+                round_fk_good_h = round(perc_num_fk_good_h, 1)
+                round_fk_bad_h = round(perc_num_fk_bad_h, 1)
+                print_fk_good_h = str(round_fk_good_h)
+                print_fk_bad_h = str(round_fk_bad_h)
+                final_fk_good_h = print_fk_good_h + "% of the Free Kicks " \
+                                                    "from " + home + \
+                                                    " were good"
+                final_fk_bad_h = print_fk_bad_h + "% of the Free Kicks " \
+                                                  "from " + home + \
+                                                  " were bad"
+                print(blue % final_fk_good_h)
+                print(red % final_fk_bad_h)
 
-            if int_number_header_gd and \
-               int_number_header_pd and \
-               int_number_headers and \
-               int_final_header == all_header_final:
-                int_final_header_gd = int(header_ont_2)
-                int_final_header_pd = int(header_oft_2)
-                all_header_final = int_final_header_gd + int_final_header_pd
-                int_final_header = int(string_number_headers)
-                perc_num_header = 100 / all_header_final
-                perc_num_header_good = perc_num_header * int_final_header_gd
-                perc_num_header_bad = perc_num_header * int_final_header_pd
-                round_header_good = round(perc_num_header_good, 1)
-                round_header_bad = round(perc_num_header_bad, 1)
-                print_header_good = str(round_header_good)
-                print_header_bad = str(round_header_bad)
-                final_header_good = print_header_good + "% of the Headers " \
-                                                        "were good "
-                final_header_bad = print_header_bad + "% of the Headers " \
+            if int_number_fk_gd_h:
+                print("Free Kick(s) with Good Delivery from " + home + ": ", fk_string_gd_2_h)
+                safile.write("\nFree Kick(s) with Good Delivery from" + home +
+                             ": ")
+                safile.write(fk_string_gd_2_h)
+            elif not int_number_fk_gd_h:
+                print("Free Kick(s) with Good Delivery from " + home + ": 0")
+                safile.write("\nFree Kick(s) with Good Delivery from " + home + ": 0")
+
+            if int_number_fk_pd_h:
+                print("Free Kick(s) with Good Delivery from " + home + ": ",
+                      fk_string_pd_2_h)
+                safile.write("\nFree Kick(s) with Poor Delivery from " + home + ": ")
+                safile.write(fk_string_pd_2_h)
+            elif not int_number_fk_pd_h:
+                print("Free Kick(s) with Poor Delivery from " + home + ": 0")
+                safile.write("\nFree Kick(s) with Poor Delivery from " + home + ": 0")
+
+            if int_number_fk_h:
+                print("Free Kick(s) from " + home + ": ", string_number_fk_h)
+                safile.write("\nFree Kick(s) from " + home + ": ")
+                safile.write(string_number_fk_h)
+            elif not int_number_fk_h:
+                print("Free Kick(s) from " + home + ": 0")
+                safile.write("\nFree Kick(s) from " + home + ": 0")
+                
+            if int_number_fk_gd_a and \
+               int_number_fk_pd_a and \
+               int_number_fk_a and \
+               int_final_fk_a == all_fk_final_a:
+                int_final_fk_gd_a = int(fk_string_gd_2_a)
+                int_final_fk_pd_a = int(fk_string_pd_2_a)
+                all_fk_final_a = int_final_fk_gd_a + int_final_fk_pd_a
+                perc_num_fk_a = 100 / all_fk_final_a
+                perc_num_fk_good_a = perc_num_fk_a * int_final_fk_gd_a
+                perc_num_fk_bad_a = perc_num_fk_a * int_final_fk_pd_a
+                round_fk_good_a = round(perc_num_fk_good_a, 1)
+                round_fk_bad_a = round(perc_num_fk_bad_a, 1)
+                print_fk_good_a = str(round_fk_good_a)
+                print_fk_bad_a = str(round_fk_bad_a)
+                final_fk_good_a = print_fk_good_a + "% of the Free Kicks " \
+                                                    "from " + away + \
+                                                    " were good"
+                final_fk_bad_a = print_fk_bad_a + "% of the Free Kicks " \
+                                                  "from " + away + \
+                                                  " were bad"
+                print(blue % final_fk_good_a)
+                print(red % final_fk_bad_a)
+
+            if int_number_fk_gd_a:
+                print("Free Kick(s) with Good Delivery from " + away + ": ", fk_string_gd_2_a)
+                safile.write("\nFree Kick(s) with Good Delivery from" + away +
+                             ": ")
+                safile.write(fk_string_gd_2_a)
+            elif not int_number_fk_gd_a:
+                print("Free Kick(s) with Good Delivery from " + away + ": 0")
+                safile.write("\nFree Kick(s) with Good Delivery from " + away + ": 0")
+
+            if int_number_fk_pd_a:
+                print("Free Kick(s) with Good Delivery from " + away + ": ",
+                      fk_string_pd_2_a)
+                safile.write("\nFree Kick(s) with Poor Delivery from " + away + ": ")
+                safile.write(fk_string_pd_2_a)
+            elif not int_number_fk_pd_a:
+                print("Free Kick(s) with Poor Delivery from " + away + ": 0")
+                safile.write("\nFree Kick(s) with Poor Delivery from " + away + ": 0")
+
+            if int_number_fk_a:
+                print("Free Kick(s) from " + away + ": ", string_number_fk_a)
+                safile.write("\nFree Kick(s) from " + away + ": ")
+                safile.write(string_number_fk_a)
+            elif not int_number_fk_a:
+                print("Free Kick(s) from " + away + ": 0")
+                safile.write("\nFree Kick(s) from " + away + ": 0")
+
+            if int_number_ck_gd_h and \
+               int_number_ck_pd_h and \
+               int_number_ck_h and \
+               int_final_ck_h == all_ck_final_h:
+                int_final_ck_gd_h = int(ck_string_gd_2_h)
+                int_final_ck_pd_h = int(ck_string_pd_2_h)
+                all_ck_final_h = int_final_ck_gd_h + int_final_ck_pd_h
+                perc_num_ck_h = 100 / all_ck_final_h
+                perc_num_ck_good_h = perc_num_ck_h * int_final_ck_gd_h
+                perc_num_ck_bad_h = perc_num_ck_h * int_final_ck_pd_h
+                round_ck_good_h = round(perc_num_ck_good_h, 1)
+                round_ck_bad_h = round(perc_num_ck_bad_h, 1)
+                print_ck_good_h = str(round_ck_good_h)
+                print_ck_bad_h = str(round_ck_bad_h)
+                final_ck_good_h = print_ck_good_h + "% of the Corner Kicks " \
+                                                    "from " + home + \
+                                                    " were good"
+                final_ck_bad_h = print_ck_bad_h + "% of the Corner Kicks " \
+                                                  "from " + home + \
+                                                  " were bad"
+                print(blue % final_ck_good_h)
+                print(red % final_ck_bad_h)
+
+            if int_number_ck_gd_h:
+                print("Corner Kick(s) with Good Delivery from " + home + ": ", ck_string_gd_2_h)
+                safile.write("\nCorner Kick(s) with Good Delivery from" + home +
+                             ": ")
+                safile.write(ck_string_gd_2_h)
+            elif not int_number_ck_gd_h:
+                print("Corner Kick(s) with Good Delivery from " + home + ": 0")
+                safile.write("\nCorner Kick(s) with Good Delivery from " + home + ": 0")
+
+            if int_number_ck_pd_h:
+                print("Corner Kick(s) with Good Delivery from " + home + ": ",
+                      ck_string_pd_2_h)
+                safile.write("\nCorner Kick(s) with Poor Delivery from " + home + ": ")
+                safile.write(ck_string_pd_2_h)
+            elif not int_number_ck_pd_h:
+                print("Corner Kick(s) with Poor Delivery from " + home + ": 0")
+                safile.write("\nCorner Kick(s) with Poor Delivery from " + home + ": 0")
+
+            if int_number_ck_h:
+                print("Corner Kick(s) from " + home + ": ", string_number_ck_h)
+                safile.write("\nCorner Kick(s) from " + home + ": ")
+                safile.write(string_number_ck_h)
+            elif not int_number_ck_h:
+                print("Corner Kick(s) from " + home + ": 0")
+                safile.write("\nCorner Kick(s) from " + home + ": 0")
+                
+            if int_number_ck_gd_a and \
+               int_number_ck_pd_a and \
+               int_number_ck_a and \
+               int_final_ck_a == all_ck_final_a:
+                int_final_ck_gd_a = int(ck_string_gd_2_a)
+                int_final_ck_pd_a = int(ck_string_pd_2_a)
+                all_ck_final_a = int_final_ck_gd_a + int_final_ck_pd_a
+                perc_num_ck_a = 100 / all_ck_final_a
+                perc_num_ck_good_a = perc_num_ck_a * int_final_ck_gd_a
+                perc_num_ck_bad_a = perc_num_ck_a * int_final_ck_pd_a
+                round_ck_good_a = round(perc_num_ck_good_a, 1)
+                round_ck_bad_a = round(perc_num_ck_bad_a, 1)
+                print_ck_good_a = str(round_ck_good_a)
+                print_ck_bad_a = str(round_ck_bad_a)
+                final_ck_good_a = print_ck_good_a + "% of the Corner Kicks " \
+                                                    "from " + away + \
+                                                    " were good"
+                final_ck_bad_a = print_ck_bad_a + "% of the Corner Kicks " \
+                                                  "from " + away + \
+                                                  " were bad"
+                print(blue % final_ck_good_a)
+                print(red % final_ck_bad_a)
+
+            if int_number_ck_gd_a:
+                print("Corner Kick(s) with Good Delivery from " + away + ": ", ck_string_gd_2_a)
+                safile.write("\nCorner Kick(s) with Good Delivery from" + away +
+                             ": ")
+                safile.write(ck_string_gd_2_a)
+            elif not int_number_ck_gd_a:
+                print("Corner Kick(s) with Good Delivery from " + away + ": 0")
+                safile.write("\nCorner Kick(s) with Good Delivery from " + away + ": 0")
+
+            if int_number_ck_pd_a:
+                print("Corner Kick(s) with Good Delivery from " + away + ": ",
+                      ck_string_pd_2_a)
+                safile.write("\nCorner Kick(s) with Poor Delivery from " + away + ": ")
+                safile.write(ck_string_pd_2_a)
+            elif not int_number_ck_pd_a:
+                print("Corner Kick(s) with Poor Delivery from " + away + ": 0")
+                safile.write("\nCorner Kick(s) with Poor Delivery from " + away + ": 0")
+
+            if int_number_ck_a:
+                print("Corner Kick(s) from " + away + ": ", string_number_ck_a)
+                safile.write("\nCorner Kick(s) from " + away + ": ")
+                safile.write(string_number_ck_a)
+            elif not int_number_ck_a:
+                print("Corner Kick(s) from " + away + ": 0")
+                safile.write("\nCorner Kick(s) from " + away + ": 0")
+
+            if int_number_ti_gd_h and \
+               int_number_ti_pd_h and \
+               int_number_ti_h and \
+               int_final_ti_h == all_ti_final_h:
+                int_final_ti_gd_h = int(ti_string_gd_2_h)
+                int_final_ti_pd_h = int(ti_string_pd_2_h)
+                all_ti_final_h = int_final_ti_gd_h + int_final_ti_pd_h
+                perc_num_ti_h = 100 / all_ti_final_h
+                perc_num_ti_good_h = perc_num_ti_h * int_final_ti_gd_h
+                perc_num_ti_bad_h = perc_num_ti_h * int_final_ti_pd_h
+                round_ti_good_h = round(perc_num_ti_good_h, 1)
+                round_ti_bad_h = round(perc_num_ti_bad_h, 1)
+                print_ti_good_h = str(round_ti_good_h)
+                print_ti_bad_h = str(round_ti_bad_h)
+                final_ti_good_h = print_ti_good_h + "% of the Throw Ins " \
+                                                    "from " + home + \
+                                                    " were good"
+                final_ti_bad_h = print_ti_bad_h + "% of the Throw Ins " \
+                                                  "from " + home + \
+                                                  " were bad"
+                print(blue % final_ti_good_h)
+                print(red % final_ti_bad_h)
+
+            if int_number_ti_gd_h:
+                print("Throw In(s) with Good Delivery from " + home + ": ", ti_string_gd_2_h)
+                safile.write("\nThrow In(s) with Good Delivery from" + home +
+                             ": ")
+                safile.write(ti_string_gd_2_h)
+            elif not int_number_ti_gd_h:
+                print("Throw In(s) with Good Delivery from " + home + ": 0")
+                safile.write("\nThrow In(s) with Good Delivery from " + home + ": 0")
+
+            if int_number_ti_pd_h:
+                print("Throw In(s) with Good Delivery from " + home + ": ",
+                      ti_string_pd_2_h)
+                safile.write("\nThrow In(s) with Poor Delivery from " + home + ": ")
+                safile.write(ti_string_pd_2_h)
+            elif not int_number_ti_pd_h:
+                print("Throw In(s) with Poor Delivery from " + home + ": 0")
+                safile.write("\nThrow In(s) with Poor Delivery from " + home + ": 0")
+
+            if int_number_ti_h:
+                print("Throw In(s) from " + home + ": ", string_number_ti_h)
+                safile.write("\nThrow In(s) from " + home + ": ")
+                safile.write(string_number_ti_h)
+            elif not int_number_ti_h:
+                print("Throw In(s) from " + home + ": 0")
+                safile.write("\nThrow In(s) from " + home + ": 0")
+                
+            if int_number_ti_gd_a and \
+               int_number_ti_pd_a and \
+               int_number_ti_a and \
+               int_final_ti_a == all_ti_final_a:
+                int_final_ti_gd_a = int(ti_string_gd_2_a)
+                int_final_ti_pd_a = int(ti_string_pd_2_a)
+                all_ti_final_a = int_final_ti_gd_a + int_final_ti_pd_a
+                perc_num_ti_a = 100 / all_ti_final_a
+                perc_num_ti_good_a = perc_num_ti_a * int_final_ti_gd_a
+                perc_num_ti_bad_a = perc_num_ti_a * int_final_ti_pd_a
+                round_ti_good_a = round(perc_num_ti_good_a, 1)
+                round_ti_bad_a = round(perc_num_ti_bad_a, 1)
+                print_ti_good_a = str(round_ti_good_a)
+                print_ti_bad_a = str(round_ti_bad_a)
+                final_ti_good_a = print_ti_good_a + "% of the Throw Ins " \
+                                                    "from " + away + \
+                                                    " were good"
+                final_ti_bad_a = print_ti_bad_a + "% of the Throw Ins " \
+                                                  "from " + away + \
+                                                  " were bad"
+                print(blue % final_ti_good_a)
+                print(red % final_ti_bad_a)
+
+            if int_number_ti_gd_a:
+                print("Throw In(s) with Good Delivery from " + away + ": ", ti_string_gd_2_a)
+                safile.write("\nThrow In(s) with Good Delivery from" + away +
+                             ": ")
+                safile.write(ti_string_gd_2_a)
+            elif not int_number_ti_gd_a:
+                print("Throw In(s) with Good Delivery from " + away + ": 0")
+                safile.write("\nThrow In(s) with Good Delivery from " + away + ": 0")
+
+            if int_number_ti_pd_a:
+                print("Throw In(s) with Good Delivery from " + away + ": ",
+                      ti_string_pd_2_a)
+                safile.write("\nThrow In(s) with Poor Delivery from " + away + ": ")
+                safile.write(ti_string_pd_2_a)
+            elif not int_number_ti_pd_a:
+                print("Throw In(s) with Poor Delivery from " + away + ": 0")
+                safile.write("\nThrow In(s) with Poor Delivery from " + away + ": 0")
+
+            if int_number_ti_a:
+                print("Throw In(s) from " + away + ": ", string_number_ti_a)
+                safile.write("\nThrow In(s) from " + away + ": ")
+                safile.write(string_number_ti_a)
+            elif not int_number_ti_a:
+                print("Throw In(s) from " + away + ": 0")
+                safile.write("\nThrow In(s) from " + away + ": 0")
+
+            if int_number_cross_gd_h and \
+               int_number_cross_pd_h and \
+               int_number_cross_h and \
+               int_final_cross_h == all_cross_final_h:
+                int_final_cross_gd_h = int(cross_string_gd_2_h)
+                int_final_cross_pd_h = int(cross_string_pd_2_h)
+                all_cross_final_h = int_final_cross_gd_h + int_final_cross_pd_h
+                perc_num_cross_h = 100 / all_cross_final_h
+                perc_num_cross_good_h = perc_num_cross_h * int_final_cross_gd_h
+                perc_num_cross_bad_h = perc_num_cross_h * int_final_cross_pd_h
+                round_cross_good_h = round(perc_num_cross_good_h, 1)
+                round_cross_bad_h = round(perc_num_cross_bad_h, 1)
+                print_cross_good_h = str(round_cross_good_h)
+                print_cross_bad_h = str(round_cross_bad_h)
+                final_cross_good_h = print_cross_good_h + "% of the Crosses " \
+                                                          "from " + home + \
+                                                          " were good"
+                final_cross_bad_h = print_cross_bad_h + "% of the Crosses " \
+                                                        "from " + home + \
+                                                        " were bad"
+                print(blue % final_cross_good_h)
+                print(red % final_cross_bad_h)
+
+            if int_number_cross_gd_h:
+                print("Cross(es) with Good Delivery from " + home + ": ", cross_string_gd_2_h)
+                safile.write("\nCross(es) with Good Delivery from" + home +
+                             ": ")
+                safile.write(cross_string_gd_2_h)
+            elif not int_number_cross_gd_h:
+                print("Cross(es) with Good Delivery from " + home + ": 0")
+                safile.write("\nCross(es) with Good Delivery from " + home + ": 0")
+
+            if int_number_cross_pd_h:
+                print("Cross(es) with Good Delivery from " + home + ": ",
+                      cross_string_pd_2_h)
+                safile.write("\nCross(es) with Poor Delivery from " + home + ": ")
+                safile.write(cross_string_pd_2_h)
+            elif not int_number_cross_pd_h:
+                print("Cross(es) with Poor Delivery from " + home + ": 0")
+                safile.write("\nCross(es) with Poor Delivery from " + home + ": 0")
+
+            if int_number_cross_h:
+                print("Cross(es) from " + home + ": ", string_number_cross_h)
+                safile.write("\nCross(es) from " + home + ": ")
+                safile.write(string_number_cross_h)
+            elif not int_number_cross_h:
+                print("Cross(es) from " + home + ": 0")
+                safile.write("\nCross(es) from " + home + ": 0")
+                  
+            if int_number_cross_gd_a and \
+               int_number_cross_pd_a and \
+               int_number_cross_a and \
+               int_final_cross_a == all_cross_final_a:
+                int_final_cross_gd_a = int(cross_string_gd_2_a)
+                int_final_cross_pd_a = int(cross_string_pd_2_a)
+                all_cross_final_a = int_final_cross_gd_a + int_final_cross_pd_a
+                perc_num_cross_a = 100 / all_cross_final_a
+                perc_num_cross_good_a = perc_num_cross_a * int_final_cross_gd_a
+                perc_num_cross_bad_a = perc_num_cross_a * int_final_cross_pd_a
+                round_cross_good_a = round(perc_num_cross_good_a, 1)
+                round_cross_bad_a = round(perc_num_cross_bad_a, 1)
+                print_cross_good_a = str(round_cross_good_a)
+                print_cross_bad_a = str(round_cross_bad_a)
+                final_cross_good_a = print_cross_good_a + "% of the Crosses " \
+                                                          "from " + away + \
+                                                          " were good"
+                final_cross_bad_a = print_cross_bad_a + "% of the Crosses " \
+                                                        "from " + away + \
+                                                        " were bad"
+                print(blue % final_cross_good_a)
+                print(red % final_cross_bad_a)
+
+            if int_number_cross_gd_a:
+                print("Cross(es) with Good Delivery from " + away + ": ", cross_string_gd_2_a)
+                safile.write("\nCross(es) with Good Delivery from" + away +
+                             ": ")
+                safile.write(cross_string_gd_2_a)
+            elif not int_number_cross_gd_a:
+                print("Cross(es) with Good Delivery from " + away + ": 0")
+                safile.write("\nCross(es) with Good Delivery from " + away + ": 0")
+
+            if int_number_cross_pd_a:
+                print("Cross(es) with Good Delivery from " + away + ": ",
+                      cross_string_pd_2_a)
+                safile.write("\nCross(es) with Poor Delivery from " + away + ": ")
+                safile.write(cross_string_pd_2_a)
+            elif not int_number_cross_pd_a:
+                print("Cross(es) with Poor Delivery from " + away + ": 0")
+                safile.write("\nCross(es) with Poor Delivery from " + away + ": 0")
+
+            if int_number_cross_a:
+                print("Cross(es) from " + away + ": ", string_number_cross_a)
+                safile.write("\nCross(es) from " + away + ": ")
+                safile.write(string_number_cross_a)
+            elif not int_number_cross_a:
+                print("Cross(es) from " + away + ": 0")
+                safile.write("\nCross(es) from " + away + ": 0")
+
+            # here bitches --490 lines left
+
+            if int_number_shot_ont_h and \
+               int_number_shot_oft_h and \
+               int_number_shot_bs_h and \
+               int_number_shot_h and \
+               int_final_shot_h == all_shot_final_h:
+                # makes the string to an int variable
+                int_final_shot_ont_h = int(shot_ont_2_h)
+                int_final_shot_bs_h = int(shot_bs_2_h)
+                int_final_shot_oft_h = int(shot_oft_2_h)
+                # adds all the "bad" stats to a general variable
+                all_shot_bad_h = int_final_shot_bs_h + int_final_shot_oft_h
+                all_shot_final_h = int_final_shot_ont_h + int_final_shot_bs_h
+                all_shot_final_h += int_final_shot_oft_h
+                # calculates the ratio between the good to bad
+                perc_num_shot_h = 100 / all_shot_final_h
+                perc_num_shot_good_h = perc_num_shot_h * int_final_shot_ont_h
+                perc_num_shot_bad_h = perc_num_shot_h * all_shot_bad_h
+                round_shot_good_h = round(perc_num_shot_good_h, 1)
+                round_shot_bad_h = round(perc_num_shot_bad_h, 1)
+                print_shot_good_h = str(round_shot_good_h)
+                print_shot_bad_h = str(round_shot_bad_h)
+                final_shot_good_h = print_shot_good_h + "% of the Shot " \
+                                                        "from " + home + \
+                                                        " were good"
+
+                final_shot_bad_h = print_shot_bad_h + "% of the Shot " \
+                                                      "from " + home + \
                                                       " were bad"
+                print(blue % final_shot_good_h)
+                print(red % final_shot_bad_h)
 
-                print(blue % final_header_good)
-                print(red % final_header_bad)
+            # start print out/write on file each stat
+            # if it was called
+            if int_number_shot_ont_h:
+                # print the number of the stat
+                end_shot_ont_h = "Shot on target(s): " + shot_ont_2_h
+                print(white % end_shot_ont_h)
+                # write on the file
+                safile.write("Shot on target(s) from " + home + ": ")
+                safile.write(shot_ont_2_h)
+            # if it was not called
+            elif not int_number_shot_ont_h:
+                # print/write the time that the stat was called was None
+                print("Shot on target(s): 0")
+                safile.write("\nShot on target(s) from " + home + ": 0")
 
-            if int_number_header_gd:
-                print("Header(s) on Target: ", header_ont_2)
-                safile.write("\nHeader(s) on Target: ")
-                safile.write(header_ont_2)
-            elif not int_number_header_gd:
-                print("Header(s) on Target: 0")
-                safile.write("\nHeader(s) on Target: 0")
+            if int_number_shot_bs_h:
+                print("Shot(s) blocked: ", shot_bs_2)
+                safile.write("\nShot(s) blocked from " + home + ": ")
+                safile.write(shot_bs_2_h)
+            elif not int_number_shot_bs_h:
+                print("Shot(s) blocked: 0")
+                safile.write("\nShot(s) blocked from " + home + ": 0 ")
 
-            if int_number_header_pd:
-                print("Header(s) off Target: ", header_oft_2)
-                safile.write("\nHeader(s) off Target: ")
-                safile.write(header_oft_2)
-            elif not int_number_header_pd:
-                print("Header(s) off Target: 0")
-                safile.write("\nHeader(s) off Target: 0")
+            if int_number_shot_oft_h:
+                print("Shot(s) off target: ", shot_oft_2_h)
+                safile.write("\nShot(s) off target from " + home + ": ")
+                safile.write(shot_oft_2_h)
+            elif not int_number_shot_oft_h:
+                print("Shot(s) off target: 0")
+                safile.write("\nShot(s) off target from " + home + ": 0")
 
-            if int_number_headers:
-                print("Header(s): ", string_number_headers)
-                safile.write("\nHeader(s): ")
-                safile.write(string_number_headers)
-            elif not int_number_headers:
-                print("Header(s): 0")
-                safile.write("\nHeader(s): 0")
+            if int_number_shot_h:
+                print("Shot(s): ", string_number_shot_h)
+                safile.write("\nShot(s) from " + home + ": ")
+                safile.write(string_number_shot_h)
+            elif not int_number_shot_h:
+                print("Shot(s): 0")
+                safile.write("\nShot(s) from " + home + ": 0")
 
-            if int_number_v1_w and \
-               int_number_v1_l and \
-               int_number_v1 and \
-               int_final_v1 == all_v1_final:
-                int_final_v1_w = int(string_number_v1_w)
-                int_final_v1_l = int(string_number_v1_l)
-                all_v1_final = int_final_v1_w + int_final_v1_l
-                int_final_v1 = int(string_number_v1)
-                perc_num_v1 = 100 / all_v1_final
-                perc_num_v1_good = perc_num_v1 * int_final_v1_w
-                perc_num_v1_bad = perc_num_v1 * int_final_v1_l
-                round_v1_good = round(perc_num_v1_good, 1)
-                round_v1_bad = round(perc_num_v1_bad, 1)
-                print_v1_good = str(round_v1_good)
-                print_v1_bad = str(round_v1_bad)
-                final_v1_good = print_v1_good + "% of the 1vs1 " \
-                                                "were good "
-                final_v1_bad = print_v1_bad + "% of the 1vs1 " \
-                                              " were bad"
+            if int_number_shot_ont_a and \
+               int_number_shot_oft_a and \
+               int_number_shot_bs_a and \
+               int_number_shot_a and \
+               int_final_shot_a == all_shot_final_a:
+                # makes the string to an int variable
+                int_final_shot_ont_a = int(shot_ont_2_a)
+                int_final_shot_bs_a = int(shot_bs_2_a)
+                int_final_shot_oft_a = int(shot_oft_2_a)
+                # adds all the "bad" stats to a general variable
+                all_shot_bad_a = int_final_shot_bs_a + int_final_shot_oft_a
+                all_shot_final_a = int_final_shot_ont_a + int_final_shot_bs_a
+                all_shot_final_a += int_final_shot_oft_a
+                # calculates the ratio between the good to bad
+                perc_num_shot_a = 100 / all_shot_final_a
+                perc_num_shot_good_a = perc_num_shot_a * int_final_shot_ont_a
+                perc_num_shot_bad_a = perc_num_shot_a * all_shot_bad_a
+                round_shot_good_a = round(perc_num_shot_good_a, 1)
+                round_shot_bad_a = round(perc_num_shot_bad_a, 1)
+                print_shot_good_a = str(round_shot_good_a)
+                print_shot_bad_a = str(round_shot_bad_a)
+                final_shot_good_a = print_shot_good_a + "% of the Shot " \
+                                                        "from " + away + \
+                                                        " were good"
 
-                print(blue % final_v1_good)
-                print(red % final_v1_bad)
+                final_shot_bad_a = print_shot_bad_a + "% of the Shot " \
+                                                      "from " + away + \
+                                                      " were bad"
+                print(blue % final_shot_good_a)
+                print(red % final_shot_bad_a)
 
-            if int_number_v1_w:
-                print("1vs1 Won: ", string_number_v1_w)
-                safile.write("\n1vs1 Won: ")
-                safile.write(string_number_v1_w)
-            elif not int_number_v1_w:
-                print("1vs1 Won: 0")
-                safile.write("\n1vs1 Won: 0")
+            # start print out/write on file each stat
+            # if it was called
+            if int_number_shot_ont_a:
+                # print the number of the stat
+                end_shot_ont_a = "Shot on target(s): " + shot_ont_2_a
+                print(white % end_shot_ont_a)
+                # write on the file
+                safile.write("Shot on target(s) from " + away + ": ")
+                safile.write(shot_ont_2_a)
+            # if it was not called
+            elif not int_number_shot_ont_a:
+                # print/write the time that the stat was called was None
+                print("Shot on target(s): 0")
+                safile.write("\nShot on target(s) from " + away + ": 0")
 
-            if int_number_v1_l:
-                print("1vs1 Lost: ", string_number_v1_l)
-                safile.write("\n1vs1 Lost: ")
-                safile.write(string_number_v1_l)
-            elif not int_number_v1_l:
-                print("1vs1 Lost: 0")
-                safile.write("\n1vs1 Lost: 0")
+            if int_number_shot_bs_a:
+                print("Shot(s) blocked: ", shot_bs_2)
+                safile.write("\nShot(s) blocked from " + away + ": ")
+                safile.write(shot_bs_2_a)
+            elif not int_number_shot_bs_a:
+                print("Shot(s) blocked: 0")
+                safile.write("\nShot(s) blocked from " + away + ": 0 ")
 
-            if int_number_v1:
-                print("1vs1: ", string_number_v1)
-                safile.write("\n1vs1: ")
-                safile.write(string_number_v1)
-            elif not int_number_v1:
-                print("1vs1: 0")
-                safile.write("\n1vs1: 0")
+            if int_number_shot_oft_a:
+                print("Shot(s) off target: ", shot_oft_2_a)
+                safile.write("\nShot(s) off target from " + away + ": ")
+                safile.write(shot_oft_2_a)
+            elif not int_number_shot_oft_a:
+                print("Shot(s) off target: 0")
+                safile.write("\nShot(s) off target from " + away + ": 0")
 
+            if int_number_shot_a:
+                print("Shot(s): ", string_number_shot_a)
+                safile.write("\nShot(s) from " + away + ": ")
+                safile.write(string_number_shot_a)
+            elif not int_number_shot_a:
+                print("Shot(s): 0")
+                safile.write("\nShot(s) from " + away + ": 0")
+
+            if int_number_header_ont_h and \
+               int_number_header_oft_h and \
+               int_number_header_h and \
+               int_final_header_h == all_header_final_h:
+                int_final_header_ont_h = int(header_string_gd_2_h)
+                int_final_header_oft_h = int(header_string_pd_2_h)
+                all_header_final_h = int_final_header_ont_h + int_final_header_oft_h
+                perc_num_header_h = 100 / all_header_final_h
+                perc_num_header_good_h = perc_num_header_h * int_final_header_ont_h
+                perc_num_header_bad_h = perc_num_header_h * int_final_header_oft_h
+                round_header_good_h = round(perc_num_header_good_h, 1)
+                round_header_bad_h = round(perc_num_header_bad_h, 1)
+                print_header_good_h = str(round_header_good_h)
+                print_header_bad_h = str(round_header_bad_h)
+                final_header_good_h = print_header_good_h + "% of the Headers " \
+                                                            "from " + home + \
+                                                            " were good"
+                final_header_bad_h = print_header_bad_h + "% of the Headers " \
+                                                          "from " + home + \
+                                                          " were bad"
+                print(blue % final_header_good_h)
+                print(red % final_header_bad_h)
+
+            if int_number_header_ont_h:
+                print("Header(s) on target from " + home + ": ",
+                      header_string_gd_2_h)
+                safile.write("\nHeader(s) on target from" + home +
+                             ": ")
+                safile.write(header_string_gd_2_h)
+            elif not int_number_header_ont_h:
+                print("Header(s) on target from " + home + ": 0")
+                safile.write(
+                    "\nHeader(s) on target from " + home + ": 0")
+
+            if int_number_header_oft_h:
+                print("Header(s) on target from " + home + ": ",
+                      header_string_pd_2_h)
+                safile.write(
+                    "\nHeader(s) off target from " + home + ": ")
+                safile.write(header_string_pd_2_h)
+            elif not int_number_header_oft_h:
+                print("Header(s) off target from " + home + ": 0")
+                safile.write(
+                    "\nHeader(s) off target from " + home + ": 0")
+
+            if int_number_header_h:
+                print("Header(s) from " + home + ": ", string_number_header_h)
+                safile.write("\nHeader(s) from " + home + ": ")
+                safile.write(string_number_header_h)
+            elif not int_number_header_h:
+                print("Header(s) from " + home + ": 0")
+                safile.write("\nHeader(s) from " + home + ": 0")
+
+            if int_number_header_ont_a and \
+               int_number_header_oft_a and \
+               int_number_header_a and \
+               int_final_header_a == all_header_final_a:
+                int_final_header_ont_a = int(header_string_gd_2_a)
+                int_final_header_oft_a = int(header_string_pd_2_a)
+                all_header_final_a = int_final_header_ont_a + int_final_header_oft_a
+                perc_num_header_a = 100 / all_header_final_a
+                perc_num_header_good_a = perc_num_header_a * int_final_header_ont_a
+                perc_num_header_bad_a = perc_num_header_a * int_final_header_oft_a
+                round_header_good_a = round(perc_num_header_good_a, 1)
+                round_header_bad_a = round(perc_num_header_bad_a, 1)
+                print_header_good_a = str(round_header_good_a)
+                print_header_bad_a = str(round_header_bad_a)
+                final_header_good_a = print_header_good_a + "% of the Headers " \
+                                                            "from " + away + \
+                                                            " were good"
+                final_header_bad_a = print_header_bad_a + "% of the Headers " \
+                                                          "from " + away + \
+                                                          " were bad"
+                print(blue % final_header_good_a)
+                print(red % final_header_bad_a)
+
+            if int_number_header_ont_a:
+                print("Header(s) on target from " + away + ": ",
+                      header_string_gd_2_a)
+                safile.write("\nHeader(s) on target from" + away +
+                             ": ")
+                safile.write(header_string_gd_2_a)
+            elif not int_number_header_ont_a:
+                print("Header(s) on target from " + away + ": 0")
+                safile.write("\nHeader(s) on target from " + away + ": 0")
+
+            if int_number_header_oft_a:
+                print("Header(s) on target from " + away + ": ",
+                      header_string_pd_2_a)
+                safile.write("\nHeader(s) off target from " + away + ":")
+
+                safile.write(header_string_pd_2_a)
+            elif not int_number_header_oft_a:
+                print("Header(s) off target from " + away + ": 0")
+                safile.write("\nHeader(s) off target from " + away + ": 0")
+                    
+            if int_number_header_a:
+                print("Header(s) from " + away + ": ", string_number_header_a)
+                safile.write("\nHeader(s) from " + away + ": ")
+                safile.write(string_number_header_a)
+            elif not int_number_header_a:
+                print("Header(s) from " + away + ": 0")
+                safile.write("\nHeader(s) from " + away + ": 0")
+
+            if int_number_v1_w_h and \
+               int_number_v1_l_h and \
+               int_number_v1_h and \
+               int_final_v1_h == all_v1_final_h:
+                int_final_v1_w_h = int(v1_string_gd_2_h)
+                int_final_v1_l_h = int(v1_string_pd_2_h)
+                all_v1_final_h = int_final_v1_w_h + int_final_v1_l_h
+                perc_num_v1_h = 100 / all_v1_final_h
+                perc_num_v1_good_h = perc_num_v1_h * int_final_v1_w_h
+                perc_num_v1_bad_h = perc_num_v1_h * int_final_v1_l_h
+                round_v1_good_h = round(perc_num_v1_good_h, 1)
+                round_v1_bad_h = round(perc_num_v1_bad_h, 1)
+                print_v1_good_h = str(round_v1_good_h)
+                print_v1_bad_h = str(round_v1_bad_h)
+                final_v1_good_h = print_v1_good_h + "% of the 1v1 " \
+                                                    "from " + home + \
+                                                    " were good"
+                final_v1_bad_h = print_v1_bad_h + "% of the 1v1 " \
+                                                  "from " + home + \
+                                                  " were bad"
+                print(blue % final_v1_good_h)
+                print(red % final_v1_bad_h)
+
+            if int_number_v1_w_h:
+                print("1v1 won from " + home + ": ",
+                      v1_string_gd_2_h)
+                safile.write("\n1v1 won from" + home +
+                             ": ")
+                safile.write(v1_string_gd_2_h)
+            elif not int_number_v1_w_h:
+                print("1v1 won from " + home + ": 0")
+                safile.write(
+                    "\n1v1 won from " + home + ": 0")
+
+            if int_number_v1_l_h:
+                print("1v1 won from " + home + ": ",
+                      v1_string_pd_2_h)
+                safile.write(
+                    "\n1v1 lost from " + home + ": ")
+                safile.write(v1_string_pd_2_h)
+            elif not int_number_v1_l_h:
+                print("1v1 lost from " + home + ": 0")
+                safile.write(
+                    "\n1v1 lost from " + home + ": 0")
+
+            if int_number_v1_h:
+                print("1v1 from " + home + ": ", string_number_v1_h)
+                safile.write("\n1v1 from " + home + ": ")
+                safile.write(string_number_v1_h)
+            elif not int_number_v1_h:
+                print("1v1 from " + home + ": 0")
+                safile.write("\n1v1 from " + home + ": 0")
+
+            if int_number_v1_w_a and \
+               int_number_v1_l_a and \
+               int_number_v1_a and \
+               int_final_v1_a == all_v1_final_a:
+                int_final_v1_w_a = int(v1_string_gd_2_a)
+                int_final_v1_l_a = int(v1_string_pd_2_a)
+                all_v1_final_a = int_final_v1_w_a + int_final_v1_l_a
+                perc_num_v1_a = 100 / all_v1_final_a
+                perc_num_v1_good_a = perc_num_v1_a * int_final_v1_w_a
+                perc_num_v1_bad_a = perc_num_v1_a * int_final_v1_l_a
+                round_v1_good_a = round(perc_num_v1_good_a, 1)
+                round_v1_bad_a = round(perc_num_v1_bad_a, 1)
+                print_v1_good_a = str(round_v1_good_a)
+                print_v1_bad_a = str(round_v1_bad_a)
+                final_v1_good_a = print_v1_good_a + "% of the 1v1 " \
+                                                    "from " + away + \
+                                                    " were good"
+                final_v1_bad_a = print_v1_bad_a + "% of the 1v1 " \
+                                                  "from " + away + \
+                                                  " were bad"
+                print(blue % final_v1_good_a)
+                print(red % final_v1_bad_a)
+
+            if int_number_v1_w_a:
+                print("1v1 won from " + away + ": ",
+                      v1_string_gd_2_a)
+                safile.write("\n1v1 won from" + away +
+                             ": ")
+                safile.write(v1_string_gd_2_a)
+            elif not int_number_v1_w_a:
+                print("1v1 won from " + away + ": 0")
+                safile.write(
+                    "\n1v1 won from " + away + ": 0")
+
+            if int_number_v1_l_a:
+                print("1v1 won from " + away + ": ",
+                      v1_string_pd_2_a)
+                safile.write(
+                    "\n1v1 lost from " + away + ":")
+
+                safile.write(v1_string_pd_2_a)
+            elif not int_number_v1_l_a:
+                print("1v1 lost from " + away + ": 0")
+                safile.write(
+                    "\n1v1 lost from " + away + ": 0")
+
+            if int_number_v1_a:
+                print("1v1 from " + away + ": ", string_number_v1_a)
+                safile.write("\n1v1 from " + away + ": ")
+                safile.write(string_number_v1_a)
+            elif not int_number_v1_a:
+                print("1v1 from " + away + ": 0")
+                safile.write("\n1v1 from " + away + ": 0")
+
+            # i'm here bitches --300 lines left
+            
             if int_number_lpi_sb_attack:
                 end_lpi_sb_attack = "Second Ball Long Pass Interceptions on " \
                                     "Attack: "
