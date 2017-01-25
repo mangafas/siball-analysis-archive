@@ -238,3 +238,9 @@ Release Date: 16/10/16
 User Interface: Text Based
 Version: Beta
 Features: SATB071 + fix bugs(more info on bugs card in projects)
+
+Codename: SATBB073
+Release Date: 22/10/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB071 + record stat for both teams
