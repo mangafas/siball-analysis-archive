@@ -243,4 +243,10 @@ Codename: SATBB073
 Release Date: 22/10/16 
 User Interface: Text Based
 Version: Beta
-Features: SATB071 + record stat for both teams
+Features: SATB072 + record stat for both teams
+
+Codename: SATBB074
+Release Date: 1/2/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB073 + record possession stat
