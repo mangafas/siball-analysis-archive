@@ -250,3 +250,9 @@ Release Date: 1/2/16
 User Interface: Text Based
 Version: Beta
 Features: SATB073 + record possession stat
+
+Codename: SATBB075
+Release Date: 13/2/16 
+User Interface: Text Based
+Version: Beta
+Features: SATB074 + get message when possession changes
