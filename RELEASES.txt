@@ -1,5 +1,3 @@
-http://paf.dias.ac.cy/main/
-
 Full details about the releases.
 
 Codename: SATBA011
