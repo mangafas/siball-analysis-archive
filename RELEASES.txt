@@ -258,3 +258,11 @@ Release Date: 13/2/16
 User Interface: Text Based
 Version: Beta
 Features: SATB074 + get message when possession changes
+
+
+Codename: SATBB076
+Release Date: 8/4/2017
+User Interface: Text Based
+Version: Beta
+Features: SATB075 + clearance stat is now supported
+
