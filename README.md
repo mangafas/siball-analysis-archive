@@ -8,7 +8,7 @@
 ![alt tag](https://img.shields.io/badge/inprogress-v0.8.1-f5f500.svg)
 
 
-The development of this command line software has been temporarly stopped.
+The development of this command line software has been temporarly stopped. Our development team has now been moved to psoniapp. For more information visit www.psoniapp.com
 
 ## What is Siball-Analysis?
 Siball-Analysis, SA for short, is a text-based software for recording football stats(soccer if wou will). It is developed in python.  You can find it on the project's [github page](https://mangafas.github.io/siball-analysis-archive/) and the github page's [branch](https://github.com/mangafas/siball-analysis-archive/tree/gh-pages) on github.
