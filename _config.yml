@@ -2,7 +2,7 @@ title: Siball-analysis
 description: A computer software and a mobile application for simple analytics in football(soccer if you will)
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-architect
+theme: jekyll-theme-hacker
 
 gems:
   - jekyll-mentions
